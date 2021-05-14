@@ -4,9 +4,8 @@ namespace OceniTest.Data.Models
     using System;
     using System.Collections.Generic;
 
-    using OceniTest.Data.Common.Models;
-
     using Microsoft.AspNetCore.Identity;
+    using OceniTest.Data.Common.Models;
 
     public class ApplicationUser : IdentityUser, IAuditInfo, IDeletableEntity
     {
@@ -16,6 +15,8 @@ namespace OceniTest.Data.Models
             this.Roles = new HashSet<IdentityUserRole<string>>();
             this.Claims = new HashSet<IdentityUserClaim<string>>();
             this.Logins = new HashSet<IdentityUserLogin<string>>();
+            this.UserQuizzes = new HashSet<Quiz>();
+            this.UserFeedbacks = new HashSet<Feedback>();
         }
 
         // Audit info
@@ -33,5 +34,9 @@ namespace OceniTest.Data.Models
         public virtual ICollection<IdentityUserClaim<string>> Claims { get; set; }
 
         public virtual ICollection<IdentityUserLogin<string>> Logins { get; set; }
+
+        public ICollection<Quiz> UserQuizzes { get; set; }
+
+        public ICollection<Feedback> UserFeedbacks { get; set; }
     }
 }

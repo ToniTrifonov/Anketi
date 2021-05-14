@@ -1,0 +1,16 @@
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Services\OceniTest.Services.Data\bin\Debug\netstandard2.1\OceniTest.Services.Data.deps.json
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Services\OceniTest.Services.Data\bin\Debug\netstandard2.1\OceniTest.Services.Data.dll
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Services\OceniTest.Services.Data\bin\Debug\netstandard2.1\OceniTest.Services.Data.pdb
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Services\OceniTest.Services.Data\bin\Debug\netstandard2.1\OceniTest.Data.Common.dll
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Services\OceniTest.Services.Data\bin\Debug\netstandard2.1\OceniTest.Data.Models.dll
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Services\OceniTest.Services.Data\bin\Debug\netstandard2.1\OceniTest.Services.Mapping.dll
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Services\OceniTest.Services.Data\bin\Debug\netstandard2.1\OceniTest.Data.Common.pdb
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Services\OceniTest.Services.Data\bin\Debug\netstandard2.1\OceniTest.Data.Models.pdb
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Services\OceniTest.Services.Data\bin\Debug\netstandard2.1\OceniTest.Services.Mapping.pdb
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Services\OceniTest.Services.Data\obj\Debug\netstandard2.1\OceniTest.Services.Data.csprojAssemblyReference.cache
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Services\OceniTest.Services.Data\obj\Debug\netstandard2.1\OceniTest.Services.Data.AssemblyInfoInputs.cache
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Services\OceniTest.Services.Data\obj\Debug\netstandard2.1\OceniTest.Services.Data.AssemblyInfo.cs
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Services\OceniTest.Services.Data\obj\Debug\netstandard2.1\OceniTest.Services.Data.csproj.CoreCompileInputs.cache
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Services\OceniTest.Services.Data\obj\Debug\netstandard2.1\OceniTest.Services.Data.csproj.CopyComplete
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Services\OceniTest.Services.Data\obj\Debug\netstandard2.1\OceniTest.Services.Data.dll
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Services\OceniTest.Services.Data\obj\Debug\netstandard2.1\OceniTest.Services.Data.pdb

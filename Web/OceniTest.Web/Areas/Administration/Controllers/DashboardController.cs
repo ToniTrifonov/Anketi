@@ -1,9 +1,8 @@
 ﻿namespace OceniTest.Web.Areas.Administration.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using OceniTest.Services.Data;
     using OceniTest.Web.ViewModels.Administration.Dashboard;
-
-    using Microsoft.AspNetCore.Mvc;
 
     public class DashboardController : AdministrationController
     {

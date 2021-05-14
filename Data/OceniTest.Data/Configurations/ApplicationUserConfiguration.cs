@@ -1,8 +1,8 @@
 ﻿namespace OceniTest.Data.Configurations
 {
-    using OceniTest.Data.Models;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
+    using OceniTest.Data.Models;
 
     public class ApplicationUserConfiguration : IEntityTypeConfiguration<ApplicationUser>
     {

@@ -2,9 +2,8 @@
 {
     using System.Linq;
 
-    using OceniTest.Data.Common.Models;
-
     using Microsoft.EntityFrameworkCore;
+    using OceniTest.Data.Common.Models;
 
     internal static class EntityIndexesConfiguration
     {

@@ -11,6 +11,8 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("OceniTest.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Web\\OceniTest." +
+    "Web", "OceniTest.Web.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("OceniTest.Web.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

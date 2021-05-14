@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-OceniTest",
+      "appliesTo": "OceniTest.sln",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-Startup",
+      "appliesTo": "Web/OceniTest.Web/Startup.cs",
+      "type": "launch"
+    }
+  ]
+}

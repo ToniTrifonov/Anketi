@@ -6,11 +6,10 @@
     using System.Threading;
     using System.Threading.Tasks;
 
-    using OceniTest.Data.Common.Models;
-    using OceniTest.Data.Models;
-
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore;
+    using OceniTest.Data.Common.Models;
+    using OceniTest.Data.Models;
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, string>
     {
@@ -23,6 +22,20 @@
             : base(options)
         {
         }
+
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+
+        public DbSet<Quiz> Quizzes { get; set; }
+
+        public DbSet<Feedback> Feedbacks { get; set; }
+
+        public DbSet<Answer> Answers { get; set; }
+
+        public DbSet<Question> Questions { get; set; }
+
+        public DbSet<Category> Categories { get; set; }
+
+        public DbSet<UserQuiz> UsersQuizzes { get; set; }
 
         public DbSet<Setting> Settings { get; set; }
 

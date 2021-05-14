@@ -2,9 +2,8 @@
 {
     using System.Diagnostics;
 
-    using OceniTest.Web.ViewModels;
-
     using Microsoft.AspNetCore.Mvc;
+    using OceniTest.Web.ViewModels;
 
     public class HomeController : BaseController
     {

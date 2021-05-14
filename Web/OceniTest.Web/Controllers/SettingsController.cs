@@ -3,12 +3,11 @@
     using System;
     using System.Threading.Tasks;
 
+    using Microsoft.AspNetCore.Mvc;
     using OceniTest.Data.Common.Repositories;
     using OceniTest.Data.Models;
     using OceniTest.Services.Data;
     using OceniTest.Web.ViewModels.Settings;
-
-    using Microsoft.AspNetCore.Mvc;
 
     public class SettingsController : BaseController
     {
