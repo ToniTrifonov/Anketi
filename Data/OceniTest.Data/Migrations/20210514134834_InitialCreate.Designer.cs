@@ -10,7 +10,7 @@ using OceniTest.Data;
 namespace OceniTest.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210514125357_InitialCreate")]
+    [Migration("20210514134834_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -6,6 +6,7 @@
 
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Logging;
+    using OceniTest.Data.Models;
 
     public class ApplicationDbContextSeeder : ISeeder
     {

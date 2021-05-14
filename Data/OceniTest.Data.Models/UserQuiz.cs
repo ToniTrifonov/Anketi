@@ -6,6 +6,11 @@
 
     public class UserQuiz : BaseDeletableModel<string>
     {
+        public UserQuiz()
+        {
+            this.Id = Guid.NewGuid().ToString();
+        }
+
         public ApplicationUser User { get; set; }
 
         public string UserId { get; set; }

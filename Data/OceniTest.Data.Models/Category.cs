@@ -1,5 +1,6 @@
 ﻿namespace OceniTest.Data.Models
 {
+    using System;
     using System.Collections.Generic;
 
     using OceniTest.Data.Common.Models;
@@ -8,6 +9,7 @@
     {
         public Category()
         {
+            this.Id = Guid.NewGuid().ToString();
             this.CategoryQuizzes = new HashSet<Quiz>();
         }
 
