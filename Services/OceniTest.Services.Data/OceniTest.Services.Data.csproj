@@ -25,6 +25,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Data\OceniTest.Data.Common\OceniTest.Data.Common.csproj" />
     <ProjectReference Include="..\..\Data\OceniTest.Data.Models\OceniTest.Data.Models.csproj" />
+    <ProjectReference Include="..\..\Web\OceniTest.Web.ViewModels\OceniTest.Web.ViewModels.csproj" />
     <ProjectReference Include="..\OceniTest.Services.Mapping\OceniTest.Services.Mapping.csproj" />
   </ItemGroup>
 

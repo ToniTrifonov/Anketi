@@ -14,3 +14,5 @@ C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Se
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Services\OceniTest.Services.Data\obj\Debug\netstandard2.1\OceniTest.Services.Data.csproj.CopyComplete
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Services\OceniTest.Services.Data\obj\Debug\netstandard2.1\OceniTest.Services.Data.dll
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Services\OceniTest.Services.Data\obj\Debug\netstandard2.1\OceniTest.Services.Data.pdb
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Services\OceniTest.Services.Data\bin\Debug\netstandard2.1\OceniTest.Web.ViewModels.dll
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Services\OceniTest.Services.Data\bin\Debug\netstandard2.1\OceniTest.Web.ViewModels.pdb

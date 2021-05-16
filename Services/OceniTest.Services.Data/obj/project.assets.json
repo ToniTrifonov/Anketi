@@ -603,6 +603,24 @@
         "runtime": {
           "bin/placeholder/OceniTest.Services.Mapping.dll": {}
         }
+      },
+      "OceniTest.Web.ViewModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "5.0.0",
+          "Microsoft.Extensions.Configuration.EnvironmentVariables": "5.0.0",
+          "Microsoft.Extensions.Configuration.Json": "5.0.0",
+          "Microsoft.Extensions.Logging.Console": "5.0.0",
+          "OceniTest.Data.Models": "1.0.0",
+          "OceniTest.Services.Mapping": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/OceniTest.Web.ViewModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OceniTest.Web.ViewModels.dll": {}
+        }
       }
     }
   },
@@ -1746,6 +1764,11 @@
       "type": "project",
       "path": "../OceniTest.Services.Mapping/OceniTest.Services.Mapping.csproj",
       "msbuildProject": "../OceniTest.Services.Mapping/OceniTest.Services.Mapping.csproj"
+    },
+    "OceniTest.Web.ViewModels/1.0.0": {
+      "type": "project",
+      "path": "../../Web/OceniTest.Web.ViewModels/OceniTest.Web.ViewModels.csproj",
+      "msbuildProject": "../../Web/OceniTest.Web.ViewModels/OceniTest.Web.ViewModels.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1757,6 +1780,7 @@
       "OceniTest.Data.Common >= 1.0.0",
       "OceniTest.Data.Models >= 1.0.0",
       "OceniTest.Services.Mapping >= 1.0.0",
+      "OceniTest.Web.ViewModels >= 1.0.0",
       "StyleCop.Analyzers >= 1.2.0-beta.205"
     ]
   },
@@ -1800,6 +1824,9 @@
             },
             "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj": {
               "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj"
+            },
+            "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Web\\OceniTest.Web.ViewModels\\OceniTest.Web.ViewModels.csproj": {
+              "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Web\\OceniTest.Web.ViewModels\\OceniTest.Web.ViewModels.csproj"
             }
           }
         }

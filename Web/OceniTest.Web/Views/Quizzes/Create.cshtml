@@ -1,0 +1,36 @@
+﻿@model OceniTest.Web.ViewModels.Quizzes.CreateQuizInputModel
+@{
+    this.ViewData["Title"] = "Create Quiz";
+}
+
+<h1>@this.ViewData["Title"]</h1>
+
+<div>
+    <form method="post">
+        <div class="col-md-6">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" />
+            <span asp-validation-for="Name" class="alert-danger"></span>
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="Title"></label>
+            <input asp-for="Title" />
+            <span asp-validation-for="Title" class="alert-danger"></span>
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="Description"></label>
+            <textarea asp-for="Description"></textarea>
+            <span asp-validation-for="Description" class="alert-danger"></span>
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="CategoryName"></label>
+            <input asp-for="CategoryName" />
+            <span asp-validation-for="CategoryName" class="alert-danger"></span>
+        </div>
+
+        <input type="submit" />
+    </form>
+</div>

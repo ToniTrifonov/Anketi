@@ -464,3 +464,4 @@ C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\We
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web\obj\Debug\net5.0\ref\OceniTest.Web.dll
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web\obj\Debug\net5.0\OceniTest.Web.pdb
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web\obj\Debug\net5.0\OceniTest.Web.genruntimeconfig.cache
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web\obj\Debug\net5.0\Razor\Views\Quizzes\Create.cshtml.g.cs

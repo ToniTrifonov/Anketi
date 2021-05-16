@@ -1908,7 +1908,8 @@
           "Microsoft.Extensions.Logging.Console": "5.0.0",
           "OceniTest.Data.Common": "1.0.0",
           "OceniTest.Data.Models": "1.0.0",
-          "OceniTest.Services.Mapping": "1.0.0"
+          "OceniTest.Services.Mapping": "1.0.0",
+          "OceniTest.Web.ViewModels": "1.0.0"
         },
         "compile": {
           "bin/placeholder/OceniTest.Services.Data.dll": {}
@@ -1949,6 +1950,24 @@
         },
         "runtime": {
           "bin/placeholder/OceniTest.Services.Messaging.dll": {}
+        }
+      },
+      "OceniTest.Web.ViewModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "5.0.0",
+          "Microsoft.Extensions.Configuration.EnvironmentVariables": "5.0.0",
+          "Microsoft.Extensions.Configuration.Json": "5.0.0",
+          "Microsoft.Extensions.Logging.Console": "5.0.0",
+          "OceniTest.Data.Models": "1.0.0",
+          "OceniTest.Services.Mapping": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/OceniTest.Web.ViewModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OceniTest.Web.ViewModels.dll": {}
         }
       }
     }
@@ -6757,6 +6776,11 @@
       "type": "project",
       "path": "../../Services/OceniTest.Services.Messaging/OceniTest.Services.Messaging.csproj",
       "msbuildProject": "../../Services/OceniTest.Services.Messaging/OceniTest.Services.Messaging.csproj"
+    },
+    "OceniTest.Web.ViewModels/1.0.0": {
+      "type": "project",
+      "path": "../../Web/OceniTest.Web.ViewModels/OceniTest.Web.ViewModels.csproj",
+      "msbuildProject": "../../Web/OceniTest.Web.ViewModels/OceniTest.Web.ViewModels.csproj"
     }
   },
   "projectFileDependencyGroups": {
