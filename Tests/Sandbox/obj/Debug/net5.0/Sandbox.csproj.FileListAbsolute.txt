@@ -73,3 +73,5 @@ C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Te
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Tests\Sandbox\obj\Debug\net5.0\ref\Sandbox.dll
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Tests\Sandbox\obj\Debug\net5.0\Sandbox.pdb
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Tests\Sandbox\obj\Debug\net5.0\Sandbox.genruntimeconfig.cache
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Tests\Sandbox\bin\Debug\net5.0\OceniTest.Web.ViewModels.dll
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Tests\Sandbox\bin\Debug\net5.0\OceniTest.Web.ViewModels.pdb

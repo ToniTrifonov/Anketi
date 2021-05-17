@@ -1,5 +1,7 @@
 ﻿namespace OceniTest.Services.Data
 {
+    using System.Collections.Generic;
+    using System.Linq;
     using System.Threading.Tasks;
 
     using OceniTest.Data.Common.Repositories;
@@ -15,7 +17,7 @@
             this.quizzesRepository = quizzesRepository;
         }
 
-        public async Task Create(CreateQuizInputModel input)
+        public async Task CreateAsync(CreateQuizInputModel input)
         {
             var quiz = new Quiz()
             {
@@ -27,6 +29,23 @@
 
             await this.quizzesRepository.AddAsync(quiz);
             await this.quizzesRepository.SaveChangesAsync();
+        }
+
+        public IEnumerable<QuizViewModel> GetAll()
+        {
+            var quizzes = this.quizzesRepository
+                .All()
+                .ToList()
+                .Select(x => new QuizViewModel()
+                {
+                    Name = x.Name,
+                    CreatedOn = x.CreatedOn,
+                    ModifiedOn = x.ModifiedOn,
+                    QuestionsCount = x.QuizQuestions.Count,
+                    SubmitsCount = x.QuizUsers.Count,
+                }).ToList();
+
+            return quizzes;
         }
     }
 }

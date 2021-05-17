@@ -1223,7 +1223,8 @@
           "Microsoft.Extensions.Logging.Console": "5.0.0",
           "OceniTest.Data.Common": "1.0.0",
           "OceniTest.Data.Models": "1.0.0",
-          "OceniTest.Services.Mapping": "1.0.0"
+          "OceniTest.Services.Mapping": "1.0.0",
+          "OceniTest.Web.ViewModels": "1.0.0"
         },
         "runtime": {
           "OceniTest.Services.Data.dll": {}
@@ -1251,6 +1252,19 @@
         },
         "runtime": {
           "OceniTest.Services.Messaging.dll": {}
+        }
+      },
+      "OceniTest.Web.ViewModels/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "5.0.0",
+          "Microsoft.Extensions.Configuration.EnvironmentVariables": "5.0.0",
+          "Microsoft.Extensions.Configuration.Json": "5.0.0",
+          "Microsoft.Extensions.Logging.Console": "5.0.0",
+          "OceniTest.Data.Models": "1.0.0",
+          "OceniTest.Services.Mapping": "1.0.0"
+        },
+        "runtime": {
+          "OceniTest.Web.ViewModels.dll": {}
         }
       }
     }
@@ -2130,6 +2144,11 @@
       "sha512": ""
     },
     "OceniTest.Services.Messaging/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OceniTest.Web.ViewModels/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -29,8 +29,15 @@
                 return this.View(input);
             }
 
-            await this.quizzesService.Create(input);
-            return this.RedirectToAction("Create");
+            await this.quizzesService.CreateAsync(input);
+            return this.RedirectToAction("All");
+        }
+
+        public IActionResult All()
+        {
+            var quizzesList = this.quizzesService.GetAll();
+
+            return this.View(quizzesList);
         }
     }
 }

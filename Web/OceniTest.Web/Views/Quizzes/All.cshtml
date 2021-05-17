@@ -1,0 +1,16 @@
+﻿@model IEnumerable<OceniTest.Web.ViewModels.Quizzes.QuizViewModel>
+@{
+    this.ViewData["Title"] = "All Quizzes";
+}
+
+@foreach (var item in Model)
+{
+    <div>
+        <label asp-for="@item.Name"></label> : @item.Name
+        <label asp-for="@item.CreatedOn"></label> : @item.CreatedOn
+        <label asp-for="@item.ModifiedOn"></label> : @item.ModifiedOn
+        <label asp-for="@item.QuestionsCount"></label> : @item.QuestionsCount
+        <label asp-for="@item.SubmitsCount"></label> : @item.SubmitsCount
+    </div>
+}
+

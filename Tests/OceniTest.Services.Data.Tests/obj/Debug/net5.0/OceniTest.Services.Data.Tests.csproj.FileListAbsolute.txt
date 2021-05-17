@@ -177,3 +177,5 @@ C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Te
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Tests\OceniTest.Services.Data.Tests\obj\Debug\net5.0\ref\OceniTest.Services.Data.Tests.dll
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Tests\OceniTest.Services.Data.Tests\obj\Debug\net5.0\OceniTest.Services.Data.Tests.pdb
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Tests\OceniTest.Services.Data.Tests\obj\Debug\net5.0\OceniTest.Services.Data.Tests.genruntimeconfig.cache
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Tests\OceniTest.Services.Data.Tests\bin\Debug\net5.0\OceniTest.Web.ViewModels.dll
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Tests\OceniTest.Services.Data.Tests\bin\Debug\net5.0\OceniTest.Web.ViewModels.pdb
