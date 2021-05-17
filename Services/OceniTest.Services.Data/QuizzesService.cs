@@ -36,11 +36,13 @@
             var quizzes = this.quizzesRepository
                 .All()
                 .ToList()
+                .OrderByDescending(x => x.CreatedOn)
                 .Select(x => new QuizViewModel()
                 {
+                    Id = x.Id,
                     Name = x.Name,
                     CreatedOn = x.CreatedOn,
-                    ModifiedOn = x.ModifiedOn,
+                    ModifiedOn = x.ModifiedOn != null ? x.ModifiedOn : x.CreatedOn,
                     QuestionsCount = x.QuizQuestions.Count,
                     SubmitsCount = x.QuizUsers.Count,
                 }).ToList();
