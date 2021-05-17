@@ -39,5 +39,12 @@
 
             return this.View(quizzesList);
         }
+
+        public IActionResult Details(string id)
+        {
+            var quiz = this.quizzesService.GetQuizzById(id);
+
+            return this.View(quiz);
+        }
     }
 }

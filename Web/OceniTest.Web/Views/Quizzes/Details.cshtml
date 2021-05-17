@@ -1,0 +1,18 @@
+﻿@model OceniTest.Web.ViewModels.Quizzes.SingleQuizViewModel
+
+@{
+    this.ViewData["Title"] = "Quiz Details";
+}
+
+<h1>@this.ViewData["Title"]</h1>
+
+<div>
+    <label asp-for="Name"></label> : @Model.Name
+    <label asp-for="Description"></label> : @Model.Description
+    <label asp-for="Title"></label> : @Model.Title
+    <label asp-for="CreatedOn"></label> : @Model.CreatedOn
+    <label asp-for="ModifiedOn"></label> : @Model.ModifiedOn
+    <label asp-for="QuestionsCount"></label> : @Model.QuestionsCount
+    <label asp-for="SubmitsCount"></label> : @Model.SubmitsCount
+</div>
+

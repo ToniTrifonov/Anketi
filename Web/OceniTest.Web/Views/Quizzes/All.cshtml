@@ -3,6 +3,8 @@
     this.ViewData["Title"] = "All Quizzes";
 }
 
+<h1>@this.ViewData["Title"]</h1>
+
 @foreach (var item in Model)
 {
     <div>
@@ -11,6 +13,7 @@
         <label asp-for="@item.ModifiedOn"></label> : @item.ModifiedOn
         <label asp-for="@item.QuestionsCount"></label> : @item.QuestionsCount
         <label asp-for="@item.SubmitsCount"></label> : @item.SubmitsCount
+        <button class="btn btn-primary" type="button" onclick="GetDetails">View</button>
     </div>
 }
 

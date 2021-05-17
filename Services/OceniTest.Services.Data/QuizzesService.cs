@@ -47,5 +47,24 @@
 
             return quizzes;
         }
+
+        public SingleQuizViewModel GetQuizzById(string id)
+        {
+            var quizFromDb = this.quizzesRepository.All().FirstOrDefault(x => x.Id == id);
+
+            var quiz = new SingleQuizViewModel()
+            {
+                Name = quizFromDb.Name,
+                CreatedOn = quizFromDb.CreatedOn,
+                ModifiedOn = quizFromDb.ModifiedOn,
+                QuestionsCount = quizFromDb.QuizQuestions.Count,
+                SubmitsCount = quizFromDb.QuizUsers.Count,
+                Questions = quizFromDb.QuizQuestions,
+                Description = quizFromDb.Description,
+                Title = quizFromDb.Title,
+            };
+
+            return quiz;
+        }
     }
 }

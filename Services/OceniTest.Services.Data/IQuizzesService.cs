@@ -10,5 +10,7 @@
         Task CreateAsync(CreateQuizInputModel input);
 
         IEnumerable<QuizViewModel> GetAll();
+
+        SingleQuizViewModel GetQuizzById(string id);
     }
 }
