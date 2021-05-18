@@ -120,6 +120,9 @@
             "projectReferences": {
               "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data.Common\\OceniTest.Data.Common.csproj": {
                 "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data.Common\\OceniTest.Data.Common.csproj"
+              },
+              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj": {
+                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj"
               }
             }
           }

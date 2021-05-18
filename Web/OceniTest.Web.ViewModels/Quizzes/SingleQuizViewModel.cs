@@ -4,9 +4,15 @@
     using System.Collections.Generic;
 
     using OceniTest.Data.Models;
+    using OceniTest.Services.Mapping;
 
-    public class SingleQuizViewModel
+    public class SingleQuizViewModel : IMapFrom<Quiz>
     {
+        public SingleQuizViewModel()
+        {
+            this.Questions = new HashSet<Question>();
+        }
+
         public string Name { get; set; }
 
         public string Description { get; set; }
@@ -21,7 +27,7 @@
 
         public int QuestionsCount { get; set; }
 
-        public int SubmitsCount { get; set; }
+        public int UsersCount { get; set; }
 
         public IEnumerable<Question> Questions { get; set; }
     }

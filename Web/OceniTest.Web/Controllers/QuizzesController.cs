@@ -42,9 +42,29 @@
 
         public IActionResult Details(string id)
         {
-            var quiz = this.quizzesService.GetQuizzById(id);
+            var quiz = this.quizzesService.GetQuizById<SingleQuizViewModel>(id);
 
             return this.View(quiz);
+        }
+
+        public IActionResult Edit(string id)
+        {
+            var quiz = this.quizzesService.GetQuizById<EditQuizInputModel>(id);
+
+            return this.View(quiz);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(string id, EditQuizInputModel input)
+        {
+            if (!this.ModelState.IsValid)
+            {
+                return this.View(input);
+            }
+
+            await this.quizzesService.EditAsync(id, input);
+
+            return this.RedirectToAction("Details", new { id });
         }
     }
 }

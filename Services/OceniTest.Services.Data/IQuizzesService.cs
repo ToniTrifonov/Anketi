@@ -11,6 +11,8 @@
 
         IEnumerable<QuizViewModel> GetAll();
 
-        SingleQuizViewModel GetQuizzById(string id);
+        T GetQuizById<T>(string id);
+
+        Task EditAsync(string id, EditQuizInputModel input);
     }
 }

@@ -6,6 +6,7 @@
 
     using OceniTest.Data.Common.Repositories;
     using OceniTest.Data.Models;
+    using OceniTest.Services.Mapping;
     using OceniTest.Web.ViewModels.Quizzes;
 
     public class QuizzesService : IQuizzesService
@@ -31,6 +32,21 @@
             await this.quizzesRepository.SaveChangesAsync();
         }
 
+        public async Task EditAsync(string id, EditQuizInputModel input)
+        {
+            var quizToEdit = this.quizzesRepository
+                .All()
+                .Where(x => x.Id == id)
+                .FirstOrDefault();
+
+            quizToEdit.Name = input.Name;
+            quizToEdit.Title = input.Title;
+            quizToEdit.Description = input.Description;
+            quizToEdit.Category = new Category { Name = input.Name };
+
+            await this.quizzesRepository.SaveChangesAsync();
+        }
+
         public IEnumerable<QuizViewModel> GetAll()
         {
             var quizzes = this.quizzesRepository
@@ -50,21 +66,13 @@
             return quizzes;
         }
 
-        public SingleQuizViewModel GetQuizzById(string id)
+        public T GetQuizById<T>(string id)
         {
-            var quizFromDb = this.quizzesRepository.All().FirstOrDefault(x => x.Id == id);
-
-            var quiz = new SingleQuizViewModel()
-            {
-                Name = quizFromDb.Name,
-                CreatedOn = quizFromDb.CreatedOn,
-                ModifiedOn = quizFromDb.ModifiedOn,
-                QuestionsCount = quizFromDb.QuizQuestions.Count,
-                SubmitsCount = quizFromDb.QuizUsers.Count,
-                Questions = quizFromDb.QuizQuestions,
-                Description = quizFromDb.Description,
-                Title = quizFromDb.Title,
-            };
+            var quiz = this.quizzesRepository
+                .AllAsNoTracking()
+                .Where(x => x.Id == id)
+                .To<T>()
+                .FirstOrDefault();
 
             return quiz;
         }

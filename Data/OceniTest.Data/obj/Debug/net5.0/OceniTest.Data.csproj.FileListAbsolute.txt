@@ -21,3 +21,5 @@ C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Da
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Data\OceniTest.Data\obj\Debug\net5.0\ref\OceniTest.Data.dll
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Data\OceniTest.Data\obj\Debug\net5.0\OceniTest.Data.pdb
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Data\OceniTest.Data\obj\Debug\net5.0\OceniTest.Data.genruntimeconfig.cache
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Data\OceniTest.Data\bin\Debug\net5.0\OceniTest.Services.Mapping.dll
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Data\OceniTest.Data\bin\Debug\net5.0\OceniTest.Services.Mapping.pdb

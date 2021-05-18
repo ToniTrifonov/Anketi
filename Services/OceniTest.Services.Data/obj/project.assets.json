@@ -578,7 +578,8 @@
           "Microsoft.Extensions.Configuration.EnvironmentVariables": "5.0.0",
           "Microsoft.Extensions.Configuration.Json": "5.0.0",
           "Microsoft.Extensions.Logging.Console": "5.0.0",
-          "OceniTest.Data.Common": "1.0.0"
+          "OceniTest.Data.Common": "1.0.0",
+          "OceniTest.Services.Mapping": "1.0.0"
         },
         "compile": {
           "bin/placeholder/OceniTest.Data.Models.dll": {}
