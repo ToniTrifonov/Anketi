@@ -73,5 +73,23 @@
 
             return this.RedirectToAction("All");
         }
+
+        public IActionResult Start(string id)
+        {
+            var quiz = this.quizzesService.GetQuizById<TakeQuizInputModel>(id);
+
+            return this.View(quiz);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Start(string id, TakeQuizInputModel input)
+        {
+            if (!this.ModelState.IsValid)
+            {
+                return this.View(input);
+            }
+
+            return this.RedirectToAction("Details", new { id });
+        }
     }
 }

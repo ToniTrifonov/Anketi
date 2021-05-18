@@ -17,6 +17,14 @@
 </div>
 <br />
 <a class="btn btn-primary" asp-action="All">Back to All</a>
-<a class="btn btn-danger" asp-action="Delete" asp-route-id="@Model.Id">Delete</a>
+<a class="btn btn-warning" asp-action="Start" asp-route-id="@Model.Id">Start</a>
+<a id="submitDeleteButton" class="btn btn-danger" asp-action="Delete" asp-route-id="@Model.Id">Delete</a>
 
-
+<script>
+    $(document).ready(function () {
+        $("#submitDeleteButton").on("click", function ()
+        {
+            alert('Are you sure you want to delete this?');
+        });
+    });
+</script>
