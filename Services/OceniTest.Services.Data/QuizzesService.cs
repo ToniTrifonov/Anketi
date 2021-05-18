@@ -32,6 +32,17 @@
             await this.quizzesRepository.SaveChangesAsync();
         }
 
+        public async Task DeleteAsync(string id)
+        {
+            var quiz = this.quizzesRepository
+                .All()
+                .Where(x => x.Id == id)
+                .FirstOrDefault();
+
+            this.quizzesRepository.Delete(quiz);
+            await this.quizzesRepository.SaveChangesAsync();
+        }
+
         public async Task EditAsync(string id, EditQuizInputModel input)
         {
             var quizToEdit = this.quizzesRepository

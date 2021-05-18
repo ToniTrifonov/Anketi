@@ -66,5 +66,12 @@
 
             return this.RedirectToAction("Details", new { id });
         }
+
+        public async Task<IActionResult> Delete(string id)
+        {
+            await this.quizzesService.DeleteAsync(id);
+
+            return this.RedirectToAction("All");
+        }
     }
 }

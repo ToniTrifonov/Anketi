@@ -14,5 +14,7 @@
         T GetQuizById<T>(string id);
 
         Task EditAsync(string id, EditQuizInputModel input);
+
+        Task DeleteAsync(string id);
     }
 }
