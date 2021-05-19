@@ -89,7 +89,7 @@
                 return this.View(input);
             }
 
-            return this.RedirectToAction("Details", new { id });
+            return this.RedirectToAction("Submit", "Feedbacks", new { id });
         }
     }
 }
