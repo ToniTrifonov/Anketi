@@ -1,5 +1,6 @@
 ﻿namespace OceniTest.Web.Controllers
 {
+    using System.Collections.Generic;
     using System.Threading.Tasks;
 
     using Microsoft.AspNetCore.Authorization;
@@ -10,15 +11,22 @@
     public class QuizzesController : BaseController
     {
         private readonly IQuizzesService quizzesService;
+        private readonly ICategoriesService categoriesService;
 
-        public QuizzesController(IQuizzesService quizzesService)
+        public QuizzesController(IQuizzesService quizzesService, ICategoriesService categoriesService)
         {
             this.quizzesService = quizzesService;
+            this.categoriesService = categoriesService;
         }
 
         public IActionResult Create()
         {
-            return this.View();
+            var viewModel = new CreateQuizInputModel()
+            {
+                Categories = this.categoriesService.GetAll(),
+            };
+
+            return this.View(viewModel);
         }
 
         [HttpPost]

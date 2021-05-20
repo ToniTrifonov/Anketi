@@ -25,7 +25,7 @@
                 Name = input.Name,
                 Title = input.Title,
                 Description = input.Description,
-                Category = new Category() { Name = input.CategoryName },
+                CategoryId = input.CategoryId,
             };
 
             await this.quizzesRepository.AddAsync(quiz);
