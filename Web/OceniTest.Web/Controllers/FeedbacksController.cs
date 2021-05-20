@@ -32,7 +32,12 @@
 
             await this.feedbacksService.SubmitAsync(id, input);
 
-            return this.RedirectToAction("Details", "Quizzes", new { id });
+            return this.RedirectToAction("ThankYou");
+        }
+
+        public IActionResult ThankYou()
+        {
+            return this.View();
         }
     }
 }
