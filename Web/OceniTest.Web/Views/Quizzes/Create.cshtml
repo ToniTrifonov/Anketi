@@ -8,6 +8,8 @@
 
 <div>
     <form method="post">
+        <div class="alert-danger" asp-validation-summary="All"></div>
+
         <div class="col-md-6">
             <label asp-for="Name"></label>
             <input asp-for="Name" />
@@ -29,10 +31,9 @@
         <div class="col-md-6">
             <label asp-for="CategoryId"></label>
             <select asp-for="CategoryId" asp-items="categories">
-                <option>Please select a category</option>
             </select>
         </div>
 
-        <input type="submit" asp-action="Create"/>
+        <input type="submit" asp-action="Create" />
     </form>
 </div>

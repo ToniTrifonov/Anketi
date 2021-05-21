@@ -59,6 +59,8 @@
         {
             var quiz = this.quizzesService.GetQuizById<EditQuizInputModel>(id);
 
+            quiz.Categories = this.categoriesService.GetAll();
+
             return this.View(quiz);
         }
 
