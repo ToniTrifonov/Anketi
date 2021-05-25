@@ -7,7 +7,7 @@
 <h1>@this.ViewData["Title"]</h1>
 
 <div>
-    <form method="post">
+    <form id="createSurveyForm" method="post">
         <div class="alert-danger" asp-validation-summary="All"></div>
 
         <div class="col-md-6">
@@ -34,6 +34,39 @@
             </select>
         </div>
 
+        <button id="addQuestionButton">Add Question</button>
+
+        <div id="questionsContainer">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div>Question</div>
+                        </td>
+                        <td>
+                            <div>
+                                <textarea placeholder="Enter your question here"></textarea>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
         <input type="submit" asp-action="Create" />
     </form>
 </div>
+
+<script type="text/javascript">
+    function AddQuestion() {
+        document.getElementById('addQuestionButton').addEventListener('click', function (event) {
+            event.preventDefault();
+            var element = document.createElement('div');
+            element.innerHTML =
+                '<table><tbody><tr><td><div>Question</div></td><td><div><textarea placeholder="Enter your question here"></textarea></div></td></tr></tbody></table>';
+            document.getElementById('questionsContainer').appendChild(element);
+        })
+    }
+
+    AddQuestion();
+</script>
