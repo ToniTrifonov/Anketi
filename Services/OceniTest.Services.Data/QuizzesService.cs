@@ -12,10 +12,12 @@
     public class QuizzesService : IQuizzesService
     {
         private readonly IDeletableEntityRepository<Quiz> quizzesRepository;
+        private readonly IDeletableEntityRepository<Question> questionsRepository;
 
-        public QuizzesService(IDeletableEntityRepository<Quiz> quizzesRepository)
+        public QuizzesService(IDeletableEntityRepository<Quiz> quizzesRepository, IDeletableEntityRepository<Question> questionsRepository)
         {
             this.quizzesRepository = quizzesRepository;
+            this.questionsRepository = questionsRepository;
         }
 
         public async Task CreateAsync(CreateQuizInputModel input)
@@ -28,8 +30,22 @@
                 CategoryId = input.CategoryId,
             };
 
+            var inputQuestions = input.Questions;
+
+            foreach (var inputQuestion in inputQuestions)
+            {
+                var question = new Question()
+                {
+                    Description = inputQuestion.Description,
+                    QuizId = quiz.Id,
+                };
+
+                await this.questionsRepository.AddAsync(question);
+            }
+
             await this.quizzesRepository.AddAsync(quiz);
             await this.quizzesRepository.SaveChangesAsync();
+            await this.questionsRepository.SaveChangesAsync();
         }
 
         public async Task DeleteAsync(string id)

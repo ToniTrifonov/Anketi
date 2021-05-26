@@ -48,13 +48,18 @@
 </div>
 
 <script type="text/javascript">
+    var questionsCount = 0;
+    var answersCount = 0;
+
     function AddQuestion() {
         document.getElementById('addQuestionButton').addEventListener('click', function (event) {
             event.preventDefault();
             var element = document.createElement('tr');
             element.innerHTML =
-                '<td><div>Question</div></td><td><div><textarea placeholder="Enter your question here"></textarea></div></td><button class="btn btn-danger">Remove</button><button class="btn btn-success">+</button>';
+                `<td><div><strong>Q${questionsCount + 1}.</strong></div></td><td><div><textarea type="text" name="Questions[${questionsCount}].Description" placeholder="Enter your question here"></textarea></div></td><button class="btn btn-danger">Remove</button><button class="btn btn-success">+</button>`;
             document.querySelector('#questionsContainer table tbody').appendChild(element);
+
+            questionsCount++;
         })
     }
 
@@ -68,8 +73,6 @@
                 var element = document.createElement('textarea');
                 element.setAttribute('placeholder', 'Enter answer option here...');
                 event.target.parentNode.appendChild(element);
-            } else if (event.target.textContent == '-') {
-
             }
         })
     }
