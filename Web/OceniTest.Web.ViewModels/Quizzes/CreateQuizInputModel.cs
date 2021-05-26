@@ -4,6 +4,7 @@
     using System.ComponentModel.DataAnnotations;
 
     using OceniTest.Web.ViewModels.Categories;
+    using OceniTest.Web.ViewModels.Questions;
 
     public class CreateQuizInputModel
     {
@@ -24,5 +25,7 @@
         public string CategoryId { get; set; }
 
         public IEnumerable<KeyValuePair<string, string>> Categories { get; set; }
+
+        public IEnumerable<QuestionViewModel> Questions { get; set; }
     }
 }

@@ -39,16 +39,6 @@
         <div id="questionsContainer">
             <table>
                 <tbody>
-                    <tr>
-                        <td>
-                            <div>Question</div>
-                        </td>
-                        <td>
-                            <div>
-                                <textarea placeholder="Enter your question here"></textarea>
-                            </div>
-                        </td>
-                    </tr>
                 </tbody>
             </table>
         </div>
@@ -61,12 +51,29 @@
     function AddQuestion() {
         document.getElementById('addQuestionButton').addEventListener('click', function (event) {
             event.preventDefault();
-            var element = document.createElement('div');
+            var element = document.createElement('tr');
             element.innerHTML =
-                '<table><tbody><tr><td><div>Question</div></td><td><div><textarea placeholder="Enter your question here"></textarea></div></td></tr></tbody></table>';
-            document.getElementById('questionsContainer').appendChild(element);
+                '<td><div>Question</div></td><td><div><textarea placeholder="Enter your question here"></textarea></div></td><button class="btn btn-danger">Remove</button><button class="btn btn-success">+</button>';
+            document.querySelector('#questionsContainer table tbody').appendChild(element);
+        })
+    }
+
+    function HandleEvents() {
+        document.getElementById('questionsContainer').addEventListener('click', function (event) {
+            event.preventDefault();
+            if (event.target.textContent == 'Remove') {
+                var elementToRemove = event.target.parentNode;
+                document.querySelector('#questionsContainer table tbody').removeChild(elementToRemove);
+            } else if (event.target.textContent == '+') {
+                var element = document.createElement('textarea');
+                element.setAttribute('placeholder', 'Enter answer option here...');
+                event.target.parentNode.appendChild(element);
+            } else if (event.target.textContent == '-') {
+
+            }
         })
     }
 
     AddQuestion();
+    HandleEvents();
 </script>

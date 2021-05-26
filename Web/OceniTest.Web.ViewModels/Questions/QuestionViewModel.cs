@@ -6,13 +6,8 @@
     using OceniTest.Services.Mapping;
     using OceniTest.Web.ViewModels.Answers;
 
-    public class QuestionViewModel : IMapFrom<Question>
+    public class QuestionViewModel
     {
-        public QuestionViewModel()
-        {
-            this.Answers = new HashSet<AnswerViewModel>();
-        }
-
         public string Description { get; set; }
 
         public IEnumerable<AnswerViewModel> Answers { get; set; }
