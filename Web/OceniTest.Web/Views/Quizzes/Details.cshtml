@@ -7,13 +7,19 @@
 <h1>@this.ViewData["Title"]</h1>
 
 <div>
-    <label asp-for="Name"></label> : @Model.Name
-    <label asp-for="Description"></label> : @Model.Description
-    <label asp-for="Title"></label> : @Model.Title
-    <label asp-for="CreatedOn"></label> : @Model.CreatedOn
-    <label asp-for="ModifiedOn"></label> : @Model.ModifiedOn
-    <label asp-for="QuestionsCount"></label> : @Model.QuestionsCount
-    <label asp-for="UsersCount"></label> : @Model.UsersCount
+    <strong><label asp-for="Name"></label></strong>: @Model.Name
+    <br />
+    <strong><label asp-for="Description"></label></strong>: @Model.Description
+    <br />
+    <strong><label asp-for="Title"></label></strong>: @Model.Title
+    <br />
+    <strong><label asp-for="CreatedOn"></label></strong>: @Model.CreatedOn
+    <br />
+    <strong><label asp-for="ModifiedOn"></label></strong>: @Model.ModifiedOn
+    <br />
+    <strong><label asp-for="QuizQuestionsCount"></label></strong>: @Model.QuizQuestionsCount
+    <br />
+    <strong><label asp-for="UsersCount"></label></strong>: @Model.UsersCount
 </div>
 <br />
 <a class="btn btn-primary" asp-action="All">Back to All</a>

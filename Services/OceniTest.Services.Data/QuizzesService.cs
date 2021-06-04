@@ -3,13 +3,13 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
-
+    using AutoMapper;
     using OceniTest.Data.Common.Repositories;
     using OceniTest.Data.Models;
     using OceniTest.Services.Mapping;
     using OceniTest.Web.ViewModels.Quizzes;
 
-    public class QuizzesService : IQuizzesService
+    public class QuizzesService : IQuizzesService, IHaveCustomMappings
     {
         private readonly IDeletableEntityRepository<Quiz> quizzesRepository;
         private readonly IDeletableEntityRepository<Question> questionsRepository;
@@ -104,7 +104,7 @@
                     Name = x.Name,
                     CreatedOn = x.CreatedOn,
                     ModifiedOn = x.ModifiedOn != null ? x.ModifiedOn : x.CreatedOn,
-                    QuestionsCount = x.QuizQuestions.Count,
+                    QuestionsCount = this.questionsRepository.All().Where(q => q.QuizId == x.Id).Count(),
                 }).ToList();
 
             return quizzes;
@@ -120,7 +120,7 @@
                     Id = x.Id,
                     Name = x.Name,
                     CreatedOn = x.CreatedOn,
-                    ModifiedOn = x.ModifiedOn,
+                    ModifiedOn = x.ModifiedOn != null ? x.ModifiedOn : x.CreatedOn,
                     QuestionsCount = this.questionsRepository.All().Where(q => q.QuizId == x.Id).Count(),
                 })
                 .ToList();
@@ -135,6 +135,12 @@
                 .FirstOrDefault();
 
             return quiz;
+        }
+
+        public void CreateMappings(IProfileExpression configuration)
+        {
+            configuration.CreateMap<SingleQuizViewModel, Quiz>()
+                .ForMember(x => x.ModifiedOn, opt => opt.MapFrom(src => src.ModifiedOn != null ? src.ModifiedOn : src.CreatedOn));
         }
     }
 }

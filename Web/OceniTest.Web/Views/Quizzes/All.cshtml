@@ -8,11 +8,17 @@
 @foreach (var item in Model)
 {
     <div id="@item.Id">
-        <label asp-for="@item.Name"></label> : @item.Name
-        <label asp-for="@item.CreatedOn"></label> : @item.CreatedOn
-        <label asp-for="@item.ModifiedOn"></label> : @item.ModifiedOn
-        <label asp-for="@item.QuestionsCount"></label> : @item.QuestionsCount
+        <strong><label asp-for="@item.Name"></label></strong>: @item.Name
+        <br />
+        <strong><label asp-for="@item.CreatedOn"></label></strong>: @item.CreatedOn
+        <br />
+        <strong><label asp-for="@item.ModifiedOn"></label></strong>: @item.ModifiedOn
+        <br />
+        <strong><label asp-for="@item.QuestionsCount"></label></strong>: @item.QuestionsCount
+        <br />
         <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.Id">View</a>
     </div>
+
+    <hr />
 }
 
