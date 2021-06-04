@@ -3,11 +3,12 @@
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using AutoMapper;
     using OceniTest.Data.Models;
     using OceniTest.Services.Mapping;
     using OceniTest.Web.ViewModels.Questions;
 
-    public class SingleQuizViewModel : IMapFrom<Quiz>
+    public class SingleQuizViewModel : IMapFrom<Quiz>, IHaveCustomMappings
     {
         public SingleQuizViewModel()
         {
@@ -36,5 +37,11 @@
         public int UsersCount { get; set; }
 
         public IEnumerable<QuestionViewModel> Questions { get; set; }
+
+        public void CreateMappings(IProfileExpression configuration)
+        {
+            configuration.CreateMap<Quiz, SingleQuizViewModel>()
+                            .ForMember(x => x.ModifiedOn, opt => opt.MapFrom(src => src.ModifiedOn != null ? src.ModifiedOn : src.CreatedOn));
+        }
     }
 }

@@ -9,7 +9,7 @@
     using OceniTest.Services.Mapping;
     using OceniTest.Web.ViewModels.Quizzes;
 
-    public class QuizzesService : IQuizzesService, IHaveCustomMappings
+    public class QuizzesService : IQuizzesService
     {
         private readonly IDeletableEntityRepository<Quiz> quizzesRepository;
         private readonly IDeletableEntityRepository<Question> questionsRepository;
@@ -135,12 +135,6 @@
                 .FirstOrDefault();
 
             return quiz;
-        }
-
-        public void CreateMappings(IProfileExpression configuration)
-        {
-            configuration.CreateMap<SingleQuizViewModel, Quiz>()
-                .ForMember(x => x.ModifiedOn, opt => opt.MapFrom(src => src.ModifiedOn != null ? src.ModifiedOn : src.CreatedOn));
         }
     }
 }
