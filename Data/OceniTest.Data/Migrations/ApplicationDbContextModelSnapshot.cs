@@ -19,21 +19,6 @@ namespace OceniTest.Data.Migrations
                 .HasAnnotation("ProductVersion", "5.0.6")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("ApplicationUserQuiz", b =>
-                {
-                    b.Property<string>("QuizUsersId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("UserQuizzesId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("QuizUsersId", "UserQuizzesId");
-
-                    b.HasIndex("UserQuizzesId");
-
-                    b.ToTable("ApplicationUserQuiz");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.Property<int>("Id")
@@ -421,11 +406,16 @@ namespace OceniTest.Data.Migrations
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
 
                     b.HasIndex("IsDeleted");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Quizzes");
                 });
@@ -499,21 +489,6 @@ namespace OceniTest.Data.Migrations
                     b.ToTable("UsersQuizzes");
                 });
 
-            modelBuilder.Entity("ApplicationUserQuiz", b =>
-                {
-                    b.HasOne("OceniTest.Data.Models.ApplicationUser", null)
-                        .WithMany()
-                        .HasForeignKey("QuizUsersId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("OceniTest.Data.Models.Quiz", null)
-                        .WithMany()
-                        .HasForeignKey("UserQuizzesId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("OceniTest.Data.Models.ApplicationRole", null)
@@ -580,13 +555,13 @@ namespace OceniTest.Data.Migrations
                         .WithMany("QuizFeedbacks")
                         .HasForeignKey("QuizId");
 
-                    b.HasOne("OceniTest.Data.Models.ApplicationUser", "User")
+                    b.HasOne("OceniTest.Data.Models.ApplicationUser", "ApplicationUser")
                         .WithMany("UserFeedbacks")
                         .HasForeignKey("UserId");
 
-                    b.Navigation("Quiz");
+                    b.Navigation("ApplicationUser");
 
-                    b.Navigation("User");
+                    b.Navigation("Quiz");
                 });
 
             modelBuilder.Entity("OceniTest.Data.Models.Question", b =>
@@ -603,6 +578,12 @@ namespace OceniTest.Data.Migrations
                     b.HasOne("OceniTest.Data.Models.Category", "Category")
                         .WithMany("CategoryQuizzes")
                         .HasForeignKey("CategoryId");
+
+                    b.HasOne("OceniTest.Data.Models.ApplicationUser", "ApplicationUser")
+                        .WithMany("UserQuizzes")
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("ApplicationUser");
 
                     b.Navigation("Category");
                 });
@@ -631,6 +612,8 @@ namespace OceniTest.Data.Migrations
                     b.Navigation("Roles");
 
                     b.Navigation("UserFeedbacks");
+
+                    b.Navigation("UserQuizzes");
                 });
 
             modelBuilder.Entity("OceniTest.Data.Models.Category", b =>

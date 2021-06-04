@@ -10,6 +10,8 @@
     {
         public async Task SeedAsync(ApplicationDbContext dbContext, IServiceProvider serviceProvider)
         {
+            await dbContext.Categories.AddAsync(new Category { Name = "Survey" });
+
             if (dbContext.Settings.Any())
             {
                 return;

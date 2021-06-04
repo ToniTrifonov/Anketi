@@ -471,3 +471,4 @@ C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\We
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web\obj\Debug\net5.0\Razor\Views\Quizzes\Start.cshtml.g.cs
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web\obj\Debug\net5.0\Razor\Views\Feedbacks\Submit.cshtml.g.cs
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web\obj\Debug\net5.0\Razor\Views\Feedbacks\ThankYou.cshtml.g.cs
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web\obj\Debug\net5.0\Razor\Views\Quizzes\My.cshtml.g.cs

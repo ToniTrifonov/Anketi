@@ -85,6 +85,17 @@
             {
                 foreignKey.DeleteBehavior = DeleteBehavior.Restrict;
             }
+
+            builder.Entity<ApplicationUser>(entity =>
+            {
+                entity.HasMany(e => e.UserQuizzes)
+                    .WithOne(e => e.ApplicationUser)
+                    .HasForeignKey(e => e.UserId);
+
+                entity.HasMany(e => e.UserFeedbacks)
+                    .WithOne(e => e.ApplicationUser)
+                    .HasForeignKey(e => e.UserId);
+            });
         }
 
         private static void SetIsDeletedQueryFilter<T>(ModelBuilder builder)

@@ -7,7 +7,7 @@
 
     public interface IQuizzesService
     {
-        Task CreateAsync(CreateQuizInputModel input);
+        Task CreateAsync(CreateQuizInputModel input, string userId);
 
         IEnumerable<QuizViewModel> GetAll();
 
@@ -16,5 +16,7 @@
         Task EditAsync(string id, EditQuizInputModel input);
 
         Task DeleteAsync(string id);
+
+        IEnumerable<QuizViewModel> GetMySurveys(string userId);
     }
 }

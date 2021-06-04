@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<OceniTest.Web.ViewModels.Quizzes.QuizViewModel>
+
 @{
-    this.ViewData["Title"] = "All Quizzes";
+    this.ViewData["Title"] = "My Surveys";
 }
 
 <h1>@this.ViewData["Title"]</h1>
@@ -15,4 +16,3 @@
         <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.Id">View</a>
     </div>
 }
-

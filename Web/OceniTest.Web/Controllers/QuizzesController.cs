@@ -1,6 +1,7 @@
 ﻿namespace OceniTest.Web.Controllers
 {
     using System.Collections.Generic;
+    using System.Security.Claims;
     using System.Threading.Tasks;
 
     using Microsoft.AspNetCore.Authorization;
@@ -37,7 +38,9 @@
                 return this.View(input);
             }
 
-            await this.quizzesService.CreateAsync(input);
+            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+            await this.quizzesService.CreateAsync(input, userId);
             return this.RedirectToAction("All");
         }
 
@@ -100,6 +103,15 @@
             }
 
             return this.RedirectToAction("Submit", "Feedbacks", new { id });
+        }
+
+        public IActionResult My()
+        {
+            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+            var surveys = this.quizzesService.GetMySurveys(userId);
+
+            return this.View(surveys);
         }
     }
 }

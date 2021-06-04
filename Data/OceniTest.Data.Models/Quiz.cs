@@ -11,7 +11,6 @@
         {
             this.Id = Guid.NewGuid().ToString();
             this.QuizQuestions = new HashSet<Question>();
-            this.QuizUsers = new HashSet<ApplicationUser>();
             this.QuizFeedbacks = new HashSet<Feedback>();
         }
 
@@ -25,9 +24,11 @@
 
         public string CategoryId { get; set; }
 
-        public ICollection<Question> QuizQuestions { get; set; }
+        public ApplicationUser ApplicationUser { get; set; }
 
-        public ICollection<ApplicationUser> QuizUsers { get; set; }
+        public string UserId { get; set; }
+
+        public ICollection<Question> QuizQuestions { get; set; }
 
         public ICollection<Feedback> QuizFeedbacks { get; set; }
     }

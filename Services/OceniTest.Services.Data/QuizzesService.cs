@@ -25,7 +25,7 @@
             this.answersRepository = answersRepository;
         }
 
-        public async Task CreateAsync(CreateQuizInputModel input)
+        public async Task CreateAsync(CreateQuizInputModel input, string userId)
         {
             var quiz = new Quiz()
             {
@@ -33,6 +33,7 @@
                 Title = input.Title,
                 Description = input.Description,
                 CategoryId = input.CategoryId,
+                UserId = userId,
             };
 
             var inputQuestions = input.Questions;
@@ -104,10 +105,25 @@
                     CreatedOn = x.CreatedOn,
                     ModifiedOn = x.ModifiedOn != null ? x.ModifiedOn : x.CreatedOn,
                     QuestionsCount = x.QuizQuestions.Count,
-                    SubmitsCount = x.QuizUsers.Count,
                 }).ToList();
 
             return quizzes;
+        }
+
+        public IEnumerable<QuizViewModel> GetMySurveys(string userId)
+        {
+            return this.quizzesRepository
+                .All()
+                .Where(x => x.UserId == userId)
+                .Select(x => new QuizViewModel()
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    CreatedOn = x.CreatedOn,
+                    ModifiedOn = x.ModifiedOn,
+                    QuestionsCount = this.questionsRepository.All().Where(q => q.QuizId == x.Id).Count(),
+                })
+                .ToList();
         }
 
         public T GetQuizById<T>(string id)

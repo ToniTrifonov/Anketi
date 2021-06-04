@@ -15,7 +15,5 @@
         public DateTime? ModifiedOn { get; set; }
 
         public int QuestionsCount { get; set; }
-
-        public int SubmitsCount { get; set; }
     }
 }
