@@ -78,6 +78,7 @@
                     .filter(question => question.getAttribute('id') > questionNumber)
                     .map(question => {
                         question.setAttribute('id', question.getAttribute('id') - 1);
+                        question.querySelector('td div textarea').setAttribute('name', `Questions[${question.getAttribute('id')}].Description`);
                         question.querySelector('td div strong').textContent = `Q${Number(question.getAttribute('id')) + 1}`;
                     });
 
@@ -85,6 +86,8 @@
             } else if (event.target.textContent == '+') {
                 var element = document.createElement('textarea');
                 element.setAttribute('placeholder', 'Enter answer option here...');
+                var answersCount = [...event.target.parentNode.querySelectorAll('textarea')].length;
+                element.setAttribute('name', `Questions[${event.target.parentNode.getAttribute('id')}].Answers[${answersCount - 1}].Description`);
 
                 event.target.parentNode.appendChild(element);
             }
