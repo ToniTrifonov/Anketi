@@ -1,0 +1,137 @@
+[33mcommit 66248a4c2e6d9c693f5345efef7ec6e0dffbe4a2[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Toni Trifonov <toni.trifonov@abv.bg>
+Date:   Fri Jun 4 19:24:48 2021 +0300
+
+    Implement Custom Mapper
+
+[33mcommit aa475627e3959f1c8c239fa46d3d0f57baba0f6c[m
+Author: Toni Trifonov <toni.trifonov@abv.bg>
+Date:   Fri Jun 4 19:04:20 2021 +0300
+
+    Implement Small Fixes And Styling
+
+[33mcommit 979826e27667bbeaa66b3be05341a86b5055b181[m
+Author: Toni Trifonov <toni.trifonov@abv.bg>
+Date:   Fri Jun 4 14:44:20 2021 +0300
+
+    Implement My Surveys Page
+
+[33mcommit 853e13ad73ad8622c6d2218aea0836146618ec62[m
+Author: Toni Trifonov <toni.trifonov@abv.bg>
+Date:   Fri Jun 4 09:11:02 2021 +0300
+
+    Implement Add Answers to Questions
+
+[33mcommit 7ea87ad5ba9a7a1ee2bb96d8a4103f3d4f84a576[m
+Author: Toni Trifonov <toni.trifonov@abv.bg>
+Date:   Fri May 28 14:41:22 2021 +0300
+
+    Fix Question Number When Question Is Removed
+
+[33mcommit 68b256539f1044f55f06cf7055b46c8e1010640a[m
+Author: Toni Trifonov <toni.trifonov@abv.bg>
+Date:   Wed May 26 18:13:11 2021 +0300
+
+    Implement Add Question To Quiz
+
+[33mcommit 68bd04c7f70e0e0830daaa0eea5c03c3eaf883c0[m
+Author: Toni Trifonov <toni.trifonov@abv.bg>
+Date:   Wed May 26 14:27:50 2021 +0300
+
+    Implement Add Answer Option To Question
+
+[33mcommit d0cf4d8b65691c7a5b5a0b7cc3bd2f46148e7d2a[m
+Author: Toni Trifonov <toni.trifonov@abv.bg>
+Date:   Tue May 25 20:02:11 2021 +0300
+
+    Add Question Dynamically
+
+[33mcommit 5edacff92e2d3688901a1e5b9e5677e378f1b037[m
+Author: Toni Trifonov <toni.trifonov@abv.bg>
+Date:   Fri May 21 16:56:40 2021 +0300
+
+    Add Validation
+
+[33mcommit 9fb190a793e506f0fad3ea0545436f0db213a8b3[m
+Author: Toni Trifonov <toni.trifonov@abv.bg>
+Date:   Thu May 20 20:08:37 2021 +0300
+
+    Implement Drop-down List Options
+
+[33mcommit 6b84eb92684defd6d9244ab5edbc52c381250987[m
+Author: Toni Trifonov <toni.trifonov@abv.bg>
+Date:   Thu May 20 15:31:28 2021 +0300
+
+    Implement Thank You Page and Confirmed Delete
+
+[33mcommit 622518e2e94e866ea1d81c85a8e64e8bf0b8d9fd[m
+Author: Toni Trifonov <toni.trifonov@abv.bg>
+Date:   Wed May 19 16:20:01 2021 +0300
+
+    Implement Feedback Page
+
+[33mcommit a41001653c17dc127d0f89b385ac5e8533ddf4c9[m
+Author: Toni Trifonov <toni.trifonov@abv.bg>
+Date:   Tue May 18 22:26:38 2021 +0300
+
+    Implement Start Quiz Page
+
+[33mcommit 7955c67ebcb2f377b650acb52dffae3cd84acf20[m
+Author: Toni Trifonov <toni.trifonov@abv.bg>
+Date:   Tue May 18 13:07:51 2021 +0300
+
+    Implement Delete Option
+
+[33mcommit 2037bad14206772f21792a6ae75e70ac37d83ec4[m
+Author: Toni Trifonov <toni.trifonov@abv.bg>
+Date:   Tue May 18 12:53:06 2021 +0300
+
+    Implement Edit Page
+
+[33mcommit 5ab2da6d5dd769d53288956208c4b388b885262b[m
+Author: Toni Trifonov <toni.trifonov@abv.bg>
+Date:   Mon May 17 19:49:40 2021 +0300
+
+    Add navigation buttons and user authentication
+
+[33mcommit 78819ea5a91778a03bfefcd16f086c9dca09941d[m
+Author: Toni Trifonov <toni.trifonov@abv.bg>
+Date:   Mon May 17 14:44:32 2021 +0300
+
+    Implement Single Quiz Details Page
+
+[33mcommit efe6aa1d846cc0294618ea49bdccc0a7ca316f2d[m
+Author: Toni Trifonov <toni.trifonov@abv.bg>
+Date:   Mon May 17 13:44:20 2021 +0300
+
+    Implement All Quizzes Page
+
+[33mcommit 61b7d7380cdf0844846df90560045f8f6ea1c634[m
+Author: Toni Trifonov <toni.trifonov@abv.bg>
+Date:   Sun May 16 20:47:50 2021 +0300
+
+    Implement Create Form
+
+[33mcommit b647eeae85ad7cb372ae35115c7a015d5cfdec57[m
+Author: Toni Trifonov <toni.trifonov@abv.bg>
+Date:   Fri May 14 16:58:33 2021 +0300
+
+    Implement Entity Id Generator
+
+[33mcommit 3488edcd30a08b521cc4ffdfdde2d95575486167[m
+Author: Toni Trifonov <toni.trifonov@abv.bg>
+Date:   Fri May 14 16:04:40 2021 +0300
+
+    Create DataBase
+
+[33mcommit dfb596b96b85d8cf406adda43517fcd889a6b165[m
+Author: Toni Trifonov <toni.trifonov@abv.bg>
+Date:   Thu May 6 19:49:16 2021 +0300
+
+    Initial upload
+
+[33mcommit e79593534dd20ced936365e4e40e9a2081bedac7[m
+Author: Toni Trifonov <toni.trifonov@abv.bg>
+Date:   Thu May 6 19:24:49 2021 +0300
+
+    Initial commit

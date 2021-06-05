@@ -34,6 +34,7 @@
         [Display(Name = "Questions")]
         public int QuizQuestionsCount { get; set; }
 
+        [Display(Name = "Submissions")]
         public int UsersCount { get; set; }
 
         public IEnumerable<QuestionViewModel> Questions { get; set; }
