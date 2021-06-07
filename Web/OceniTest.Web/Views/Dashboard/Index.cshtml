@@ -1,0 +1,47 @@
+﻿@model OceniTest.Web.ViewModels.Dashboard.DashboardViewModel
+
+@{
+    this.ViewData["Title"] = "Thats your Dashboard!";
+}
+
+<h1 class="text-center">@this.ViewData["Title"]</h1>
+
+<hr />
+
+<section>
+    <table>
+        <thead>
+            <tr>
+                <th>Created Surveys</th>
+                <th>Total Submissions</th>
+                <th>Total Feedback</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.SurveysCount</td>
+                <td>@Model.SubmissionsCount</td>
+                <td>@Model.FeedbacksCount</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<hr />
+
+<section>
+    @foreach (var item in Model.RecentSurveys)
+    {
+        <div id="@item.Id">
+            <strong><label asp-for="@item.Name"></label></strong>: @item.Name
+            <br />
+            <strong><label asp-for="@item.CreatedOn"></label></strong>: @item.CreatedOn
+            <br />
+            <strong><label asp-for="@item.ModifiedOn"></label></strong>: @item.ModifiedOn
+            <br />
+            <strong><label asp-for="@item.QuestionsCount"></label></strong>: @item.QuestionsCount
+            <br />
+            <a class="btn btn-primary" asp-controller="Quizzes" asp-action="Details" asp-route-id="@item.Id">View</a>
+        </div>
+    }
+</section>

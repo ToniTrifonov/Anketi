@@ -18,5 +18,9 @@
         Task DeleteAsync(string id);
 
         IEnumerable<QuizViewModel> GetMySurveys(string userId);
+
+        IEnumerable<QuizViewModel> GetRecentAsync(string userId);
+
+        int GetCount(string userId);
     }
 }

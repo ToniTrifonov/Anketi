@@ -110,6 +110,15 @@
             return quizzes;
         }
 
+        public int GetCount(string userId)
+        {
+            return this.quizzesRepository
+                .All()
+                .Where(x => x.UserId == userId)
+                .ToList()
+                .Count();
+        }
+
         public IEnumerable<QuizViewModel> GetMySurveys(string userId)
         {
             return this.quizzesRepository
@@ -135,6 +144,24 @@
                 .FirstOrDefault();
 
             return quiz;
+        }
+
+        public IEnumerable<QuizViewModel> GetRecentAsync(string userId)
+        {
+            return this.quizzesRepository
+                .All()
+                .Where(x => x.UserId == userId)
+                .OrderByDescending(x => x.CreatedOn)
+                .Take(4)
+                .Select(x => new QuizViewModel()
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    CreatedOn = x.CreatedOn,
+                    ModifiedOn = x.ModifiedOn != null ? x.ModifiedOn : x.CreatedOn,
+                    QuestionsCount = this.questionsRepository.All().Where(q => q.QuizId == x.Id).Count(),
+                })
+                .ToList();
         }
     }
 }

@@ -9,5 +9,7 @@
         Task SubmitAsync(string quizId, SubmitFeedbackInputModel input);
 
         T GetById<T>(string id);
+
+        int GetCount(string userId);
     }
 }
