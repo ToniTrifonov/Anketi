@@ -17,10 +17,10 @@
 
         Task DeleteAsync(string id);
 
-        IEnumerable<QuizViewModel> GetMySurveys(string userId);
+        IEnumerable<QuizViewModel> GetMySurveys(string userId, int pageNumber, int pageSize);
 
         IEnumerable<QuizViewModel> GetRecentAsync(string userId);
 
-        int GetCount(string userId);
+        int GetCount(string userId = null);
     }
 }

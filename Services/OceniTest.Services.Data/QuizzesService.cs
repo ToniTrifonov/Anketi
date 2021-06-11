@@ -110,20 +110,31 @@
             return quizzes;
         }
 
-        public int GetCount(string userId)
+        public int GetCount(string userId = null)
         {
-            return this.quizzesRepository
+            if (userId != null)
+            {
+                return this.quizzesRepository
                 .All()
                 .Where(x => x.UserId == userId)
                 .ToList()
                 .Count();
+            }
+
+            return this.quizzesRepository
+                .All()
+                .ToList()
+                .Count();
         }
 
-        public IEnumerable<QuizViewModel> GetMySurveys(string userId)
+        public IEnumerable<QuizViewModel> GetMySurveys(string userId, int pageNumber, int pageSize)
         {
             return this.quizzesRepository
                 .All()
                 .Where(x => x.UserId == userId)
+                .OrderByDescending(x => x.CreatedOn)
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
                 .Select(x => new QuizViewModel()
                 {
                     Id = x.Id,

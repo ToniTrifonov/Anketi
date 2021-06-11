@@ -1,4 +1,4 @@
-﻿@model IEnumerable<OceniTest.Web.ViewModels.Quizzes.QuizViewModel>
+﻿@model OceniTest.Web.ViewModels.Pagination.PaginatedListViewModel<OceniTest.Web.ViewModels.Quizzes.QuizViewModel>
 
 @{
     this.ViewData["Title"] = "My Surveys";
@@ -8,15 +8,21 @@
 
 @foreach (var item in Model)
 {
-<div id="@item.Id">
-    <strong><label asp-for="@item.Name"></label></strong>: @item.Name
-    <br />
-    <strong><label asp-for="@item.CreatedOn"></label></strong>: @item.CreatedOn
-    <br />
-    <strong><label asp-for="@item.ModifiedOn"></label></strong>: @item.ModifiedOn
-    <br />
-    <strong><label asp-for="@item.QuestionsCount"></label></strong>: @item.QuestionsCount
-    <br />
-    <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.Id">View</a>
-</div>
+    <div id="@item.Id">
+        <strong><label asp-for="@item.Name"></label></strong>: @item.Name
+        <br />
+        <strong><label asp-for="@item.CreatedOn"></label></strong>: @item.CreatedOn
+        <br />
+        <strong><label asp-for="@item.ModifiedOn"></label></strong>: @item.ModifiedOn
+        <br />
+        <strong><label asp-for="@item.QuestionsCount"></label></strong>: @item.QuestionsCount
+        <br />
+        <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.Id">View</a>
+    </div>
 }
+
+<p><a class="btn btn-primary" asp-action="Create">Create Survey</a></p>
+
+<div>
+    <partial name="_Pagination" model="@Model" />
+</div>

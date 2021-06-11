@@ -7,6 +7,7 @@
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
     using OceniTest.Services.Data;
+    using OceniTest.Web.ViewModels.Pagination;
     using OceniTest.Web.ViewModels.Quizzes;
 
     public class QuizzesController : BaseController
@@ -105,13 +106,18 @@
             return this.RedirectToAction("Submit", "Feedbacks", new { id });
         }
 
-        public IActionResult My()
+        public IActionResult My(int id = 1)
         {
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
 
-            var surveys = this.quizzesService.GetMySurveys(userId);
+            var pageSize = 6;
 
-            return this.View(surveys);
+            var surveys = this.quizzesService.GetMySurveys(userId, id, pageSize);
+            var surveysCount = this.quizzesService.GetCount();
+
+            var paginatedList = new PaginatedListViewModel<QuizViewModel>(surveys, surveysCount, id, pageSize);
+
+            return this.View(paginatedList);
         }
     }
 }
