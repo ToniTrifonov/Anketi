@@ -1,16 +1,11 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using OceniTest.Common;
-using OceniTest.Services.Data;
-using OceniTest.Web.ViewModels.Dashboard;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
-
-namespace OceniTest.Web.Controllers
+﻿namespace OceniTest.Web.Controllers
 {
+    using System.Security.Claims;
+
+    using Microsoft.AspNetCore.Mvc;
+    using OceniTest.Services.Data;
+    using OceniTest.Web.ViewModels.Dashboard;
+
     public class DashboardController : BaseController
     {
         private readonly IQuizzesService quizzesService;

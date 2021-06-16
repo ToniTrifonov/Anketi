@@ -4,10 +4,16 @@
     using System.ComponentModel.DataAnnotations;
 
     using OceniTest.Web.ViewModels.Categories;
+    using OceniTest.Web.ViewModels.CustomValidation;
     using OceniTest.Web.ViewModels.Questions;
 
     public class CreateQuizInputModel
     {
+        public CreateQuizInputModel()
+        {
+            this.Questions = new List<QuestionViewModel>();
+        }
+
         [Required]
         [MinLength(3, ErrorMessage = "Survey name must be at least 3 characters long.")]
         public string Name { get; set; }
@@ -26,6 +32,7 @@
 
         public IEnumerable<KeyValuePair<string, string>> Categories { get; set; }
 
-        public IEnumerable<QuestionViewModel> Questions { get; set; }
+        [QuestionsValidation(ErrorMessage = "A survey must have at least 1 question!")]
+        public List<QuestionViewModel> Questions { get; set; }
     }
 }

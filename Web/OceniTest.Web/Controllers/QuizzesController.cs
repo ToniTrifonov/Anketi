@@ -1,5 +1,6 @@
 ﻿namespace OceniTest.Web.Controllers
 {
+    using System;
     using System.Collections.Generic;
     using System.Security.Claims;
     using System.Threading.Tasks;
@@ -36,6 +37,7 @@
         {
             if (!this.ModelState.IsValid)
             {
+                input.Categories = this.categoriesService.GetAll();
                 return this.View(input);
             }
 
@@ -108,12 +110,21 @@
 
         public IActionResult My(int id = 1)
         {
+            var pageSize = 6;
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
 
-            var pageSize = 6;
+            var surveysCount = this.quizzesService.GetCount();
+
+            if (id <= 1)
+            {
+                id = 1;
+            }
+            else if (id > (int)Math.Ceiling(surveysCount / (double)pageSize))
+            {
+                id = (int)Math.Ceiling(surveysCount / (double)pageSize);
+            }
 
             var surveys = this.quizzesService.GetMySurveys(userId, id, pageSize);
-            var surveysCount = this.quizzesService.GetCount();
 
             var paginatedList = new PaginatedListViewModel<QuizViewModel>(surveys, surveysCount, id, pageSize);
 

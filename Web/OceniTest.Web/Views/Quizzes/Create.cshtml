@@ -34,16 +34,18 @@
             </select>
         </div>
 
-        <button id="addQuestionButton">Add Question</button>
-
         <div id="questionsContainer">
-            <table>
+            <label asp-for="Questions"></label>
+            <table name="Questions" id="Questions">
                 <tbody>
                 </tbody>
             </table>
+            <span asp-validation-for="Questions" class="alert-danger"></span>
         </div>
 
-        <input type="submit" asp-action="Create" />
+        <button id="addQuestionButton">Add Question</button>
+
+        <input type="submit" asp-action="Create" value="Submit" />
     </form>
 </div>
 

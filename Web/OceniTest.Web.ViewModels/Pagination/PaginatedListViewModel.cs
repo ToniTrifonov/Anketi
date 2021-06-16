@@ -1,12 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OceniTest.Web.ViewModels.Pagination
+﻿namespace OceniTest.Web.ViewModels.Pagination
 {
+    using System;
+    using System.Collections.Generic;
+
     public class PaginatedListViewModel<T> : List<T>
     {
         public PaginatedListViewModel(IEnumerable<T> items, int count, int pageIndex, int pageSize)

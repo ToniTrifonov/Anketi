@@ -1,10 +1,9 @@
-﻿using OceniTest.Web.ViewModels.Quizzes;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace OceniTest.Web.ViewModels.Dashboard
+﻿namespace OceniTest.Web.ViewModels.Dashboard
 {
+    using System.Collections.Generic;
+
+    using OceniTest.Web.ViewModels.Quizzes;
+
     public class DashboardViewModel
     {
         public int SurveysCount { get; set; }
