@@ -6,6 +6,7 @@
 
     public class AnswerViewModel
     {
+        [Required(ErrorMessage = "Please fill the missing answer description!")]
         public string Description { get; set; }
     }
 }
