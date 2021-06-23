@@ -15,11 +15,19 @@
     {
         private readonly IQuizzesService quizzesService;
         private readonly ICategoriesService categoriesService;
+        private readonly IQuestionsService questionsService;
+        private readonly IAnswersService answersService;
 
-        public QuizzesController(IQuizzesService quizzesService, ICategoriesService categoriesService)
+        public QuizzesController(
+            IQuizzesService quizzesService,
+            ICategoriesService categoriesService,
+            IQuestionsService questionsService,
+            IAnswersService answersService)
         {
             this.quizzesService = quizzesService;
             this.categoriesService = categoriesService;
+            this.questionsService = questionsService;
+            this.answersService = answersService;
         }
 
         public IActionResult Create()
@@ -44,7 +52,7 @@
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
 
             await this.quizzesService.CreateAsync(input, userId);
-            return this.RedirectToAction("All");
+            return this.RedirectToAction("My");
         }
 
         public IActionResult All()
@@ -66,6 +74,11 @@
             var quiz = this.quizzesService.GetQuizById<EditQuizInputModel>(id);
 
             quiz.Categories = this.categoriesService.GetAll();
+            quiz.Questions = this.questionsService.GetAllById(id);
+            foreach (var question in quiz.Questions)
+            {
+                question.Answers = this.answersService.GetAllById(question.Id);
+            }
 
             return this.View(quiz);
         }
@@ -75,6 +88,7 @@
         {
             if (!this.ModelState.IsValid)
             {
+                input.Categories = this.categoriesService.GetAll();
                 return this.View(input);
             }
 

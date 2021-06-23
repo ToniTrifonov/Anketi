@@ -5,13 +5,14 @@
 
     using OceniTest.Data.Models;
     using OceniTest.Services.Mapping;
+    using OceniTest.Web.ViewModels.CustomValidation;
     using OceniTest.Web.ViewModels.Questions;
 
     public class EditQuizInputModel : IMapFrom<Quiz>
     {
         public EditQuizInputModel()
         {
-            this.Questions = new HashSet<QuestionViewModel>();
+            this.Questions = new List<QuestionViewModel>();
         }
 
         [Required]
@@ -32,6 +33,7 @@
 
         public IEnumerable<KeyValuePair<string, string>> Categories { get; set; }
 
-        public IEnumerable<QuestionViewModel> Questions { get; set; }
+        [QuestionsValidation(ErrorMessage = "A survey must have at least 1 question!")]
+        public List<QuestionViewModel> Questions { get; set; }
     }
 }

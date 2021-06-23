@@ -14,6 +14,8 @@
             this.Answers = new List<AnswerViewModel>();
         }
 
+        public string Id { get; set; }
+
         [Required(ErrorMessage = "Please fill the missing question descriptions!")]
         public string Description { get; set; }
 

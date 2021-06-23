@@ -7,8 +7,6 @@
 <form id="createSurveyForm" method="post">
     <h1>@this.ViewData["Title"]</h1>
 
-    <span class="alert-danger" asp-validation-summary="All"></span>
-
     <label asp-for="Name"></label>
     <input asp-for="Name" />
     <span asp-validation-for="Name" class="alert-danger"></span>
@@ -114,7 +112,6 @@
             event.preventDefault();
 
             if (event.target.textContent == 'Remove') {
-                console.log(event.target.parentNode);
                 var elementToRemove = event.target.parentNode;
                 document.querySelector('#Questions').removeChild(elementToRemove);
                 var questionNumber = elementToRemove.getAttribute('id');

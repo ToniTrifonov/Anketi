@@ -77,6 +77,7 @@
             await this.quizzesRepository.SaveChangesAsync();
         }
 
+        ////TODO: When submitting edit form, edit existing questions with new ones from edit form input
         public async Task EditAsync(string id, EditQuizInputModel input)
         {
             var quizToEdit = this.quizzesRepository
@@ -87,8 +88,27 @@
             quizToEdit.Name = input.Name;
             quizToEdit.Title = input.Title;
             quizToEdit.Description = input.Description;
-            quizToEdit.Category = new Category { Name = input.Name };
+            quizToEdit.CategoryId = input.CategoryId;
+            foreach (var inputQuestion in input.Questions)
+            {
+                var question = new Question()
+                {
+                    Description = inputQuestion.Description,
+                    QuizId = quizToEdit.Id,
+                };
 
+                foreach (var inputAnswer in inputQuestion.Answers)
+                {
+                    var answer = new Answer()
+                    {
+                        Description = inputAnswer.Description,
+                        QuestionId = question.Id,
+                    };
+                }
+            }
+
+            await this.answersRepository.SaveChangesAsync();
+            await this.questionsRepository.SaveChangesAsync();
             await this.quizzesRepository.SaveChangesAsync();
         }
 

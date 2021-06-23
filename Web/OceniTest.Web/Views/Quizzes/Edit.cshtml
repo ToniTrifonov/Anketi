@@ -1,40 +1,154 @@
 ﻿@model OceniTest.Web.ViewModels.Quizzes.EditQuizInputModel
 
-@{ 
-    this.ViewData["Title"] = "Edit Quiz";
+@{
+    this.ViewData["Title"] = "Edit Survey";
     var categories = this.Model.Categories.Select(x => new SelectListItem(x.Value, x.Key));
 }
 
-<h1>@this.ViewData["Title"]</h1>
+<form id="editSurveyForm" method="post">
+    <h1>@this.ViewData["Title"]</h1>
 
-<div>
-    <form method="post">
-        <div class="alert-danger" asp-validation-summary="All"></div>
+    <label asp-for="Name"></label>
+    <input asp-for="Name" />
+    <span asp-validation-for="Name" class="alert-danger"></span>
 
-        <div class="col-md-6">
-            <label asp-for="Name"></label>
-            <input asp-for="Name" />
-            <span asp-validation-for="Name" class="alert-danger"></span>
-        </div>
+    <label asp-for="Title"></label>
+    <input asp-for="Title" />
+    <span asp-validation-for="Title" class="alert-danger"></span>
 
-        <div class="col-md-6">
-            <label asp-for="Title"></label>
-            <input asp-for="Title" />
-            <span asp-validation-for="Title" class="alert-danger"></span>
-        </div>
+    <label asp-for="Description"></label>
+    <textarea asp-for="Description"></textarea>
+    <span asp-validation-for="Description" class="alert-danger"></span>
 
-        <div class="col-md-6">
-            <label asp-for="Description"></label>
-            <textarea asp-for="Description"></textarea>
-            <span asp-validation-for="Description" class="alert-danger"></span>
-        </div>
+    <label asp-for="CategoryId"></label>
+    <select asp-for="CategoryId" asp-items="categories"></select>
+    <span asp-validation-for="CategoryId"></span>
 
-        <div class="col-md-6">
-            <label asp-for="CategoryId"></label>
-            <select asp-for="CategoryId" asp-items="categories">
-            </select>
-        </div>
+    <button id="addQuestionBtn">Add Question</button>
 
-        <input type="submit"/>
-    </form>
-</div>
+    <label asp-for="Questions"></label>
+    <section id="Questions" name="Questions">
+        @{
+            var questionsCount = 0;
+
+            @foreach (var question in Model.Questions)
+            {
+                <article id="@questionsCount" class="question">
+                    <label asp-for="Questions[questionsCount].Description">Q@(questionsCount + 1).</label>
+                    <textarea asp-for="Questions[questionsCount].Description" placeholder="Enter your question here">@question.Description</textarea>
+                    <span asp-validation-for="Questions[questionsCount].Description" class="alert-danger"></span>
+
+                    <button class="removeQuestionBtn btn btn-danger">Remove</button>
+                    <button class="addQuestionAnswer btn btn-success">+</button>
+
+                    @{
+                        var answersCount = 0;
+                    }
+
+                    @foreach (var answer in question.Answers)
+                    {
+                        <label asp-for="Questions[questionsCount].Answers[answersCount].Description">A@(answersCount + 1).</label>
+                        <textarea asp-for="Questions[questionsCount].Answers[answersCount].Description" placeholder="Enter your answer here" class="questionAnswer">@answer.Description</textarea>
+                        <span asp-validation-for="Questions[questionsCount].Answers[answersCount].Description" class="alert-danger"></span>
+
+                        answersCount++;
+                    }
+
+                    <span asp-validation-for="Questions[questionsCount].Answers" class="alert-danger"></span>
+                </article>
+
+                questionsCount++;
+            }
+        }
+    </section>
+    <span asp-validation-for="Questions" class="alert-danger"></span>
+</form>
+
+<button id="submitBtn" form="editSurveyForm" type="submit" asp-action="Edit">Submit</button>
+
+<script type="text/javascript">
+    var questionsCount = document.querySelectorAll('#Questions .question').length;
+
+    function AddQuestion() {
+        document.getElementById('addQuestionBtn').addEventListener('click', function (event) {
+            event.preventDefault();
+
+            var articleElement = document.createElement('article');
+
+            var labelElement = document.createElement('label');
+            var textareaElement = document.createElement('textarea');
+            var spanElement = document.createElement('span');
+            var removeButtonElement = document.createElement('button');
+            var addQuestionAnswerElement = document.createElement('button');
+
+            labelElement.setAttribute('for', `Questions[${questionsCount}].Description`);
+            labelElement.textContent = `Q${questionsCount + 1}.`
+            textareaElement.setAttribute('name', `Questions[${questionsCount}].Description`);
+            textareaElement.setAttribute('id', `Questions[${questionsCount}].Description`);
+            textareaElement.setAttribute('placeholder', 'Enter your question here')
+            spanElement.setAttribute('data-valmsg-for', `Questions[${questionsCount}].Description`);
+            spanElement.setAttribute('class', 'alert-danger');
+            removeButtonElement.setAttribute('class', 'btn btn-danger');
+            removeButtonElement.textContent = 'Remove';
+            addQuestionAnswerElement.setAttribute('class', 'btn btn-success');
+            addQuestionAnswerElement.textContent = '+';
+
+            articleElement.setAttribute('class', 'question');
+            articleElement.setAttribute('id', `${questionsCount}`);
+
+            document.querySelector('#Questions').appendChild(articleElement);
+
+            document.getElementById(`${questionsCount}`).appendChild(labelElement);
+            document.getElementById(`${questionsCount}`).appendChild(textareaElement);
+            document.getElementById(`${questionsCount}`).appendChild(spanElement);
+            document.getElementById(`${questionsCount}`).appendChild(removeButtonElement);
+            document.getElementById(`${questionsCount}`).appendChild(addQuestionAnswerElement);
+
+            questionsCount++;
+        })
+    }
+
+    function HandleEvents() {
+        document.getElementById('Questions').addEventListener('click', function (event) {
+            event.preventDefault();
+
+            if (event.target.textContent == 'Remove') {
+                var elementToRemove = event.target.parentNode;
+                document.querySelector('#Questions').removeChild(elementToRemove);
+                var questionNumber = elementToRemove.getAttribute('id');
+
+                [...document.querySelectorAll('#Questions .question')]
+                    .filter(question => question.getAttribute('id') > questionNumber)
+                    .map(question => {
+                        question.setAttribute('id', question.getAttribute('id') - 1);
+                        question.querySelector('textarea, label, span').setAttribute('name', `Questions[${question.getAttribute('id')}].Description`);
+                        question.querySelector('label').textContent = `Q${Number(question.getAttribute('id')) + 1}.`;
+                    });
+
+                questionsCount--;
+            } else if (event.target.textContent == '+') {
+                var answersCount = [...event.target.parentNode.querySelectorAll('.questionAnswer')].length;
+
+                var textareaElement = document.createElement('textarea');
+                var spanElement = document.createElement('span');
+                var labelElement = document.createElement('label');
+
+                labelElement.setAttribute('for', `Questions[${event.target.parentNode.getAttribute('id')}].Answers[${answersCount}].Description`);
+                labelElement.textContent = `A${answersCount + 1}.`
+                textareaElement.setAttribute('placeholder', 'Enter answer option here');
+                textareaElement.setAttribute('class', 'questionAnswer');
+                textareaElement.setAttribute('id', `Questions[${event.target.parentNode.getAttribute('id')}].Answers[${answersCount}].Description`);
+                textareaElement.setAttribute('name', `Questions[${event.target.parentNode.getAttribute('id')}].Answers[${answersCount}].Description`);
+                spanElement.setAttribute('data-valmsg-for', `Questions[${event.target.parentNode.getAttribute('id')}].Answers[${answersCount}].Description`);
+                spanElement.setAttribute('class', 'alert-danger');
+
+                event.target.parentNode.appendChild(labelElement);
+                event.target.parentNode.appendChild(textareaElement);
+                event.target.parentNode.appendChild(spanElement);
+            }
+        })
+    }
+
+    AddQuestion();
+    HandleEvents();
+</script>
