@@ -10,7 +10,7 @@ using OceniTest.Data;
 namespace OceniTest.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210604094342_InitialUpload")]
+    [Migration("20210624092954_InitialUpload")]
     partial class InitialUpload
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -397,6 +397,9 @@ namespace OceniTest.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsPrivate")
                         .HasColumnType("bit");
 
                     b.Property<DateTime?>("ModifiedOn")

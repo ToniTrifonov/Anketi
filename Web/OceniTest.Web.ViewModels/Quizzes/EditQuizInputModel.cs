@@ -27,6 +27,10 @@
         [MinLength(15, ErrorMessage = "Survey description must be at least 15 characters long.")]
         public string Description { get; set; }
 
+        [Required(ErrorMessage = "A survey's visibility must be selected!")]
+        [Display(Name = "Visibility")]
+        public bool IsPrivate { get; set; }
+
         [Display(Name = "Category")]
         [Required(ErrorMessage = "Category selection is required!")]
         public string CategoryId { get; set; }

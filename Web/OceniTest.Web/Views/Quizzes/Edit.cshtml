@@ -20,6 +20,11 @@
     <textarea asp-for="Description"></textarea>
     <span asp-validation-for="Description" class="alert-danger"></span>
 
+    <label asp-for="IsPrivate"></label>
+    <input type="radio" asp-for="IsPrivate" value="true" />Private
+    <input type="radio" asp-for="IsPrivate" value="false" />Public
+    <span asp-validation-for="IsPrivate" class="alert-danger"></span>
+
     <label asp-for="CategoryId"></label>
     <select asp-for="CategoryId" asp-items="categories"></select>
     <span asp-validation-for="CategoryId"></span>

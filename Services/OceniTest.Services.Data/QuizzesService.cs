@@ -34,6 +34,7 @@
                 Description = input.Description,
                 CategoryId = input.CategoryId,
                 UserId = userId,
+                IsPrivate = input.IsPrivate,
             };
 
             var inputQuestions = input.Questions;
@@ -85,26 +86,54 @@
                 .Where(x => x.Id == id)
                 .FirstOrDefault();
 
+            var questionsToRemove = this.questionsRepository
+                .All()
+                .Where(x => x.QuizId == id)
+                .ToList();
+
             quizToEdit.Name = input.Name;
             quizToEdit.Title = input.Title;
             quizToEdit.Description = input.Description;
+            quizToEdit.IsPrivate = input.IsPrivate;
             quizToEdit.CategoryId = input.CategoryId;
+
+            foreach (var questionToRemove in questionsToRemove)
+            {
+                this.questionsRepository.Delete(questionToRemove);
+
+                var questionId = questionToRemove.Id;
+
+                var answersToRemove = this.answersRepository
+                    .All()
+                    .Where(x => x.QuestionId == questionId)
+                    .ToList();
+
+                foreach (var answerToRemove in answersToRemove)
+                {
+                    this.answersRepository.Delete(answerToRemove);
+                }
+            }
+
             foreach (var inputQuestion in input.Questions)
             {
                 var question = new Question()
                 {
                     Description = inputQuestion.Description,
-                    QuizId = quizToEdit.Id,
+                    QuizId = id,
                 };
 
-                foreach (var inputAnswer in inputQuestion.Answers)
+                foreach (var inputQuestionAnswer in inputQuestion.Answers)
                 {
                     var answer = new Answer()
                     {
-                        Description = inputAnswer.Description,
+                        Description = inputQuestionAnswer.Description,
                         QuestionId = question.Id,
                     };
+
+                    await this.answersRepository.AddAsync(answer);
                 }
+
+                await this.questionsRepository.AddAsync(question);
             }
 
             await this.answersRepository.SaveChangesAsync();
@@ -118,6 +147,7 @@
                 .All()
                 .ToList()
                 .OrderByDescending(x => x.CreatedOn)
+                .Where(x => x.IsPrivate == false)
                 .Select(x => new QuizViewModel()
                 {
                     Id = x.Id,
@@ -162,6 +192,7 @@
                     CreatedOn = x.CreatedOn,
                     ModifiedOn = x.ModifiedOn != null ? x.ModifiedOn : x.CreatedOn,
                     QuestionsCount = this.questionsRepository.All().Where(q => q.QuizId == x.Id).Count(),
+                    Visibility = x.IsPrivate == true ? "Private" : "Public",
                 })
                 .ToList();
         }
