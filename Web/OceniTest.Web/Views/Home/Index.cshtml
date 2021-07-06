@@ -3,15 +3,31 @@
     this.ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to @GlobalConstants.SystemName!</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-
 @if (this.User.Identity.IsAuthenticated)
 {
-    <div class="text-center"><a class="btn btn-primary" asp-controller="Quizzes" asp-action="Create">Create a survey</a></div>
+    <section class="welcome">
+        <article class="welcome-content">
+            <h1 class="welcome-content-title">Welcome @this.User.Identity.Name</h1>
+            <p class="welcome-content-text">You can start by creating a survey or browsing already created by the community surveys.</p>
+        </article>
 
-    <div class="text-center"><a class="btn btn-primary" asp-controller="Quizzes" asp-action="All">All surveys</a></div>
+        <article class="welcome-navigation">
+            <ul class="welcome-navigation-list">
+                <li class="welcome-navigation-list-item"><a class="welcome-navigation-list-item-btn" asp-controller="Quizzes" asp-action="Create">Create a survey</a></li>
+                <li class="welcome-navigation-list-item"><a class="welcome-navigation-list-item-btn" asp-controller="Quizzes" asp-action="All">All surveys</a></li>
+            </ul>
+        </article>
+    </section>
 }
+else
+{
+    <section class="welcome-content">
+        <h1 class="welcome-content-title">Welcome</h1>
+
+        <p class="welcome-content-text">You can log in or register if you do not already have an account.</p>
+    </section>
+}
+
+<article class="tempname">
+</article>
 
