@@ -4,27 +4,21 @@
     this.ViewData["Title"] = "My Surveys";
 }
 
-<h1>@this.ViewData["Title"]</h1>
+<section class="surveys">
+    @foreach (var survey in Model)
+    {
+        <article class="surveys-item">
+            <article class="survey" id="@survey.Id">
+                <h3 class="survey-name">@survey.Name</h3>
+                <p class="survey-creation">@survey.CreatedOn</p>
+                <p class="survey-description">@survey.Description</p>
+                <p class="survey-visibility">@survey.Visibility</p>
+            </article>
+            <p class="view-btn"><a class="btn btn-primary" asp-action="Details" asp-route-id="@survey.Id">See Details</a></p>
+        </article>
+    }
+</section>
 
-@foreach (var item in Model)
-{
-<div id="@item.Id">
-    <strong><label asp-for="@item.Name"></label></strong>: @item.Name
-    <br />
-    <strong><label asp-for="@item.CreatedOn"></label></strong>: @item.CreatedOn
-    <br />
-    <strong><label asp-for="@item.ModifiedOn"></label></strong>: @item.ModifiedOn
-    <br />
-    <strong><label asp-for="@item.QuestionsCount"></label></strong>: @item.QuestionsCount
-    <br />
-    <strong><label asp-for="@item.Visibility"></label></strong>: @item.Visibility
-    <br />
-    <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.Id">View</a>
-</div>
-}
-
-<p><a class="btn btn-primary" asp-action="Create">Create Survey</a></p>
-
-<div>
+<section class="pagination">
     <partial name="_Pagination" model="@Model" />
-</div>
+</section>

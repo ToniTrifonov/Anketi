@@ -1,18 +1,18 @@
 ﻿@model OceniTest.Web.ViewModels.Pagination.PaginatedListViewModel<OceniTest.Web.ViewModels.Quizzes.QuizViewModel>
 
-@{ 
+@{
     var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
     var nextDisabled = !Model.HasNextPage ? "disabled" : "";
     var nextPage = Model.PageIndex + 1;
     var prevPage = Model.PageIndex - 1;
 }
 
-<nav aria-label="...">
-    <ul class="pagination">
-        <li class="page-item @prevDisabled">
+<nav>
+    <ul class="pagination-list">
+        <li class="pagination-list-item" @prevDisabled>
             <a class="page-link" asp-route-id="@prevPage">Previous</a>
         </li>
-        <li class="page-item @nextDisabled">
+        <li class="pagination-list-item" @nextDisabled>
             <a class="page-link" asp-route-id="@nextPage">Next</a>
         </li>
     </ul>

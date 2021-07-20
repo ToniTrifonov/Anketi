@@ -13,21 +13,56 @@
 
         <article class="welcome-navigation">
             <ul class="welcome-navigation-list">
-                <li class="welcome-navigation-list-item"><a class="welcome-navigation-list-item-btn" asp-controller="Quizzes" asp-action="Create">Create a survey</a></li>
-                <li class="welcome-navigation-list-item"><a class="welcome-navigation-list-item-btn" asp-controller="Quizzes" asp-action="All">All surveys</a></li>
+                <li class="welcome-navigation-list-item"><a class="welcome-navigation-list-item-btn" asp-controller="Quizzes" asp-action="Create">CREATE</a></li>
+                <li class="welcome-navigation-list-item"><a class="welcome-navigation-list-item-btn" asp-controller="Quizzes" asp-action="All">BROWSE</a></li>
             </ul>
         </article>
     </section>
 }
 else
 {
-    <section class="welcome-content">
-        <h1 class="welcome-content-title">Welcome</h1>
+    <section class="welcome">
+        <article class="welcome-content">
+            <h1 class="welcome-content-title">Welcome @this.User.Identity.Name</h1>
+            <p class="welcome-content-text">You can sign in or create an account with us if you do not already have on.</p>
+        </article>
 
-        <p class="welcome-content-text">You can log in or register if you do not already have an account.</p>
+        <article class="welcome-navigation">
+            <ul class="welcome-navigation-list">
+                <li class="navigation-authentication-list-item"><a class="authentication-btn" asp-area="Identity" asp-page="/Account/Register">Get Started</a></li>
+                <li class="navigation-authentication-list-item"><a class="authentication-btn" asp-area="Identity" asp-page="/Account/Login">Sign In</a></li>
+            </ul>
+        </article>
     </section>
 }
 
-<article class="tempname">
-</article>
+<section class="reviews">
+    <article class="review">
+        <article class="review-image">
+            <img src="~/images/profile-image.jpg" alt="profile-image" />
+        </article>
+        <article class="review-content">
+            <h3 class="review-content-title">Toni Trifonov</h3>
+            <p class="review-content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed hendrerit dui. Nam laoreet ullamcorper ex, lacinia iaculis elit. Donec a felis eu nibh commodo condimentum. Aliquam eget arcu ut dolor placerat aliquam sagittis sed sem.</p>
+        </article>
+    </article>
+    <article class="review">
+        <article class="review-image">
+            <img src="~/images/profile-image.jpg" alt="profile-image" />
+        </article>
+        <article class="review-content">
+            <h3 class="review-content-title">Valentin Golemanov</h3>
+            <p class="review-content-text">Quisque rutrum lorem in ante vestibulum cursus. Aliquam cursus commodo venenatis. Donec porttitor leo est, sed cursus orci vulputate eget. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc eget augue ac ex scelerisque efficitur non et ligula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        </article>
+    </article>
+    <article class="review">
+        <article class="review-image">
+            <img src="~/images/profile-image-girl.jpg" alt="profile-image" />
+        </article>
+        <article class="review-content">
+            <h3 class="review-content-title">Anastasiq Petrova</h3>
+            <p class="review-content-text">In hac habitasse platea dictumst. Aliquam erat volutpat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas tristique congue velit non tempus.</p>
+        </article>
+    </article>
+</section>
 

@@ -144,5 +144,12 @@
 
             return this.View(paginatedList);
         }
+
+        public IActionResult Overview(string id)
+        {
+            var surveyOverviewViewModel = this.quizzesService.GetSurveyById(id);
+
+            return this.View(surveyOverviewViewModel);
+        }
     }
 }

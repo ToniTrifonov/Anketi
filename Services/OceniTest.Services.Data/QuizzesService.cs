@@ -7,6 +7,8 @@
     using OceniTest.Data.Common.Repositories;
     using OceniTest.Data.Models;
     using OceniTest.Services.Mapping;
+    using OceniTest.Web.ViewModels.Answers;
+    using OceniTest.Web.ViewModels.Questions;
     using OceniTest.Web.ViewModels.Quizzes;
 
     public class QuizzesService : IQuizzesService
@@ -189,6 +191,7 @@
                 {
                     Id = x.Id,
                     Name = x.Name,
+                    Description = x.Description,
                     CreatedOn = x.CreatedOn,
                     ModifiedOn = x.ModifiedOn != null ? x.ModifiedOn : x.CreatedOn,
                     QuestionsCount = this.questionsRepository.All().Where(q => q.QuizId == x.Id).Count(),
@@ -197,15 +200,48 @@
                 .ToList();
         }
 
+        public SurveyOverviewViewModel GetSurveyById(string id)
+        {
+            var surveyQuestions = this.questionsRepository
+                    .AllAsNoTracking()
+                    .Where(x => x.QuizId == id)
+                    .Select(x => new QuestionViewModel()
+                    {
+                        Description = x.Description,
+                        Id = x.Id,
+                    })
+                    .ToList();
+
+            foreach (var question in surveyQuestions)
+            {
+                question.Answers = this.answersRepository
+                    .AllAsNoTracking()
+                    .Where(x => x.QuestionId == question.Id)
+                    .Select(x => new AnswerViewModel()
+                    {
+                        Description = x.Description,
+                    })
+                    .ToList();
+            }
+
+            return this.quizzesRepository
+                .AllAsNoTracking()
+                .Where(x => x.Id == id)
+                .Select(x => new SurveyOverviewViewModel()
+                {
+                    Name = x.Name,
+                    Questions = surveyQuestions,
+                })
+                .FirstOrDefault();
+        }
+
         public T GetQuizById<T>(string id)
         {
-            var quiz = this.quizzesRepository
+            return this.quizzesRepository
                 .AllAsNoTracking()
                 .Where(x => x.Id == id)
                 .To<T>()
                 .FirstOrDefault();
-
-            return quiz;
         }
 
         public IEnumerable<QuizViewModel> GetRecentAsync(string userId)

@@ -11,6 +11,8 @@
 
         public string Name { get; set; }
 
+        public string Description { get; set; }
+
         [Display(Name = "Created On")]
         public DateTime CreatedOn { get; set; }
 

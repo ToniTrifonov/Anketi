@@ -1,0 +1,23 @@
+﻿@model OceniTest.Web.ViewModels.Quizzes.SurveyOverviewViewModel
+
+<article class="survey-overview">
+    <section class="survey-overview-header">
+        <h2 class="survey-overview-header-title">
+            @this.Model.Name
+        </h2>
+    </section>
+    <section class="survey-overview-content">
+        @foreach (var question in Model.Questions)
+        {
+            <article class="survey-overview-content-question">
+                <p>@question.Description</p>
+                <section class="survey-overview-content-question-answers">
+                    @foreach (var answer in question.Answers)
+                    {
+                        <label><input class="survey-overview-answer" type="radio" value="@answer.Description" />@answer.Description</label>
+                    }
+                </section>
+            </article>
+        }
+    </section>
+</article>

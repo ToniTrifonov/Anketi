@@ -13,6 +13,8 @@
 
         T GetQuizById<T>(string id);
 
+        SurveyOverviewViewModel GetSurveyById(string id);
+
         Task EditAsync(string id, EditQuizInputModel input);
 
         Task DeleteAsync(string id);
