@@ -14,6 +14,8 @@ namespace OceniTest.Web.ViewModels.Quizzes
 
         public string Name { get; set; }
 
+        public string Title { get; set; }
+
         public List<QuestionViewModel> Questions { get; set; }
     }
 }

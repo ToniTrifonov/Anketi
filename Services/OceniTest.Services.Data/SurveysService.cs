@@ -230,6 +230,7 @@
                 .Select(x => new SurveyOverviewViewModel()
                 {
                     Name = x.Name,
+                    Title = x.Title,
                     Questions = surveyQuestions,
                 })
                 .FirstOrDefault();

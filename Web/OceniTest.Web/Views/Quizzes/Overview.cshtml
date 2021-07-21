@@ -1,23 +1,35 @@
 ﻿@model OceniTest.Web.ViewModels.Quizzes.SurveyOverviewViewModel
 
+@{ 
+    var questionNumber = 1;
+}
+
 <article class="survey-overview">
     <section class="survey-overview-header">
-        <h2 class="survey-overview-header-title">
+        <h1 class="survey-overview-header-name">
             @this.Model.Name
-        </h2>
+        </h1>
+        <h3 class="survey-overview-header-title">
+            @this.Model.Title
+        </h3>
     </section>
     <section class="survey-overview-content">
         @foreach (var question in Model.Questions)
         {
             <article class="survey-overview-content-question">
-                <p>@question.Description</p>
+                <p>@($"{questionNumber}. {question.Description}")</p>
                 <section class="survey-overview-content-question-answers">
                     @foreach (var answer in question.Answers)
                     {
-                        <label><input class="survey-overview-answer" type="radio" value="@answer.Description" />@answer.Description</label>
+                        <article class="survey-overview-answer">
+                            <input name="@question.Id" type="radio" value="@answer.Description" />
+                            <label>@answer.Description</label>
+                        </article>
                     }
                 </section>
             </article>
+
+            questionNumber++;
         }
     </section>
 </article>

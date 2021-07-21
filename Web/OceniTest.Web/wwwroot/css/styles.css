@@ -24,6 +24,7 @@ body {
     display: flex;
     height: 100vh;
     flex-wrap: wrap;
+    align-items: baseline;
 }
 
 /*Home Page CSS ---------------------------------------------------------------------------------------------------------------------*/
@@ -464,4 +465,37 @@ li:disabled {
     pointer-events: none;
     color: rgb(255, 255, 255);
     */
+}
+
+/* Survey Overview CSS --------------------------------------------------------------------------------------------------*/
+
+.survey-overview {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 70vh;
+    font-size: 16px;
+}
+
+.survey-overview-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.survey-overview-header-name {
+    margin-bottom: 14px;
+    font-size: 30px;
+}
+
+.survey-overview-header-title {
+    margin-bottom: 14px;
+}
+
+.survey-overview-content-question {
+    margin-bottom: 40px;
+}
+
+.survey-overview-answer {
+    margin-bottom: 10px;
 }
