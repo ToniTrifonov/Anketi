@@ -1,13 +1,14 @@
-﻿using OceniTest.Data.Common.Repositories;
-using OceniTest.Data.Models;
-using OceniTest.Web.ViewModels.Answers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace OceniTest.Services.Data
+﻿namespace OceniTest.Services.Data
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+
+    using OceniTest.Data.Common.Repositories;
+    using OceniTest.Data.Models;
+    using OceniTest.Web.ViewModels.Answers;
+
     public class AnswersService : IAnswersService
     {
         private readonly IDeletableEntityRepository<Answer> answersRepository;

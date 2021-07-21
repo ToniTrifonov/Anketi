@@ -1,10 +1,11 @@
-﻿using OceniTest.Web.ViewModels.Questions;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace OceniTest.Services.Data
+﻿namespace OceniTest.Services.Data
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
+    using OceniTest.Web.ViewModels.Questions;
+
     public interface IQuestionsService
     {
         List<QuestionViewModel> GetAllById(string id);

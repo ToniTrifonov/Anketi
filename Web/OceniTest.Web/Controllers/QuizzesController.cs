@@ -13,18 +13,18 @@
 
     public class QuizzesController : BaseController
     {
-        private readonly IQuizzesService quizzesService;
+        private readonly ISurveysService surveysService;
         private readonly ICategoriesService categoriesService;
         private readonly IQuestionsService questionsService;
         private readonly IAnswersService answersService;
 
         public QuizzesController(
-            IQuizzesService quizzesService,
+            ISurveysService surveysService,
             ICategoriesService categoriesService,
             IQuestionsService questionsService,
             IAnswersService answersService)
         {
-            this.quizzesService = quizzesService;
+            this.surveysService = surveysService;
             this.categoriesService = categoriesService;
             this.questionsService = questionsService;
             this.answersService = answersService;
@@ -32,7 +32,7 @@
 
         public IActionResult Create()
         {
-            var viewModel = new CreateQuizInputModel()
+            var viewModel = new CreateSurveyInputModel()
             {
                 Categories = this.categoriesService.GetAll(),
             };
@@ -41,7 +41,7 @@
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(CreateQuizInputModel input)
+        public async Task<IActionResult> Create(CreateSurveyInputModel input)
         {
             if (!this.ModelState.IsValid)
             {
@@ -51,27 +51,27 @@
 
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
 
-            await this.quizzesService.CreateAsync(input, userId);
+            await this.surveysService.CreateAsync(input, userId);
             return this.RedirectToAction("My");
         }
 
         public IActionResult All()
         {
-            var quizzesList = this.quizzesService.GetAll();
+            var quizzesList = this.surveysService.GetAll();
 
             return this.View(quizzesList);
         }
 
         public IActionResult Details(string id)
         {
-            var quiz = this.quizzesService.GetQuizById<SingleQuizViewModel>(id);
+            var quiz = this.surveysService.GetQuizById<SingleSurveyViewModel>(id);
 
             return this.View(quiz);
         }
 
         public IActionResult Edit(string id)
         {
-            var quiz = this.quizzesService.GetQuizById<EditQuizInputModel>(id);
+            var quiz = this.surveysService.GetQuizById<EditSurveyInputModel>(id);
 
             quiz.Categories = this.categoriesService.GetAll();
             quiz.Questions = this.questionsService.GetAllById(id);
@@ -84,7 +84,7 @@
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(string id, EditQuizInputModel input)
+        public async Task<IActionResult> Edit(string id, EditSurveyInputModel input)
         {
             if (!this.ModelState.IsValid)
             {
@@ -92,21 +92,21 @@
                 return this.View(input);
             }
 
-            await this.quizzesService.EditAsync(id, input);
+            await this.surveysService.EditAsync(id, input);
 
             return this.RedirectToAction("Details", new { id });
         }
 
         public async Task<IActionResult> Delete(string id)
         {
-            await this.quizzesService.DeleteAsync(id);
+            await this.surveysService.DeleteAsync(id);
 
             return this.RedirectToAction("All");
         }
 
         public IActionResult Start(string id)
         {
-            var quiz = this.quizzesService.GetQuizById<TakeQuizInputModel>(id);
+            var quiz = this.surveysService.GetQuizById<TakeQuizInputModel>(id);
 
             return this.View(quiz);
         }
@@ -127,7 +127,7 @@
             var pageSize = 6;
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
 
-            var surveysCount = this.quizzesService.GetCount();
+            var surveysCount = this.surveysService.GetCount();
 
             if (id <= 1)
             {
@@ -138,16 +138,16 @@
                 id = (int)Math.Ceiling(surveysCount / (double)pageSize);
             }
 
-            var surveys = this.quizzesService.GetMySurveys(userId, id, pageSize);
+            var surveys = this.surveysService.GetMySurveys(userId, id, pageSize);
 
-            var paginatedList = new PaginatedListViewModel<QuizViewModel>(surveys, surveysCount, id, pageSize);
+            var paginatedList = new PaginatedListViewModel<SurveyViewModel>(surveys, surveysCount, id, pageSize);
 
             return this.View(paginatedList);
         }
 
         public IActionResult Overview(string id)
         {
-            var surveyOverviewViewModel = this.quizzesService.GetSurveyById(id);
+            var surveyOverviewViewModel = this.surveysService.GetSurveyById(id);
 
             return this.View(surveyOverviewViewModel);
         }

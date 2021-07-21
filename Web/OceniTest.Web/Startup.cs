@@ -63,7 +63,7 @@
             // Application services
             services.AddTransient<IEmailSender, NullMessageSender>();
             services.AddTransient<ISettingsService, SettingsService>();
-            services.AddTransient<IQuizzesService, QuizzesService>();
+            services.AddTransient<ISurveysService, SurveysService>();
             services.AddTransient<IFeedbacksService, FeedbacksService>();
             services.AddTransient<ICategoriesService, CategoriesService>();
             services.AddTransient<IQuestionsService, QuestionsService>();

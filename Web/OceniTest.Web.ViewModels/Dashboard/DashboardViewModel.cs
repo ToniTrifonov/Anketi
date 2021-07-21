@@ -12,6 +12,6 @@
 
         public int FeedbacksCount { get; set; }
 
-        public IEnumerable<QuizViewModel> RecentSurveys { get; set; }
+        public IEnumerable<SurveyViewModel> RecentSurveys { get; set; }
     }
 }

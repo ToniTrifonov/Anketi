@@ -8,10 +8,10 @@
 
     public class DashboardController : BaseController
     {
-        private readonly IQuizzesService quizzesService;
+        private readonly ISurveysService quizzesService;
         private readonly IFeedbacksService feedbacksService;
 
-        public DashboardController(IQuizzesService quizzesService, IFeedbacksService feedbacksService)
+        public DashboardController(ISurveysService quizzesService, IFeedbacksService feedbacksService)
         {
             this.quizzesService = quizzesService;
             this.feedbacksService = feedbacksService;
