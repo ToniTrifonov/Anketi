@@ -1,5 +1,22 @@
 ﻿@using OceniTest.Common
 
+@{
+    var controllerName = string.Empty;
+    object controllerObj;
+    var actionName = string.Empty;
+    object actionObj;
+
+    if (ViewContext.RouteData.Values.TryGetValue("controller", out controllerObj))
+    {
+        controllerName = controllerObj.ToString();
+    }
+
+    if (ViewContext.RouteData.Values.TryGetValue("action", out actionObj))
+    {
+        actionName = actionObj.ToString();
+    }
+}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,53 +28,62 @@
     <link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" asp-append-version="true">
 </head>
 <body>
-    <header>
-        <nav class="navigation">
-            <section class="navigation-options">
-                <a class="navigation-brand" asp-area="" asp-controller="Home" asp-action="Index">@GlobalConstants.SystemName</a>
-                <ul class="navigation-options-list">
-                    <li class="navigation-options-list-item">
-                        <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                    </li>
-                    <li class="navigation-options-list-item">
-                        <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                    </li>
-                    @if (this.User.Identity.IsAuthenticated)
-                    {
+    @if (actionName == "Overview")
+    {
+        <main role="main">
+            @this.RenderBody()
+        </main>
+    }
+    else
+    {
+        <header>
+            <nav class="navigation">
+                <section class="navigation-options">
+                    <a class="navigation-brand" asp-area="" asp-controller="Home" asp-action="Index">@GlobalConstants.SystemName</a>
+                    <ul class="navigation-options-list">
                         <li class="navigation-options-list-item">
-                            <a asp-area="" asp-controller="Quizzes" asp-action="Create">Create</a>
+                            <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="navigation-options-list-item">
-                            <a asp-area="" asp-controller="Quizzes" asp-action="My">My Surveys</a>
+                            <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
-                        <li class="navigation-options-list-item">
-                            <a asp-area="" asp-controller="Dashboard" asp-action="Index">Dashboard</a>
-                        </li>
-                    }
-                </ul>
+                        @if (this.User.Identity.IsAuthenticated)
+                        {
+                            <li class="navigation-options-list-item">
+                                <a asp-area="" asp-controller="Quizzes" asp-action="Create">Create</a>
+                            </li>
+                            <li class="navigation-options-list-item">
+                                <a asp-area="" asp-controller="Quizzes" asp-action="My">My Surveys</a>
+                            </li>
+                            <li class="navigation-options-list-item">
+                                <a asp-area="" asp-controller="Dashboard" asp-action="Index">Dashboard</a>
+                            </li>
+                        }
+                    </ul>
+                </section>
+                <section class="navigation-authentication">
+                    <partial name="_LoginPartial" />
+                </section>
+            </nav>
+        </header>
+
+        <main role="main">
+            <partial name="_CookieConsentPartial" />
+            @this.RenderBody()
+        </main>
+
+        <footer>
+            <section>
+                &copy; @DateTime.Now.Year - @GlobalConstants.SystemName - <a class="footer-privacy-btn" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
             </section>
-            <section class="navigation-authentication">
-                <partial name="_LoginPartial" />
-            </section>
-        </nav>
-    </header>
+        </footer>
 
-    <main role="main">
-        <partial name="_CookieConsentPartial" />
-        @this.RenderBody()
-    </main>
-
-    <footer>
-        <section>
-            &copy; @DateTime.Now.Year - @GlobalConstants.SystemName - <a class="footer-privacy-btn" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </section>
-    </footer>
-
-    <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
-    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js" asp-append-version="true"></script>
-    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js" asp-append-version="true"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js" asp-append-version="true"></script>
-    <script src="~/js/site.min.js" asp-append-version="true"></script>
-    @await this.RenderSectionAsync("Scripts", required: false)
+        <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
+        <script src="~/lib/jquery-validation/dist/jquery.validate.min.js" asp-append-version="true"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js" asp-append-version="true"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.min.js" asp-append-version="true"></script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+        @await this.RenderSectionAsync("Scripts", required: false)
+    }
 </body>
 </html>
