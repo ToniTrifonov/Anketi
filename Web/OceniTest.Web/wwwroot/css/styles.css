@@ -499,3 +499,7 @@ li:disabled {
 .survey-overview-answer {
     margin-bottom: 10px;
 }
+
+.survey-overview-content-question-answers {
+    padding-left: 20px;
+}

@@ -229,6 +229,7 @@
                 .Where(x => x.Id == id)
                 .Select(x => new SurveyOverviewViewModel()
                 {
+                    Id = x.Id,
                     Name = x.Name,
                     Title = x.Title,
                     Questions = surveyQuestions,

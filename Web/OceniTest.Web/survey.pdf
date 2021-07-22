@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> - OceniTest</title>
+    <link href="/css/styles.css?v=0DIV9CvGJwnCzIe0rM0-Zh1DRprCnax9yTZhoHOgPwE" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <section class="navigation-options">
+                <a class="navigation-brand" href="/">OceniTest</a>
+                <ul class="navigation-options-list">
+                    <li class="navigation-options-list-item">
+                        <a href="/">Home</a>
+                    </li>
+                    <li class="navigation-options-list-item">
+                        <a href="/Home/Privacy">Privacy</a>
+                    </li>
+                </ul>
+            </section>
+            <section class="navigation-authentication">
+                
+<ul class="navigation-authentication-list">
+        <li class="navigation-authentication-list-item">
+            <a class="authentication-btn" href="/Identity/Account/Register">Register</a>
+        </li>
+        <li class="navigation-authentication-list-item">
+            <a class="authentication-btn" href="/Identity/Account/Login">Login</a>
+        </li>
+</ul>
+
+            </section>
+        </nav>
+    </header>
+
+    <main role="main">
+        
+
+    <div id="cookieConsent" class="alert alert-info alert-dismissible fade show" role="alert">
+        We use cookies to understand how you use our site and to improve your experience. <a href="/Home/Privacy">Learn More</a>.
+        <button type="button" class="accept-policy close" data-dismiss="alert" aria-label="Close" data-cookie-string=".AspNet.Consent=yes; expires=Thu, 21 Jul 2022 14:40:57 GMT; path=/; secure; samesite=none">
+            <span aria-hidden="true">Accept</span>
+        </button>
+    </div>
+    <script>
+        (function () {
+            var button = document.querySelector("#cookieConsent button[data-cookie-string]");
+            button.addEventListener("click", function () {
+                document.cookie = button.dataset.cookieString;
+            }, false);
+        })();
+    </script>
+
+        
+
+<article class="survey-overview">
+    <section class="survey-overview-header">
+        <h1 class="survey-overview-header-name">
+            Fun
+        </h1>
+        <h3 class="survey-overview-header-title">
+            Money and Bars
+        </h3>
+    </section>
+    <section class="survey-overview-content">
+            <article class="survey-overview-content-question">
+                <p>1. How many times do you go to a bar weekly?</p>
+                <section class="survey-overview-content-question-answers">
+                        <article class="survey-overview-answer">
+                            <input name="8d5d2140-e4f6-4ef6-9531-be18e356674e" type="radio" value="0" />
+                            <label>0</label>
+                        </article>
+                        <article class="survey-overview-answer">
+                            <input name="8d5d2140-e4f6-4ef6-9531-be18e356674e" type="radio" value="3-5" />
+                            <label>3-5</label>
+                        </article>
+                        <article class="survey-overview-answer">
+                            <input name="8d5d2140-e4f6-4ef6-9531-be18e356674e" type="radio" value="Every day" />
+                            <label>Every day</label>
+                        </article>
+                        <article class="survey-overview-answer">
+                            <input name="8d5d2140-e4f6-4ef6-9531-be18e356674e" type="radio" value="1-2" />
+                            <label>1-2</label>
+                        </article>
+                </section>
+            </article>
+            <article class="survey-overview-content-question">
+                <p>2. How much money do you spend?</p>
+                <section class="survey-overview-content-question-answers">
+                        <article class="survey-overview-answer">
+                            <input name="ba7d7066-2e6b-48b6-9298-74d9831277e1" type="radio" value="Above 150" />
+                            <label>Above 150</label>
+                        </article>
+                        <article class="survey-overview-answer">
+                            <input name="ba7d7066-2e6b-48b6-9298-74d9831277e1" type="radio" value="Below 50" />
+                            <label>Below 50</label>
+                        </article>
+                        <article class="survey-overview-answer">
+                            <input name="ba7d7066-2e6b-48b6-9298-74d9831277e1" type="radio" value="Around 100" />
+                            <label>Around 100</label>
+                        </article>
+                </section>
+            </article>
+    </section>
+    <section class="survey-overview-download">
+        <a href="/Quizzes/Download">Download Survey</a>
+    </section>
+</article>
+
+    </main>
+
+    <footer>
+        <section>
+            &copy; 2021 - OceniTest - <a class="footer-privacy-btn" href="/Home/Privacy">Privacy</a>
+        </section>
+    </footer>
+
+    <script src="/lib/jquery/dist/jquery.min.js?v=9_aliU8dGd2tb6OSsuzixeV4y_faTqgFtohetphbbj0"></script>
+    <script src="/lib/jquery-validation/dist/jquery.validate.min.js?v=-BEKmIvQ6IsL8sHcvidtDrNOdZO3C9LtFPtF2H0dOHI"></script>
+    <script src="/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js?v=XNNC8ESw29iopRLukVRazlP44TxnjGmEQanHJ5kHmtk"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.min.js?v=2JaAhvdQnfNMMnhWPauHOZ2k-dzftBmBjjownu3HC4g"></script>
+    <script src="/js/site.min.js?v=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU"></script>
+    
+</body>
+</html>

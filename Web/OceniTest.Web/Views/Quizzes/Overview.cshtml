@@ -1,6 +1,6 @@
 ﻿@model OceniTest.Web.ViewModels.Quizzes.SurveyOverviewViewModel
 
-@{ 
+@{
     var questionNumber = 1;
 }
 
@@ -31,5 +31,8 @@
 
             questionNumber++;
         }
+    </section>
+    <section class="survey-overview-download">
+        <a asp-controller="Downloads" asp-action="Download" asp-route-id="@Model.Id">Download Survey</a>
     </section>
 </article>
