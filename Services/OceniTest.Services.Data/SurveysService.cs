@@ -16,15 +16,18 @@
         private readonly IDeletableEntityRepository<Quiz> quizzesRepository;
         private readonly IDeletableEntityRepository<Question> questionsRepository;
         private readonly IDeletableEntityRepository<Answer> answersRepository;
+        private readonly IDeletableEntityRepository<Category> categoriesRepository;
 
         public SurveysService(
             IDeletableEntityRepository<Quiz> quizzesRepository,
             IDeletableEntityRepository<Question> questionsRepository,
-            IDeletableEntityRepository<Answer> answersRepository)
+            IDeletableEntityRepository<Answer> answersRepository,
+            IDeletableEntityRepository<Category> categoriesRepository)
         {
             this.quizzesRepository = quizzesRepository;
             this.questionsRepository = questionsRepository;
             this.answersRepository = answersRepository;
+            this.categoriesRepository = categoriesRepository;
         }
 
         public async Task CreateAsync(CreateSurveyInputModel input, string userId)
@@ -157,6 +160,8 @@
                     CreatedOn = x.CreatedOn,
                     ModifiedOn = x.ModifiedOn != null ? x.ModifiedOn : x.CreatedOn,
                     QuestionsCount = this.questionsRepository.All().Where(q => q.QuizId == x.Id).Count(),
+                    CategoryId = x.CategoryId,
+                    Category = this.categoriesRepository.All().Where(c => c.Id == x.CategoryId).FirstOrDefault().Name,
                 }).ToList();
 
             return quizzes;

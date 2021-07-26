@@ -22,6 +22,10 @@
         [Display(Name = "Questions")]
         public int QuestionsCount { get; set; }
 
+        public string Category { get; set; }
+
+        public string CategoryId { get; set; }
+
         public string Visibility { get; set; }
     }
 }

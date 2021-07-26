@@ -37,7 +37,7 @@
             <div id="@item.Id">
                 <strong><label asp-for="@item.Name"></label></strong>: @item.Name
                 <br />
-                <strong><label asp-for="@item.CreatedOn"></label></strong>: @item.CreatedOn
+                <strong><label asp-for="@item.CreatedOn"></label></strong>: @item.CreatedOn.ToString("MM/dd/yyyy")
                 <br />
                 <strong><label asp-for="@item.ModifiedOn"></label></strong>: @item.ModifiedOn
                 <br />

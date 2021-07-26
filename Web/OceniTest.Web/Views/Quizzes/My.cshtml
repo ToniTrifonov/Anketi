@@ -10,7 +10,7 @@
         <article class="surveys-item">
             <article class="survey" id="@survey.Id">
                 <h3 class="survey-name">@survey.Name</h3>
-                <p class="survey-creation">@survey.CreatedOn</p>
+                <p class="survey-creation">@survey.CreatedOn.ToString("MM/dd/yyyy")</p>
                 <p class="survey-description">@survey.Description</p>
                 <p class="survey-visibility">@survey.Visibility</p>
             </article>

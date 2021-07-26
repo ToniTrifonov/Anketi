@@ -2,6 +2,7 @@
 {
     using System;
     using System.IO;
+    using System.Linq;
     using System.Net;
     using System.Security.Claims;
     using System.Threading.Tasks;
@@ -55,11 +56,34 @@
             return this.RedirectToAction("My");
         }
 
-        public IActionResult All()
+        public IActionResult All(string sortOrder, string searchString)
         {
-            var quizzesList = this.surveysService.GetAll();
+            this.ViewBag.NameSortParm = string.IsNullOrEmpty(sortOrder) ? "name_desc" : string.Empty;
+            this.ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+            var surveys = this.surveysService.GetAll();
 
-            return this.View(quizzesList);
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                surveys = surveys.Where(s => s.Name.ToUpper().Contains(searchString.ToUpper()));
+            }
+
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    surveys = surveys.OrderByDescending(s => s.Name);
+                    break;
+                case "Date":
+                    surveys = surveys.OrderBy(s => s.CreatedOn);
+                    break;
+                case "date_desc":
+                    surveys = surveys.OrderByDescending(s => s.CreatedOn);
+                    break;
+                default:
+                    surveys = surveys.OrderBy(s => s.Name);
+                    break;
+            }
+
+            return this.View(surveys.ToList());
         }
 
         public IActionResult Details(string id)

@@ -68,7 +68,6 @@ header, main, footer {
 }
 
 .navigation-options-list-item a, .navigation-brand, .navigation-authentication-list-item a {
-    font-weight: bold;
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
@@ -395,7 +394,7 @@ span {
     padding: 10px;
     flex-wrap: wrap;
     justify-content: center;
-    box-shadow: 0px 0px 10px 7px rgba(135,113,134,0.6);
+    box-shadow: 0px 0px 10px 5px rgba(135,113,134,0.3);
     transition: all .2s ease-in-out;
 }
 
@@ -503,3 +502,6 @@ li:disabled {
 .survey-overview-content-question-answers {
     padding-left: 20px;
 }
+
+/*Login Page CSS ------------------------------------------------------------------------------------------------------*/
+
