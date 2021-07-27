@@ -3,21 +3,18 @@
     this.ViewData["Title"] = "All Surveys";
 }
 
-<h1>@this.ViewData["Title"]</h1>
-
 <section class="table">
-    @using (Html.BeginForm())
-    {
+    <form>
         <p>
-            Find by name: @Html.TextBox("SearchString")
+            Find by name: <input type="text" name="SearchString" />
             <input type="submit" value="Search" />
         </p>
-    }
+    </form>
     <table>
         <thead>
             <tr>
-                <th>@Html.ActionLink("Name", "All", new { sortOrder = ViewBag.NameSortParm })</th>
-                <th>@Html.ActionLink("Created On", "All", new { sortOrder = ViewBag.DateSortParm })</th>
+                <th><a asp-action="All" asp-route-sortOrder="@this.ViewBag.NameSortParm" >Name</a><i class="fas fa-sort"></i></th>
+                <th><a asp-action="All" asp-route-sortOrder="@this.ViewBag.DateSortParm">Created On</a><i class="fas fa-sort"></i></th>
                 <th>Category</th>
                 <th>Questions</th>
             </tr>
@@ -25,7 +22,7 @@
         <tbody>
             @foreach (var item in Model)
             {
-                <tr>
+                <tr onclick="window.location = '/Quizzes/Details/@item.Id'">
                     <td>@item.Name</td>
                     <td>@item.CreatedOn.ToString("MM/dd/yyyy")</td>
                     <td>@item.Category</td>

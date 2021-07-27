@@ -1,5 +1,6 @@
 ﻿namespace OceniTest.Web.Controllers
 {
+    using System.Security.Claims;
     using System.Threading.Tasks;
 
     using Microsoft.AspNetCore.Mvc;
@@ -15,11 +16,9 @@
             this.feedbacksService = feedbacksService;
         }
 
-        public IActionResult Submit(string id)
+        public IActionResult Submit()
         {
-            var feedback = this.feedbacksService.GetById<SubmitFeedbackInputModel>(id);
-
-            return this.View(feedback);
+            return this.View();
         }
 
         [HttpPost]
@@ -30,7 +29,9 @@
                 return this.View(input);
             }
 
-            await this.feedbacksService.SubmitAsync(id, input);
+            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+            await this.feedbacksService.SubmitAsync(id, input, userId);
 
             return this.RedirectToAction("ThankYou");
         }

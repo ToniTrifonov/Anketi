@@ -8,7 +8,7 @@
     {
         public int SurveysCount { get; set; }
 
-        public int SubmissionsCount { get; set; }
+        public int DownloadsCount { get; set; }
 
         public int FeedbacksCount { get; set; }
 

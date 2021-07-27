@@ -24,7 +24,7 @@
 
         public string Title { get; set; }
 
-        public string CreatedBy { get; set; }
+        public string UserId { get; set; }
 
         [Display(Name = "Created On")]
         public DateTime CreatedOn { get; set; }

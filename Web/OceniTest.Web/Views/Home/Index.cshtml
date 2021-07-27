@@ -24,7 +24,7 @@ else
     <section class="welcome">
         <article class="welcome-content">
             <h1 class="welcome-content-title">Welcome @this.User.Identity.Name</h1>
-            <p class="welcome-content-text">You can sign in or create an account with us if you do not already have on.</p>
+            <p class="welcome-content-text">You can sign in or create an account with us if you do not already have on,</p>
         </article>
 
         <article class="welcome-navigation">
@@ -32,6 +32,11 @@ else
                 <li class="navigation-authentication-list-item"><a class="authentication-btn" asp-area="Identity" asp-page="/Account/Register">Get Started</a></li>
                 <li class="navigation-authentication-list-item"><a class="authentication-btn" asp-area="Identity" asp-page="/Account/Login">Sign In</a></li>
             </ul>
+        </article>
+
+        <article>
+            <p>or start by browsing some of the already created surveys.</p>
+            <a class="welcome-navigation-list-item-btn" asp-controller="Quizzes" asp-action="All">BROWSE</a>
         </article>
     </section>
 }

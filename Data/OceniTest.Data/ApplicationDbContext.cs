@@ -37,6 +37,8 @@
 
         public DbSet<UserQuiz> UsersQuizzes { get; set; }
 
+        public DbSet<Download> Downloads { get; set; }
+
         public DbSet<Setting> Settings { get; set; }
 
         public override int SaveChanges() => this.SaveChanges(true);

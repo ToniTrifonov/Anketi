@@ -1,4 +1,5 @@
-﻿@model OceniTest.Web.ViewModels.Quizzes.SingleSurveyViewModel
+﻿@using System.Security.Claims;
+@model OceniTest.Web.ViewModels.Quizzes.SingleSurveyViewModel
 
 @{
     this.ViewData["Title"] = "Survey Details";
@@ -18,7 +19,7 @@
                 <section class="survey-details-content-question-answers">
                     @foreach (var answer in question.Answers)
                     {
-                        <input type="radio" value="@answer.Description"/>
+                        <input type="radio" value="@answer.Description" />
                     }
                 </section>
             </article>
@@ -27,10 +28,19 @@
 </article>
 
 <section class="survey-details-options">
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
-    <a asp-action="Overview" asp-route-id="@Model.Id">Overview</a>
-    <a id="submitDeleteButton" asp-action="Delete" asp-route-id="@Model.Id">Delete</a>
-    <a asp-controller="Downloads" asp-action="Download" asp-route-id="@Model.Id">Download Survey</a>
+    @if (Model.UserId != null && this.User.FindFirst(ClaimTypes.NameIdentifier).Value != null && Model.UserId == this.User.FindFirst(ClaimTypes.NameIdentifier).Value)
+    {
+        <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+        <a asp-action="Overview" asp-route-id="@Model.Id">Overview</a>
+        <a id="submitDeleteButton" asp-action="Delete" asp-route-id="@Model.Id">Delete</a>
+        <a asp-controller="Downloads" asp-action="Download" asp-route-id="@Model.Id">Download Survey</a>
+    }
+    else
+    {
+        <a asp-action="Overview" asp-route-id="@Model.Id">Overview</a>
+        <a asp-controller="Downloads" asp-action="Download" asp-route-id="@Model.Id">Download Survey</a>
+        <a asp-controller="Feedbacks" asp-action="Submit" asp-route-id="@Model.Id">Feedback</a>
+    }
 </section>
 
 @section Scripts{

@@ -6,9 +6,7 @@
 
     public interface IFeedbacksService
     {
-        Task SubmitAsync(string quizId, SubmitFeedbackInputModel input);
-
-        T GetById<T>(string id);
+        Task SubmitAsync(string quizId, SubmitFeedbackInputModel input, string userId);
 
         int GetCount(string userId);
     }

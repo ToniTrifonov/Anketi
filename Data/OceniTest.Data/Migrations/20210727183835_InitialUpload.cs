@@ -228,6 +228,35 @@ namespace OceniTest.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Downloads",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    QuizId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ModifiedOn = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false),
+                    DeletedOn = table.Column<DateTime>(type: "datetime2", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Downloads", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Downloads_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Downloads_Quizzes_QuizId",
+                        column: x => x.QuizId,
+                        principalTable: "Quizzes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Feedbacks",
                 columns: table => new
                 {
@@ -400,6 +429,21 @@ namespace OceniTest.Data.Migrations
                 column: "IsDeleted");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Downloads_IsDeleted",
+                table: "Downloads",
+                column: "IsDeleted");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Downloads_QuizId",
+                table: "Downloads",
+                column: "QuizId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Downloads_UserId",
+                table: "Downloads",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Feedbacks_IsDeleted",
                 table: "Feedbacks",
                 column: "IsDeleted");
@@ -479,6 +523,9 @@ namespace OceniTest.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "Downloads");
 
             migrationBuilder.DropTable(
                 name: "Feedbacks");

@@ -19,17 +19,6 @@
             this.quizzesRepository = quizzesRepository;
         }
 
-        public T GetById<T>(string id)
-        {
-            var feedback = this.feedbacksRepository
-                .AllAsNoTracking()
-                .Where(x => x.QuizId == id)
-                .To<T>()
-                .FirstOrDefault();
-
-            return feedback;
-        }
-
         public int GetCount(string userId)
         {
             var quizIds = this.quizzesRepository
@@ -56,12 +45,13 @@
             return feedbacksCount;
         }
 
-        public async Task SubmitAsync(string quizId, SubmitFeedbackInputModel input)
+        public async Task SubmitAsync(string quizId, SubmitFeedbackInputModel input, string userId)
         {
             var feedback = new Feedback()
             {
                 Comments = input.Comments,
-                QuizId = input.QuizId,
+                QuizId = quizId,
+                UserId = userId,
             };
 
             await this.feedbacksRepository.AddAsync(feedback);

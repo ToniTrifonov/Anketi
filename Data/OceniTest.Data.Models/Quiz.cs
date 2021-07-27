@@ -12,6 +12,7 @@
             this.Id = Guid.NewGuid().ToString();
             this.QuizQuestions = new HashSet<Question>();
             this.QuizFeedbacks = new HashSet<Feedback>();
+            this.QuizDownloads = new HashSet<Download>();
         }
 
         public string Name { get; set; }
@@ -33,5 +34,7 @@
         public ICollection<Question> QuizQuestions { get; set; }
 
         public ICollection<Feedback> QuizFeedbacks { get; set; }
+
+        public ICollection<Download> QuizDownloads { get; set; }
     }
 }

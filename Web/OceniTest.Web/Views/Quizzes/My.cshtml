@@ -4,6 +4,14 @@
     this.ViewData["Title"] = "My Surveys";
 }
 
+@if (Model.Count == 0)
+{
+    <section class="no-surveys">
+        <h1>No created surveys yet!</h1>
+        <p>Create your first survey!</p>
+        <a asp-action="Create">Create</a>
+    </section>
+}
 <section class="surveys">
     @foreach (var survey in Model)
     {

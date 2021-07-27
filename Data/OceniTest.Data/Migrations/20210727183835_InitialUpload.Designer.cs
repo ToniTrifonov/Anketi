@@ -10,7 +10,7 @@ using OceniTest.Data;
 namespace OceniTest.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210624092954_InitialUpload")]
+    [Migration("20210727183835_InitialUpload")]
     partial class InitialUpload
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -307,6 +307,40 @@ namespace OceniTest.Data.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("OceniTest.Data.Models.Download", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("QuizId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.HasIndex("QuizId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Downloads");
+                });
+
             modelBuilder.Entity("OceniTest.Data.Models.Feedback", b =>
                 {
                     b.Property<string>("Id")
@@ -554,6 +588,21 @@ namespace OceniTest.Data.Migrations
                     b.Navigation("Question");
                 });
 
+            modelBuilder.Entity("OceniTest.Data.Models.Download", b =>
+                {
+                    b.HasOne("OceniTest.Data.Models.Quiz", "Quiz")
+                        .WithMany("QuizDownloads")
+                        .HasForeignKey("QuizId");
+
+                    b.HasOne("OceniTest.Data.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("Quiz");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("OceniTest.Data.Models.Feedback", b =>
                 {
                     b.HasOne("OceniTest.Data.Models.Quiz", "Quiz")
@@ -633,6 +682,8 @@ namespace OceniTest.Data.Migrations
 
             modelBuilder.Entity("OceniTest.Data.Models.Quiz", b =>
                 {
+                    b.Navigation("QuizDownloads");
+
                     b.Navigation("QuizFeedbacks");
 
                     b.Navigation("QuizQuestions");
