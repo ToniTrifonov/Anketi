@@ -262,6 +262,7 @@
                 {
                     Id = x.Id,
                     Name = x.Name,
+                    Description = x.Description,
                     CreatedOn = x.CreatedOn,
                     ModifiedOn = x.ModifiedOn != null ? x.ModifiedOn : x.CreatedOn,
                     QuestionsCount = this.questionsRepository.All().Where(q => q.QuizId == x.Id).Count(),

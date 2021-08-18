@@ -7,24 +7,26 @@
 
 <article class="survey-details">
     <section class="survey-details-header">
-        <h2 class="survey-details-header-title">
+        <h2 class="survey-details-header-name">
             @this.Model.Name
         </h2>
+        <h4 class="survey-details-header-title">
+            @this.Model.Title
+        </h4>
     </section>
-    <section class="survey-details-content">
-        @foreach (var question in Model.Questions)
-        {
-            <article class="survey-details-content-question">
-                <p>@question.Description</p>
-                <section class="survey-details-content-question-answers">
-                    @foreach (var answer in question.Answers)
-                    {
-                        <input type="radio" value="@answer.Description" />
-                    }
-                </section>
-            </article>
-        }
-    </section>
+    <article class="survey-details-main">
+        <section class="survey-details-main-content">
+            <p class="survey-details-main-description">
+                @this.Model.Description
+            </p>
+        </section>
+        <section class="survey-details-values">
+            <p>Questions: </p>@this.Model.QuizQuestionsCount
+            <p>Created: </p>@this.Model.CreatedOn.ToString("MM/dd/yyyy")
+            <p>Last Modified: </p>@this.Model.ModifiedOn.ToString("MM/dd/yyyy")
+            <p>Downloads: </p>@this.Model.DownloadsCount
+        </section>
+    </article>
 </article>
 
 <section class="survey-details-options">

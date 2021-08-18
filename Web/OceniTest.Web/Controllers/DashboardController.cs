@@ -13,8 +13,8 @@
         private readonly IDownloadsService downloadsService;
 
         public DashboardController(
-            ISurveysService quizzesService, 
-            IFeedbacksService feedbacksService, 
+            ISurveysService quizzesService,
+            IFeedbacksService feedbacksService,
             IDownloadsService downloadsService)
         {
             this.quizzesService = quizzesService;

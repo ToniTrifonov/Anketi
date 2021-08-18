@@ -30,20 +30,20 @@
         public DateTime CreatedOn { get; set; }
 
         [Display(Name = "Modified On")]
-        public DateTime? ModifiedOn { get; set; }
+        public DateTime ModifiedOn { get; set; }
 
         [Display(Name = "Questions")]
         public int QuizQuestionsCount { get; set; }
 
-        [Display(Name = "Submissions")]
-        public int UsersCount { get; set; }
+        public int DownloadsCount { get; set; }
 
         public IEnumerable<QuestionViewModel> Questions { get; set; }
 
         public void CreateMappings(IProfileExpression configuration)
         {
             configuration.CreateMap<Quiz, SingleSurveyViewModel>()
-                            .ForMember(x => x.ModifiedOn, opt => opt.MapFrom(src => src.ModifiedOn != null ? src.ModifiedOn : src.CreatedOn));
+                            .ForMember(x => x.ModifiedOn, opt => opt.MapFrom(src => src.ModifiedOn != null ? src.ModifiedOn : src.CreatedOn))
+                            .ForMember(x => x.DownloadsCount, opt => opt.MapFrom(src => src.QuizDownloads.Count));
         }
     }
 }

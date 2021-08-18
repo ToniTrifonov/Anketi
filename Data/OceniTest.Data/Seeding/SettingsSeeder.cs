@@ -10,14 +10,19 @@
     {
         public async Task SeedAsync(ApplicationDbContext dbContext, IServiceProvider serviceProvider)
         {
-            await dbContext.Categories.AddAsync(new Category { Name = "Survey" });
-
-            if (dbContext.Settings.Any())
+            if (dbContext.Categories.Any())
             {
                 return;
             }
 
-            await dbContext.Settings.AddAsync(new Setting { Name = "Setting1", Value = "value1" });
+            await dbContext.Categories.AddAsync(new Category { Name = "Health" });
+            await dbContext.Categories.AddAsync(new Category { Name = "Education" });
+            await dbContext.Categories.AddAsync(new Category { Name = "Sports" });
+            await dbContext.Categories.AddAsync(new Category { Name = "Politics" });
+            await dbContext.Categories.AddAsync(new Category { Name = "Fashion" });
+            await dbContext.Categories.AddAsync(new Category { Name = "Investments" });
+            await dbContext.Categories.AddAsync(new Category { Name = "Money" });
+            await dbContext.Categories.AddAsync(new Category { Name = "Culture" });
         }
     }
 }

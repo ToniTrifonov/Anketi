@@ -62,6 +62,10 @@
                     </ul>
                 </section>
                 <section class="navigation-authentication">
+                    @if (this.User.Identity.IsAuthenticated)
+                    {
+                        <a asp-area="" asp-controller="Memberships" asp-action="Index">Membership</a>
+                    }
                     <partial name="_LoginPartial" />
                 </section>
             </nav>

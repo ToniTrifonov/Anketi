@@ -4,13 +4,13 @@
 }
 
 <section class="table">
-    <form>
+    <form class="table-search">
         <p>
             Find by name: <input type="text" name="SearchString" />
             <input type="submit" value="Search" />
         </p>
     </form>
-    <table>
+    <table class="table-content">
         <thead>
             <tr>
                 <th><a asp-action="All" asp-route-sortOrder="@this.ViewBag.NameSortParm" >Name</a><i class="fas fa-sort"></i></th>

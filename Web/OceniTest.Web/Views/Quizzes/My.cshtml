@@ -9,7 +9,7 @@
     <section class="no-surveys">
         <h1>No created surveys yet!</h1>
         <p>Create your first survey!</p>
-        <a asp-action="Create">Create</a>
+        <a class="create-survey-btn" asp-action="Create">Create</a>
     </section>
 }
 <section class="surveys">
@@ -19,7 +19,7 @@
             <article class="survey" id="@survey.Id">
                 <h3 class="survey-name">@survey.Name</h3>
                 <p class="survey-creation">@survey.CreatedOn.ToString("MM/dd/yyyy")</p>
-                <p class="survey-description">@survey.Description</p>
+                <p class="survey-description">@(survey.Description.Length > 100 ? survey.Description.Substring(0, 100) + "..." : survey.Description)</p>
                 <p class="survey-visibility">@survey.Visibility</p>
             </article>
             <p class="view-btn"><a class="btn btn-primary" asp-action="Details" asp-route-id="@survey.Id">See Details</a></p>
@@ -27,6 +27,11 @@
     }
 </section>
 
-<section class="pagination">
-    <partial name="_Pagination" model="@Model" />
-</section>
+
+@if (this.Model.TotalPages > 1)
+{
+    <section class="pagination">
+        <partial name="_Pagination" model="@Model" />
+    </section>
+}
+

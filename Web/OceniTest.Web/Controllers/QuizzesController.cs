@@ -125,25 +125,7 @@
         {
             await this.surveysService.DeleteAsync(id);
 
-            return this.RedirectToAction("All");
-        }
-
-        public IActionResult Start(string id)
-        {
-            var quiz = this.surveysService.GetQuizById<TakeQuizInputModel>(id);
-
-            return this.View(quiz);
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Start(string id, TakeQuizInputModel input)
-        {
-            if (!this.ModelState.IsValid)
-            {
-                return this.View(input);
-            }
-
-            return this.RedirectToAction("Submit", "Feedbacks", new { id });
+            return this.RedirectToAction("My");
         }
 
         public IActionResult My(int id = 1)
@@ -151,7 +133,7 @@
             var pageSize = 6;
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
 
-            var surveysCount = this.surveysService.GetCount();
+            var surveysCount = this.surveysService.GetCount(userId);
 
             if (id <= 1)
             {

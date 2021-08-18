@@ -10,7 +10,7 @@ using OceniTest.Data;
 namespace OceniTest.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210727183835_InitialUpload")]
+    [Migration("20210817091303_InitialUpload")]
     partial class InitialUpload
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -227,6 +227,9 @@ namespace OceniTest.Data.Migrations
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsMember")
                         .HasColumnType("bit");
 
                     b.Property<bool>("LockoutEnabled")

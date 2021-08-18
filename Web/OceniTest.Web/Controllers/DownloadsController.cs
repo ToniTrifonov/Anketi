@@ -1,14 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using OceniTest.Services.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Security.Claims;
-using System.Threading.Tasks;
-
-namespace OceniTest.Web.Controllers
+﻿namespace OceniTest.Web.Controllers
 {
+    using System.Net;
+    using System.Security.Claims;
+
+    using Microsoft.AspNetCore.Mvc;
+    using OceniTest.Services.Data;
+
     public class DownloadsController : BaseController
     {
         private readonly IDownloadsService downloadsService;
