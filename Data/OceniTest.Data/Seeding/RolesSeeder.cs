@@ -17,7 +17,7 @@
             var roleManager = serviceProvider.GetRequiredService<RoleManager<ApplicationRole>>();
 
             var roleId = await SeedRoleAsync(roleManager, GlobalConstants.AdministratorRoleName);
-            await SeedAdministrator(dbContext, roleId);
+            await SeedAdministratorAsync(dbContext, roleId);
         }
 
         private static async Task<string> SeedRoleAsync(RoleManager<ApplicationRole> roleManager, string roleName)
@@ -39,8 +39,13 @@
             return role.Id;
         }
 
-        private static async Task SeedAdministrator(ApplicationDbContext dbContext, string roleId)
+        private static async Task SeedAdministratorAsync(ApplicationDbContext dbContext, string roleId)
         {
+            if (dbContext.Users.Any(x => x.Email == "admin@abv.bg"))
+            {
+                return;
+            }
+
             var passwordHasher = new PasswordHasher<string>();
 
             var admin = new ApplicationUser()
@@ -49,7 +54,6 @@
                 NormalizedEmail = "ADMIN@ABV.BG",
                 UserName = "admin@abv.bg",
                 NormalizedUserName = "ADMIN@ABV.BG",
-                IsMember = true,
                 PasswordHash = passwordHasher.HashPassword(string.Empty, "123456"),
             };
 

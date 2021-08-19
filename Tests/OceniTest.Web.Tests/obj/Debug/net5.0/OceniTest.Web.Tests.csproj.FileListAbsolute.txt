@@ -526,7 +526,6 @@ C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Te
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Tests\OceniTest.Web.Tests\obj\Debug\net5.0\OceniTest.Web.Tests.AssemblyInfoInputs.cache
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Tests\OceniTest.Web.Tests\obj\Debug\net5.0\OceniTest.Web.Tests.AssemblyInfo.cs
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Tests\OceniTest.Web.Tests\obj\Debug\net5.0\OceniTest.Web.Tests.csproj.CoreCompileInputs.cache
-C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Tests\OceniTest.Web.Tests\obj\Debug\net5.0\OceniTest.Web.Tests.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Tests\OceniTest.Web.Tests\obj\Debug\net5.0\OceniTest.Web.Tests.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Tests\OceniTest.Web.Tests\obj\Debug\net5.0\staticwebassets\OceniTest.Web.Tests.StaticWebAssets.Manifest.cache
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Tests\OceniTest.Web.Tests\obj\Debug\net5.0\staticwebassets\OceniTest.Web.Tests.StaticWebAssets.xml

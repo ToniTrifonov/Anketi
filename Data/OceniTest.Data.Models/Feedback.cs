@@ -13,8 +13,6 @@
 
         public string Comments { get; set; }
 
-        public Review Review { get; set; }
-
         public ApplicationUser ApplicationUser { get; set; }
 
         public string UserId { get; set; }

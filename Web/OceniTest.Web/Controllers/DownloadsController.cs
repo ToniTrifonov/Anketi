@@ -2,10 +2,11 @@
 {
     using System.Net;
     using System.Security.Claims;
-
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
     using OceniTest.Services.Data;
 
+    [Authorize]
     public class DownloadsController : BaseController
     {
         private readonly IDownloadsService downloadsService;

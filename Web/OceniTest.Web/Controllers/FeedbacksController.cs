@@ -2,11 +2,12 @@
 {
     using System.Security.Claims;
     using System.Threading.Tasks;
-
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
     using OceniTest.Services.Data;
     using OceniTest.Web.ViewModels.Feedbacks;
 
+    [Authorize]
     public class FeedbacksController : BaseController
     {
         private readonly IFeedbacksService feedbacksService;

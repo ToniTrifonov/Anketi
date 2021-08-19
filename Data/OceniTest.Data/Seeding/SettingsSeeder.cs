@@ -23,6 +23,8 @@
             await dbContext.Categories.AddAsync(new Category { Name = "Investments" });
             await dbContext.Categories.AddAsync(new Category { Name = "Money" });
             await dbContext.Categories.AddAsync(new Category { Name = "Culture" });
+
+            await dbContext.SaveChangesAsync();
         }
     }
 }

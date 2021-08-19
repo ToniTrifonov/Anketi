@@ -227,14 +227,14 @@ namespace OceniTest.Data.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsMember")
-                        .HasColumnType("bit");
-
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
 
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("MembershipId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("datetime2");
@@ -269,6 +269,8 @@ namespace OceniTest.Data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("IsDeleted");
+
+                    b.HasIndex("MembershipId");
 
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
@@ -365,9 +367,6 @@ namespace OceniTest.Data.Migrations
                     b.Property<string>("QuizId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("Review")
-                        .HasColumnType("int");
-
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
@@ -380,6 +379,33 @@ namespace OceniTest.Data.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Feedbacks");
+                });
+
+            modelBuilder.Entity("OceniTest.Data.Models.Membership", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.ToTable("Memberships");
                 });
 
             modelBuilder.Entity("OceniTest.Data.Models.Question", b =>
@@ -589,6 +615,15 @@ namespace OceniTest.Data.Migrations
                     b.Navigation("Question");
                 });
 
+            modelBuilder.Entity("OceniTest.Data.Models.ApplicationUser", b =>
+                {
+                    b.HasOne("OceniTest.Data.Models.Membership", "Membership")
+                        .WithMany("MembershipUsers")
+                        .HasForeignKey("MembershipId");
+
+                    b.Navigation("Membership");
+                });
+
             modelBuilder.Entity("OceniTest.Data.Models.Download", b =>
                 {
                     b.HasOne("OceniTest.Data.Models.Quiz", "Quiz")
@@ -674,6 +709,11 @@ namespace OceniTest.Data.Migrations
             modelBuilder.Entity("OceniTest.Data.Models.Category", b =>
                 {
                     b.Navigation("CategoryQuizzes");
+                });
+
+            modelBuilder.Entity("OceniTest.Data.Models.Membership", b =>
+                {
+                    b.Navigation("MembershipUsers");
                 });
 
             modelBuilder.Entity("OceniTest.Data.Models.Question", b =>

@@ -6,12 +6,13 @@
     using System.Net;
     using System.Security.Claims;
     using System.Threading.Tasks;
-
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
     using OceniTest.Services.Data;
     using OceniTest.Web.ViewModels.Pagination;
     using OceniTest.Web.ViewModels.Quizzes;
 
+    [Authorize]
     public class QuizzesController : BaseController
     {
         private readonly ISurveysService surveysService;
@@ -56,6 +57,7 @@
             return this.RedirectToAction("My");
         }
 
+        [AllowAnonymous]
         public IActionResult All(string sortOrder, string searchString)
         {
             this.ViewBag.NameSortParm = string.IsNullOrEmpty(sortOrder) ? "name_desc" : string.Empty;

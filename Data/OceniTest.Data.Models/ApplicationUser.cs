@@ -29,7 +29,9 @@ namespace OceniTest.Data.Models
 
         public DateTime? DeletedOn { get; set; }
 
-        public bool IsMember { get; set; }
+        public string MembershipId { get; set; }
+
+        public Membership Membership { get; set; }
 
         public virtual ICollection<IdentityUserRole<string>> Roles { get; set; }
 

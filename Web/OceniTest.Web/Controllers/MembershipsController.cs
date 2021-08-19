@@ -1,10 +1,12 @@
 ﻿namespace OceniTest.Web.Controllers
 {
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
     using OceniTest.Services.Data;
     using System.Security.Claims;
     using System.Threading.Tasks;
 
+    [Authorize]
     public class MembershipsController : BaseController
     {
         private readonly IMembershipsService membershipsService;

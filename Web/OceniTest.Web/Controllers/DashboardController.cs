@@ -7,6 +7,7 @@
     using OceniTest.Services.Data;
     using OceniTest.Web.ViewModels.Dashboard;
 
+    [Authorize]
     public class DashboardController : BaseController
     {
         private readonly ISurveysService quizzesService;
