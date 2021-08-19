@@ -6,4 +6,3 @@ C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\We
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web.Infrastructure\obj\Debug\netstandard2.1\OceniTest.Web.Infrastructure.csproj.CoreCompileInputs.cache
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web.Infrastructure\obj\Debug\netstandard2.1\OceniTest.Web.Infrastructure.dll
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web.Infrastructure\obj\Debug\netstandard2.1\OceniTest.Web.Infrastructure.pdb
-C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web.Infrastructure\obj\Debug\netstandard2.1\OceniTest.Web.Infrastructure.csprojAssemblyReference.cache

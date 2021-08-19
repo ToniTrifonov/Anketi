@@ -6,4 +6,3 @@ C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Da
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Data\OceniTest.Data.Common\obj\Debug\netstandard2.1\OceniTest.Data.Common.csproj.CoreCompileInputs.cache
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Data\OceniTest.Data.Common\obj\Debug\netstandard2.1\OceniTest.Data.Common.dll
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Data\OceniTest.Data.Common\obj\Debug\netstandard2.1\OceniTest.Data.Common.pdb
-C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Data\OceniTest.Data.Common\obj\Debug\netstandard2.1\OceniTest.Data.Common.csprojAssemblyReference.cache

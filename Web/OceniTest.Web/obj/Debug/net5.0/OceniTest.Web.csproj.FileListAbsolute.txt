@@ -433,7 +433,6 @@ C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\We
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web\obj\Debug\net5.0\OceniTest.Web.AssemblyInfoInputs.cache
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web\obj\Debug\net5.0\OceniTest.Web.AssemblyInfo.cs
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web\obj\Debug\net5.0\OceniTest.Web.csproj.CoreCompileInputs.cache
-C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web\obj\Debug\net5.0\OceniTest.Web.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web\obj\Debug\net5.0\OceniTest.Web.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web\obj\Debug\net5.0\OceniTest.Web.RazorAssemblyInfo.cache
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web\obj\Debug\net5.0\OceniTest.Web.RazorAssemblyInfo.cs

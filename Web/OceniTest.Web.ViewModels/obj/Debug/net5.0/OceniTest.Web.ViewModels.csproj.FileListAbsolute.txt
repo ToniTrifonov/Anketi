@@ -1,0 +1,5 @@
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web.ViewModels\obj\Debug\net5.0\OceniTest.Web.ViewModels.csprojAssemblyReference.cache
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web.ViewModels\obj\Debug\net5.0\OceniTest.Web.ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web.ViewModels\obj\Debug\net5.0\OceniTest.Web.ViewModels.AssemblyInfoInputs.cache
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web.ViewModels\obj\Debug\net5.0\OceniTest.Web.ViewModels.AssemblyInfo.cs
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web.ViewModels\obj\Debug\net5.0\OceniTest.Web.ViewModels.csproj.CoreCompileInputs.cache
