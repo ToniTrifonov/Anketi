@@ -1,14 +1,15 @@
-﻿using Microsoft.AspNetCore.Identity;
-using OceniTest.Data.Common.Repositories;
-using OceniTest.Data.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OceniTest.Services.Data
+﻿namespace OceniTest.Services.Data
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    using Microsoft.AspNetCore.Identity;
+    using OceniTest.Data.Common.Repositories;
+    using OceniTest.Data.Models;
+
     public class MembershipsService : IMembershipsService
     {
         private readonly IDeletableEntityRepository<ApplicationUser> usersRepository;
@@ -22,34 +23,40 @@ namespace OceniTest.Services.Data
             this.membershipsRepository = membershipsRepository;
         }
 
-        public async Task AddMember(string userId)
+        public async Task AddMemberAsync(string userId, string subType)
         {
-            var userToRemove = this.usersRepository
+            var user = this.usersRepository
                 .All()
-                .Where(x => x.Id == userId)
-                .FirstOrDefault();
+                .FirstOrDefault(x => x.Id == userId);
 
-            var membershipId = this.membershipsRepository
-                .All()
-                .Where(x => x.Name == "VIP")
-                .FirstOrDefault()
-                .Id;
+            var membershipId = string.Empty;
 
-            var passwordHasher = new PasswordHasher<string>();
-
-            this.usersRepository.Delete(userToRemove);
-
-            /*var user = new ApplicationUser()
+            if (user.MembershipId == null)
             {
-                Email = userToRemove.Email,
-                NormalizedEmail = userToRemove.NormalizedEmail,
-                UserName = userToRemove.UserName,
-                NormalizedUserName = userToRemove.NormalizedUserName,
-                PasswordHash = passwordHasher.HashPassword(string.Empty, "123456"),
-                MembershipId = membershipId,
-            };
+                membershipId = string.Empty;
 
-            await this.usersRepository.AddAsync(user);*/
+                if (subType == "VIP")
+                {
+                    membershipId = this.membershipsRepository
+                        .All()
+                        .FirstOrDefault(x => x.Name == "VIP")
+                        .Id;
+                }
+                else
+                {
+                    membershipId = this.membershipsRepository
+                        .All()
+                        .FirstOrDefault(x => x.Name == "Trial")
+                        .Id;
+                }
+
+                user.MembershipId = membershipId;
+            }
+            else
+            {
+                throw new InvalidOperationException("This user is already subscribed!");
+            }
+
             await this.usersRepository.SaveChangesAsync();
         }
     }

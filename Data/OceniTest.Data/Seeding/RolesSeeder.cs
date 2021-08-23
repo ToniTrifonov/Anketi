@@ -46,6 +46,11 @@
                 return;
             }
 
+            var membershipId = dbContext
+                .Memberships
+                .FirstOrDefault(x => x.Name == "VIP")
+                .Id;
+
             var passwordHasher = new PasswordHasher<string>();
 
             var admin = new ApplicationUser()
@@ -55,6 +60,7 @@
                 UserName = "admin@abv.bg",
                 NormalizedUserName = "ADMIN@ABV.BG",
                 PasswordHash = passwordHasher.HashPassword(string.Empty, "123456"),
+                MembershipId = membershipId,
             };
 
             var userInRole = new IdentityUserRole<string>() { RoleId = roleId, UserId = admin.Id };

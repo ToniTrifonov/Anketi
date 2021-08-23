@@ -6,3 +6,4 @@ C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Se
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Services\OceniTest.Services.Messaging\obj\Debug\netstandard2.1\OceniTest.Services.Messaging.csproj.CoreCompileInputs.cache
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Services\OceniTest.Services.Messaging\obj\Debug\netstandard2.1\OceniTest.Services.Messaging.dll
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Services\OceniTest.Services.Messaging\obj\Debug\netstandard2.1\OceniTest.Services.Messaging.pdb
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Services\OceniTest.Services.Messaging\obj\Debug\netstandard2.1\OceniTest.Services.Messaging.csprojAssemblyReference.cache

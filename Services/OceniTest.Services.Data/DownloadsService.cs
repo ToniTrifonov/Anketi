@@ -1,20 +1,21 @@
-﻿using OceniTest.Data.Common.Repositories;
-using OceniTest.Data.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OceniTest.Services.Data
+﻿namespace OceniTest.Services.Data
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    using OceniTest.Data.Common.Repositories;
+    using OceniTest.Data.Models;
+
     public class DownloadsService : IDownloadsService
     {
         private readonly IDeletableEntityRepository<Download> downloadsRepository;
         private readonly IDeletableEntityRepository<Quiz> quizzesRepository;
 
         public DownloadsService(
-            IDeletableEntityRepository<Download> downloadsRepository, 
+            IDeletableEntityRepository<Download> downloadsRepository,
             IDeletableEntityRepository<Quiz> quizzesRepository)
         {
             this.downloadsRepository = downloadsRepository;

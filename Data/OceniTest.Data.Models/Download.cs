@@ -1,10 +1,11 @@
-﻿using OceniTest.Data.Common.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace OceniTest.Data.Models
+﻿namespace OceniTest.Data.Models
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
+    using OceniTest.Data.Common.Models;
+
     public class Download : BaseDeletableModel<string>
     {
         public Download()

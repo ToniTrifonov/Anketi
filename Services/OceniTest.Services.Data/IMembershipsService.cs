@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OceniTest.Services.Data
+﻿namespace OceniTest.Services.Data
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using System.Threading.Tasks;
+
     public interface IMembershipsService
     {
-        Task AddMember(string userId);
+        Task AddMemberAsync(string userId, string subType);
     }
 }

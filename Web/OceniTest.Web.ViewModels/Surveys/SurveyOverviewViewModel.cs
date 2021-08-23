@@ -1,10 +1,11 @@
-﻿using OceniTest.Web.ViewModels.Questions;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace OceniTest.Web.ViewModels.Quizzes
+﻿namespace OceniTest.Web.ViewModels.Quizzes
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
+    using OceniTest.Web.ViewModels.Questions;
+
     public class SurveyOverviewViewModel
     {
         public SurveyOverviewViewModel()

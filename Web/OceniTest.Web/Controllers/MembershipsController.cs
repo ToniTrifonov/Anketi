@@ -1,10 +1,12 @@
 ﻿namespace OceniTest.Web.Controllers
 {
+    using System;
+    using System.Security.Claims;
+    using System.Threading.Tasks;
+
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
     using OceniTest.Services.Data;
-    using System.Security.Claims;
-    using System.Threading.Tasks;
 
     [Authorize]
     public class MembershipsController : BaseController
@@ -21,13 +23,38 @@
             return this.View();
         }
 
-        public IActionResult Add()
+        [HttpPost]
+        public async Task<IActionResult> Full()
         {
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
 
-            this.membershipsService.AddMember(userId);
+            try
+            {
+                await this.membershipsService.AddMemberAsync(userId, "VIP");
+            }
+            catch (Exception)
+            {
+                return this.RedirectToAction("Error", "Home");
+            }
 
-            return this.Redirect("/Home/Index");
+            return this.Redirect("/Dashboard/Index");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Trial()
+        {
+            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+            try
+            {
+                await this.membershipsService.AddMemberAsync(userId, "Trial");
+            }
+            catch (Exception)
+            {
+                return this.RedirectToAction("Error", "Home");
+            }
+
+            return this.Redirect("/Dashboard/Index");
         }
     }
 }
