@@ -12,14 +12,27 @@
     public class MembershipsController : BaseController
     {
         private readonly IMembershipsService membershipsService;
+        private readonly IUsersService usersService;
 
-        public MembershipsController(IMembershipsService membershipsService)
+        public MembershipsController(
+            IMembershipsService membershipsService,
+            IUsersService usersService)
         {
             this.membershipsService = membershipsService;
+            this.usersService = usersService;
         }
 
         public IActionResult Index()
         {
+            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+            var user = this.usersService.GetUser(userId);
+
+            if (user.MembershipId != null)
+            {
+                return this.RedirectToAction("My");
+            }
+
             return this.View();
         }
 
@@ -55,6 +68,16 @@
             }
 
             return this.Redirect("/Dashboard/Index");
+        }
+
+        public IActionResult My()
+        {
+            return this.View();
+        }
+
+        public IActionResult Expired()
+        {
+            return this.View();
         }
     }
 }

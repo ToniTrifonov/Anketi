@@ -7,8 +7,10 @@
 
     public interface IDownloadsService
     {
-        Task SubmitDownload(string userId, string quizId);
+        Task SubmitDownloadAsync(string userId, string quizId);
 
         int GetCount(string userId);
+
+        int GetUserDownloadsCount(string userId);
     }
 }

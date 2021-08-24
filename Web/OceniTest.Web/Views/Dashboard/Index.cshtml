@@ -13,10 +13,10 @@
             <p>You have</p>
         </article>
         <article class="dashboard-content-data">
-            <p><strong>@this.Model.SurveysCount</strong> Surveys</p>
+            <p><strong>@this.Model.SurveysCount</strong>@(this.Model.SurveysCount == 1 ? " Survey" : " Surveys")</p>
         </article>
         <article class="dashboard-content-data">
-            <p><strong>@this.Model.DownloadsCount </strong> Downloads</p>
+            <p><strong>@this.Model.DownloadsCount </strong>@(this.Model.DownloadsCount == 1 ? " Download" : " Downloads")</p>
         </article>
         <article class="dashboard-content-data">
             <p><strong>@this.Model.FeedbacksCount</strong> Feedback Provided</p>
@@ -37,7 +37,7 @@
                         <p class="survey-description">@(survey.Description.Length > 100 ? survey.Description.Substring(0, 100) + "..." : survey.Description)</p>
                         <p class="survey-visibility">@survey.Visibility</p>
                     </article>
-                    <p class="view-btn"><a class="btn btn-primary" asp-action="Details" asp-route-id="@survey.Id">See Details</a></p>
+                    <p class="view-btn"><a class="btn btn-primary" asp-controller="Quizzes" asp-action="Details" asp-route-id="@survey.Id">See Details</a></p>
                 </article>
             }
         </section>

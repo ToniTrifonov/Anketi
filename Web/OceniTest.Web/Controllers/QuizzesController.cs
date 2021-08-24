@@ -154,6 +154,7 @@
             return this.View(paginatedList);
         }
 
+        [AllowAnonymous]
         public IActionResult Overview(string id)
         {
             var surveyOverviewViewModel = this.surveysService.GetSurveyById(id);

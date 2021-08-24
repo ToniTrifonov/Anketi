@@ -24,22 +24,22 @@
 
         public int GetCount(string userId)
         {
-            var quizIds = this.quizzesRepository
+            var quizzes = this.quizzesRepository
                 .All()
                 .Where(x => x.UserId == userId)
                 .Select(x => new
                 {
-                    quizId = x.Id,
+                    Id = x.Id,
                 })
                 .ToList();
 
             var downloadsCount = 0;
 
-            foreach (var quizId in quizIds)
+            foreach (var quiz in quizzes)
             {
                 downloadsCount += this.downloadsRepository
                     .All()
-                    .Where(x => x.QuizId == quizId.quizId)
+                    .Where(x => x.QuizId == quiz.Id)
                     .ToList()
                     .Count();
             }
@@ -47,7 +47,16 @@
             return downloadsCount;
         }
 
-        public async Task SubmitDownload(string userId, string quizId)
+        public int GetUserDownloadsCount(string userId)
+        {
+            return this.downloadsRepository
+                .All()
+                .Where(x => x.UserId == userId)
+                .ToList()
+                .Count();
+        }
+
+        public async Task SubmitDownloadAsync(string userId, string quizId)
         {
             var download = new Download()
             {

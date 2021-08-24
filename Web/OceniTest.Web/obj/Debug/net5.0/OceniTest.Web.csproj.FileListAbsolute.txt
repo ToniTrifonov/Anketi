@@ -467,7 +467,6 @@ C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\We
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web\obj\Debug\net5.0\Razor\Views\Quizzes\All.cshtml.g.cs
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web\obj\Debug\net5.0\Razor\Views\Quizzes\Details.cshtml.g.cs
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web\obj\Debug\net5.0\Razor\Views\Quizzes\Edit.cshtml.g.cs
-C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web\obj\Debug\net5.0\Razor\Views\Quizzes\Start.cshtml.g.cs
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web\obj\Debug\net5.0\Razor\Views\Feedbacks\Submit.cshtml.g.cs
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web\obj\Debug\net5.0\Razor\Views\Feedbacks\ThankYou.cshtml.g.cs
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web\obj\Debug\net5.0\Razor\Views\Quizzes\My.cshtml.g.cs
@@ -477,3 +476,5 @@ C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\We
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web\obj\Debug\net5.0\Razor\Views\Shared\_Search.cshtml.g.cs
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web\obj\Debug\net5.0\Razor\Views\Memberships\Index.cshtml.g.cs
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web\obj\Debug\net5.0\OceniTest.Web.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web\obj\Debug\net5.0\Razor\Views\Memberships\My.cshtml.g.cs
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\OceniTest\Web\OceniTest.Web\obj\Debug\net5.0\Razor\Views\Memberships\Expired.cshtml.g.cs
