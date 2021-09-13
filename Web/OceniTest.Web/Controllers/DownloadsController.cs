@@ -27,7 +27,12 @@
 
             var user = this.usersService.GetUser(userId);
             var userDownloadsCount = this.downloadsService.GetUserDownloadsCount(userId);
-            var userSubscription = user.Membership.Name;
+            var userSubscription = user.Membership?.Name;
+
+            if (userSubscription == null)
+            {
+                return this.RedirectToAction("Index", "Memberships");
+            }
 
             if (userDownloadsCount >= 3 && userSubscription == "Trial")
             {

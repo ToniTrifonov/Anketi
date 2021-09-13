@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services\\OceniTest.Services.csproj": {}
+    "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services\\OceniTest.Services.csproj": {}
   },
   "projects": {
-    "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services\\OceniTest.Services.csproj": {
+    "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services\\OceniTest.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services\\OceniTest.Services.csproj",
+        "projectUniqueName": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services\\OceniTest.Services.csproj",
         "projectName": "OceniTest.Services",
-        "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services\\OceniTest.Services.csproj",
+        "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services\\OceniTest.Services.csproj",
         "packagesPath": "C:\\Users\\123\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services\\obj\\",
+        "outputPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

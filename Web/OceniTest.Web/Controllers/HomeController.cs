@@ -18,10 +18,10 @@
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public IActionResult Error(int id)
         {
-            return this.View(
-                new ErrorViewModel { RequestId = Activity.Current?.Id ?? this.HttpContext.TraceIdentifier });
+            this.ViewData["ErrorMessage"] = $"Error occurred. The ErrorCode is: {id}";
+            return this.View();
         }
     }
 }

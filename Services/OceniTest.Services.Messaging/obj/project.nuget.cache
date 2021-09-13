@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QLBLZFvB9MQLOWeGVg1fkXZaHVL6Nk/t6QWXDMytKcw7vwGgMAJd7doLiysYAIlXrjuR+gWTqR8eLghUAJQBBA==",
+  "dgSpecHash": "eVYx4QpPBrxuT8xNwfKa2x9d0ygYrgVMUx6WBv4XjnbHGNom2Lr8YRCdzgnQhrUCJdH32T7JCTluPMZ8650DHw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Messaging\\OceniTest.Services.Messaging.csproj",
+  "projectFilePath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Messaging\\OceniTest.Services.Messaging.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\123\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
     "C:\\Users\\123\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",

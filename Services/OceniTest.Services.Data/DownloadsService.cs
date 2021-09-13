@@ -58,13 +58,22 @@
 
         public async Task SubmitDownloadAsync(string userId, string quizId)
         {
-            var download = new Download()
+            var download = this.downloadsRepository
+                .All()
+                .FirstOrDefault(x => (x.UserId == userId && x.QuizId == quizId));
+
+            if (download != null)
+            {
+                return;
+            }
+
+            var newDownload = new Download()
             {
                 QuizId = quizId,
                 UserId = userId,
             };
 
-            await this.downloadsRepository.AddAsync(download);
+            await this.downloadsRepository.AddAsync(newDownload);
             await this.downloadsRepository.SaveChangesAsync();
         }
     }

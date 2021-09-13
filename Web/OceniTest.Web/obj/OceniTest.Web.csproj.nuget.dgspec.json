@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Web\\OceniTest.Web\\OceniTest.Web.csproj": {}
+    "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Web\\OceniTest.Web\\OceniTest.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data.Common\\OceniTest.Data.Common.csproj": {
+    "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data.Common\\OceniTest.Data.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data.Common\\OceniTest.Data.Common.csproj",
+        "projectUniqueName": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data.Common\\OceniTest.Data.Common.csproj",
         "projectName": "OceniTest.Data.Common",
-        "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data.Common\\OceniTest.Data.Common.csproj",
+        "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data.Common\\OceniTest.Data.Common.csproj",
         "packagesPath": "C:\\Users\\123\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data.Common\\obj\\",
+        "outputPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -90,14 +90,14 @@
         }
       }
     },
-    "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data.Models\\OceniTest.Data.Models.csproj": {
+    "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data.Models\\OceniTest.Data.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data.Models\\OceniTest.Data.Models.csproj",
+        "projectUniqueName": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data.Models\\OceniTest.Data.Models.csproj",
         "projectName": "OceniTest.Data.Models",
-        "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data.Models\\OceniTest.Data.Models.csproj",
+        "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data.Models\\OceniTest.Data.Models.csproj",
         "packagesPath": "C:\\Users\\123\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data.Models\\obj\\",
+        "outputPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -118,11 +118,11 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data.Common\\OceniTest.Data.Common.csproj": {
-                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data.Common\\OceniTest.Data.Common.csproj"
+              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data.Common\\OceniTest.Data.Common.csproj": {
+                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data.Common\\OceniTest.Data.Common.csproj"
               },
-              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj": {
-                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj"
+              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj": {
+                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj"
               }
             }
           }
@@ -183,14 +183,14 @@
         }
       }
     },
-    "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data\\OceniTest.Data.csproj": {
+    "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data\\OceniTest.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data\\OceniTest.Data.csproj",
+        "projectUniqueName": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data\\OceniTest.Data.csproj",
         "projectName": "OceniTest.Data",
-        "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data\\OceniTest.Data.csproj",
+        "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data\\OceniTest.Data.csproj",
         "packagesPath": "C:\\Users\\123\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data\\obj\\",
+        "outputPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -211,14 +211,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data.Common\\OceniTest.Data.Common.csproj": {
-                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data.Common\\OceniTest.Data.Common.csproj"
+              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data.Common\\OceniTest.Data.Common.csproj": {
+                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data.Common\\OceniTest.Data.Common.csproj"
               },
-              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data.Models\\OceniTest.Data.Models.csproj": {
-                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data.Models\\OceniTest.Data.Models.csproj"
+              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data.Models\\OceniTest.Data.Models.csproj": {
+                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data.Models\\OceniTest.Data.Models.csproj"
               },
-              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\OceniTest.Common\\OceniTest.Common.csproj": {
-                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\OceniTest.Common\\OceniTest.Common.csproj"
+              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\OceniTest.Common\\OceniTest.Common.csproj": {
+                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\OceniTest.Common\\OceniTest.Common.csproj"
               }
             }
           }
@@ -299,14 +299,14 @@
         }
       }
     },
-    "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\OceniTest.Common\\OceniTest.Common.csproj": {
+    "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\OceniTest.Common\\OceniTest.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\OceniTest.Common\\OceniTest.Common.csproj",
+        "projectUniqueName": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\OceniTest.Common\\OceniTest.Common.csproj",
         "projectName": "OceniTest.Common",
-        "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\OceniTest.Common\\OceniTest.Common.csproj",
+        "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\OceniTest.Common\\OceniTest.Common.csproj",
         "packagesPath": "C:\\Users\\123\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\OceniTest.Common\\obj\\",
+        "outputPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\OceniTest.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -381,14 +381,14 @@
         }
       }
     },
-    "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Data\\OceniTest.Services.Data.csproj": {
+    "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Data\\OceniTest.Services.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Data\\OceniTest.Services.Data.csproj",
+        "projectUniqueName": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Data\\OceniTest.Services.Data.csproj",
         "projectName": "OceniTest.Services.Data",
-        "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Data\\OceniTest.Services.Data.csproj",
+        "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Data\\OceniTest.Services.Data.csproj",
         "packagesPath": "C:\\Users\\123\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Data\\obj\\",
+        "outputPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -409,17 +409,17 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data.Common\\OceniTest.Data.Common.csproj": {
-                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data.Common\\OceniTest.Data.Common.csproj"
+              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data.Common\\OceniTest.Data.Common.csproj": {
+                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data.Common\\OceniTest.Data.Common.csproj"
               },
-              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data.Models\\OceniTest.Data.Models.csproj": {
-                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data.Models\\OceniTest.Data.Models.csproj"
+              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data.Models\\OceniTest.Data.Models.csproj": {
+                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data.Models\\OceniTest.Data.Models.csproj"
               },
-              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj": {
-                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj"
+              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj": {
+                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj"
               },
-              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Web\\OceniTest.Web.ViewModels\\OceniTest.Web.ViewModels.csproj": {
-                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Web\\OceniTest.Web.ViewModels\\OceniTest.Web.ViewModels.csproj"
+              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Web\\OceniTest.Web.ViewModels\\OceniTest.Web.ViewModels.csproj": {
+                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Web\\OceniTest.Web.ViewModels\\OceniTest.Web.ViewModels.csproj"
               }
             }
           }
@@ -476,14 +476,14 @@
         }
       }
     },
-    "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj": {
+    "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj",
+        "projectUniqueName": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj",
         "projectName": "OceniTest.Services.Mapping",
-        "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj",
+        "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj",
         "packagesPath": "C:\\Users\\123\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Mapping\\obj\\",
+        "outputPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Mapping\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -562,14 +562,14 @@
         }
       }
     },
-    "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Messaging\\OceniTest.Services.Messaging.csproj": {
+    "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Messaging\\OceniTest.Services.Messaging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Messaging\\OceniTest.Services.Messaging.csproj",
+        "projectUniqueName": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Messaging\\OceniTest.Services.Messaging.csproj",
         "projectName": "OceniTest.Services.Messaging",
-        "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Messaging\\OceniTest.Services.Messaging.csproj",
+        "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Messaging\\OceniTest.Services.Messaging.csproj",
         "packagesPath": "C:\\Users\\123\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Messaging\\obj\\",
+        "outputPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Messaging\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -648,14 +648,14 @@
         }
       }
     },
-    "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services\\OceniTest.Services.csproj": {
+    "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services\\OceniTest.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services\\OceniTest.Services.csproj",
+        "projectUniqueName": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services\\OceniTest.Services.csproj",
         "projectName": "OceniTest.Services",
-        "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services\\OceniTest.Services.csproj",
+        "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services\\OceniTest.Services.csproj",
         "packagesPath": "C:\\Users\\123\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services\\obj\\",
+        "outputPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -730,14 +730,14 @@
         }
       }
     },
-    "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Web\\OceniTest.Web.Infrastructure\\OceniTest.Web.Infrastructure.csproj": {
+    "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Web\\OceniTest.Web.Infrastructure\\OceniTest.Web.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Web\\OceniTest.Web.Infrastructure\\OceniTest.Web.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Web\\OceniTest.Web.Infrastructure\\OceniTest.Web.Infrastructure.csproj",
         "projectName": "OceniTest.Web.Infrastructure",
-        "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Web\\OceniTest.Web.Infrastructure\\OceniTest.Web.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Web\\OceniTest.Web.Infrastructure\\OceniTest.Web.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\123\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Web\\OceniTest.Web.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Web\\OceniTest.Web.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -812,14 +812,14 @@
         }
       }
     },
-    "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Web\\OceniTest.Web.ViewModels\\OceniTest.Web.ViewModels.csproj": {
+    "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Web\\OceniTest.Web.ViewModels\\OceniTest.Web.ViewModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Web\\OceniTest.Web.ViewModels\\OceniTest.Web.ViewModels.csproj",
+        "projectUniqueName": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Web\\OceniTest.Web.ViewModels\\OceniTest.Web.ViewModels.csproj",
         "projectName": "OceniTest.Web.ViewModels",
-        "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Web\\OceniTest.Web.ViewModels\\OceniTest.Web.ViewModels.csproj",
+        "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Web\\OceniTest.Web.ViewModels\\OceniTest.Web.ViewModels.csproj",
         "packagesPath": "C:\\Users\\123\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Web\\OceniTest.Web.ViewModels\\obj\\",
+        "outputPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Web\\OceniTest.Web.ViewModels\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -840,11 +840,11 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data.Models\\OceniTest.Data.Models.csproj": {
-                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data.Models\\OceniTest.Data.Models.csproj"
+              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data.Models\\OceniTest.Data.Models.csproj": {
+                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data.Models\\OceniTest.Data.Models.csproj"
               },
-              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj": {
-                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj"
+              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj": {
+                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj"
               }
             }
           }
@@ -901,14 +901,14 @@
         }
       }
     },
-    "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Web\\OceniTest.Web\\OceniTest.Web.csproj": {
+    "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Web\\OceniTest.Web\\OceniTest.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Web\\OceniTest.Web\\OceniTest.Web.csproj",
+        "projectUniqueName": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Web\\OceniTest.Web\\OceniTest.Web.csproj",
         "projectName": "OceniTest.Web",
-        "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Web\\OceniTest.Web\\OceniTest.Web.csproj",
+        "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Web\\OceniTest.Web\\OceniTest.Web.csproj",
         "packagesPath": "C:\\Users\\123\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Web\\OceniTest.Web\\obj\\",
+        "outputPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Web\\OceniTest.Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -929,32 +929,32 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data.Models\\OceniTest.Data.Models.csproj": {
-                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data.Models\\OceniTest.Data.Models.csproj"
+              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data.Models\\OceniTest.Data.Models.csproj": {
+                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data.Models\\OceniTest.Data.Models.csproj"
               },
-              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data\\OceniTest.Data.csproj": {
-                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Data\\OceniTest.Data\\OceniTest.Data.csproj"
+              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data\\OceniTest.Data.csproj": {
+                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data\\OceniTest.Data.csproj"
               },
-              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\OceniTest.Common\\OceniTest.Common.csproj": {
-                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\OceniTest.Common\\OceniTest.Common.csproj"
+              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\OceniTest.Common\\OceniTest.Common.csproj": {
+                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\OceniTest.Common\\OceniTest.Common.csproj"
               },
-              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Data\\OceniTest.Services.Data.csproj": {
-                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Data\\OceniTest.Services.Data.csproj"
+              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Data\\OceniTest.Services.Data.csproj": {
+                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Data\\OceniTest.Services.Data.csproj"
               },
-              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj": {
-                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj"
+              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj": {
+                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj"
               },
-              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Messaging\\OceniTest.Services.Messaging.csproj": {
-                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Messaging\\OceniTest.Services.Messaging.csproj"
+              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Messaging\\OceniTest.Services.Messaging.csproj": {
+                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Messaging\\OceniTest.Services.Messaging.csproj"
               },
-              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services\\OceniTest.Services.csproj": {
-                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services\\OceniTest.Services.csproj"
+              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services\\OceniTest.Services.csproj": {
+                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services\\OceniTest.Services.csproj"
               },
-              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Web\\OceniTest.Web.Infrastructure\\OceniTest.Web.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Web\\OceniTest.Web.Infrastructure\\OceniTest.Web.Infrastructure.csproj"
+              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Web\\OceniTest.Web.Infrastructure\\OceniTest.Web.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Web\\OceniTest.Web.Infrastructure\\OceniTest.Web.Infrastructure.csproj"
               },
-              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Web\\OceniTest.Web.ViewModels\\OceniTest.Web.ViewModels.csproj": {
-                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Web\\OceniTest.Web.ViewModels\\OceniTest.Web.ViewModels.csproj"
+              "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Web\\OceniTest.Web.ViewModels\\OceniTest.Web.ViewModels.csproj": {
+                "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Web\\OceniTest.Web.ViewModels\\OceniTest.Web.ViewModels.csproj"
               }
             }
           }

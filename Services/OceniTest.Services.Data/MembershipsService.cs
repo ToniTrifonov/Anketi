@@ -33,8 +33,6 @@
 
             if (user.MembershipId == null)
             {
-                membershipId = string.Empty;
-
                 if (subType == "VIP")
                 {
                     membershipId = this.membershipsRepository

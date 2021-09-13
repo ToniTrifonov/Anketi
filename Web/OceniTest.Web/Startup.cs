@@ -99,6 +99,8 @@
                 app.UseHsts();
             }
 
+            app.UseStatusCodePagesWithReExecute("/Home/Error/{0}");
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();

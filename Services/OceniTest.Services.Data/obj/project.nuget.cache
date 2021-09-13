@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ln/xrVim4eC1qI2V/oYY8iq8eY5u8O3nOr8VLGLu5G6BqFqTSu0zNEC9HzYT/kRJxvvH8wmxo5WWP00wsM64Qg==",
+  "dgSpecHash": "+l2OzolLPNik8OBRCTA5znwDrYmXi+js1OZgdu+ByggRVHiVYWXbRl8sfyxO3tv51RBTqS/XWv+XyVHHEdzjXw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Services\\OceniTest.Services.Data\\OceniTest.Services.Data.csproj",
+  "projectFilePath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Data\\OceniTest.Services.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\123\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\123\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.6\\microsoft.aspnetcore.cryptography.internal.5.0.6.nupkg.sha512",

@@ -50,7 +50,7 @@
                 return this.RedirectToAction("Error", "Home");
             }
 
-            return this.Redirect("/Dashboard/Index");
+            return this.RedirectToAction("Success");
         }
 
         [HttpPost]
@@ -67,7 +67,7 @@
                 return this.RedirectToAction("Error", "Home");
             }
 
-            return this.Redirect("/Dashboard/Index");
+            return this.RedirectToAction("Success");
         }
 
         public IActionResult My()
@@ -76,6 +76,11 @@
         }
 
         public IActionResult Expired()
+        {
+            return this.View();
+        }
+
+        public IActionResult Success()
         {
             return this.View();
         }

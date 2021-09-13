@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UJ/aSkIxTdim9PN+Xn2A0WOHg4FKhzyFMkCIgUhmR57tOLMJ7vcwI0znPIiOFoxiqz15Uk/jA8XcleAgIQRG9w==",
+  "dgSpecHash": "pBsfHkJHqFtl6Ux/iILqZOoJgxmDh5s0rH3QofED2qJtjDsCo13hdre9iPUf4a6Gdl8+Y97z5CQ5qRWXFVPA4Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Tests\\OceniTest.Services.Data.Tests\\OceniTest.Services.Data.Tests.csproj",
+  "projectFilePath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Tests\\OceniTest.Services.Data.Tests\\OceniTest.Services.Data.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\123\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\123\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",

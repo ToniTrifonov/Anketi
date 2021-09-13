@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gHLhFk3+MxcIBLuV1zSCR6JBvb1PtyIhg7n9QgJTbSP2FuzSuCBPTn7LIdqNZeWho6Pvh92UgtSq42IMBLFu0w==",
+  "dgSpecHash": "xqEOBWt9aiDSoQKHp85lPcu03ccEyt6vhHzCoTHDHJidOJNh4GgxxltLEByq0PQYdv/5CIevcaQxnTVjpAwcLw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\OceniTest\\Tests\\OceniTest.Web.Tests\\OceniTest.Web.Tests.csproj",
+  "projectFilePath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Tests\\OceniTest.Web.Tests\\OceniTest.Web.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\123\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\123\\.nuget\\packages\\buildbundlerminifier\\3.2.449\\buildbundlerminifier.3.2.449.nupkg.sha512",
