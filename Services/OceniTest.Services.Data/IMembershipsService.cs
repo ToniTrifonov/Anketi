@@ -8,5 +8,9 @@
     public interface IMembershipsService
     {
         Task AddMemberAsync(string userId, string subType);
+
+        string GetUserMembership(string userId);
+
+        void CancelSubscription(string userId);
     }
 }

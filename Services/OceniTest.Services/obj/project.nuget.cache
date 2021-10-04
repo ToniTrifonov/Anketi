@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vTGhu3R3HLYfUJVEyAgyH1z2mSnw5aLkvoQv9WtmHwQV8RTiy5A3JlOIsKYrvpXNwn8xkMT8yWzo7wmgwd/PeA==",
+  "dgSpecHash": "gOI68qD2cWn1N8XE/vRp8TmFElYSVxAcQw3sh4UEC1s1yAzOCHhrbzDWOQFIom2axZuuxOzd80L3fNXBB4Hhrw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services\\OceniTest.Services.csproj",
+  "projectFilePath": "C:\\Users\\123\\OneDrive\\Работен плот\\Anketi - ASP.NET Project\\Anketi\\Services\\OceniTest.Services\\OceniTest.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\123\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
     "C:\\Users\\123\\.nuget\\packages\\microsoft.extensions.configuration\\5.0.0\\microsoft.extensions.configuration.5.0.0.nupkg.sha512",

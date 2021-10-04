@@ -1,1 +1,6 @@
-﻿<h1>You are currently subscribed for the </h1>
+﻿@{ 
+    var membership = this.ViewData["UserMembership"];
+}
+
+<h1>You are currently subscribed for the @membership membership.</h1>
+<a asp-action="Cancel">Cancel Subscription</a>

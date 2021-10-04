@@ -15,3 +15,12 @@ C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\Anketi\Servi
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\Anketi\Services\OceniTest.Services\obj\Debug\netstandard2.1\OceniTest.Services.csproj.CoreCompileInputs.cache
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\Anketi\Services\OceniTest.Services\obj\Debug\netstandard2.1\OceniTest.Services.dll
 C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\Anketi\Services\OceniTest.Services\obj\Debug\netstandard2.1\OceniTest.Services.pdb
+C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\Services\OceniTest.Services\bin\Debug\netstandard2.1\OceniTest.Services.deps.json
+C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\Services\OceniTest.Services\bin\Debug\netstandard2.1\OceniTest.Services.dll
+C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\Services\OceniTest.Services\bin\Debug\netstandard2.1\OceniTest.Services.pdb
+C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\Services\OceniTest.Services\obj\Debug\netstandard2.1\OceniTest.Services.csprojAssemblyReference.cache
+C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\Services\OceniTest.Services\obj\Debug\netstandard2.1\OceniTest.Services.AssemblyInfoInputs.cache
+C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\Services\OceniTest.Services\obj\Debug\netstandard2.1\OceniTest.Services.AssemblyInfo.cs
+C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\Services\OceniTest.Services\obj\Debug\netstandard2.1\OceniTest.Services.csproj.CoreCompileInputs.cache
+C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\Services\OceniTest.Services\obj\Debug\netstandard2.1\OceniTest.Services.dll
+C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\Services\OceniTest.Services\obj\Debug\netstandard2.1\OceniTest.Services.pdb

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wNSDklkttUfWbtuZDyThpILJ3GFHxr3hthniqOdm36W7hmmcg5gQIXdm1Fj6QH+I1316n552gm4JWJbtUSukgQ==",
+  "dgSpecHash": "F79S95TSYi5NLwjUqI/2vAG2yV54AzZubGo6jkJQUQAOmPWpd9BT2Q7+cfbmQ7PsNPNVs3wqAM2pBztpwb/RAw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data\\OceniTest.Data.csproj",
+  "projectFilePath": "C:\\Users\\123\\OneDrive\\Работен плот\\Anketi - ASP.NET Project\\Anketi\\Data\\OceniTest.Data\\OceniTest.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\123\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\123\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

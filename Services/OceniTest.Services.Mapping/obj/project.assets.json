@@ -1231,11 +1231,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj",
+      "projectUniqueName": "C:\\Users\\123\\OneDrive\\Работен плот\\Anketi - ASP.NET Project\\Anketi\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj",
       "projectName": "OceniTest.Services.Mapping",
-      "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj",
+      "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\Anketi - ASP.NET Project\\Anketi\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj",
       "packagesPath": "C:\\Users\\123\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Mapping\\obj\\",
+      "outputPath": "C:\\Users\\123\\OneDrive\\Работен плот\\Anketi - ASP.NET Project\\Anketi\\Services\\OceniTest.Services.Mapping\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

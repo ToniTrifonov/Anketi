@@ -57,5 +57,39 @@
 
             await this.usersRepository.SaveChangesAsync();
         }
+
+        public async void CancelSubscription(string userId)
+        {
+            var user = this.usersRepository
+                .All()
+                .FirstOrDefault(u => u.Id == userId);
+
+            user.MembershipId = null;
+
+            await this.usersRepository.SaveChangesAsync();
+        }
+
+        public string GetUserMembership(string userId)
+        {
+            var user = this.usersRepository
+                .All()
+                .Where(x => x.Id == userId)
+                .FirstOrDefault();
+
+            var membershipId = user.MembershipId;
+
+            if (membershipId == null)
+            {
+                return "User not subscribed yet.";
+            }
+
+            var membership = this.membershipsRepository
+                .All()
+                .Where(x => x.Id == membershipId)
+                .FirstOrDefault()
+                .Name;
+
+            return membership;
+        }
     }
 }

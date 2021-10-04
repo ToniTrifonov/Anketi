@@ -1,0 +1,9 @@
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\Anketi\Services\OceniTest.Services.Messaging\bin\Release\netstandard2.1\OceniTest.Services.Messaging.deps.json
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\Anketi\Services\OceniTest.Services.Messaging\bin\Release\netstandard2.1\OceniTest.Services.Messaging.dll
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\Anketi\Services\OceniTest.Services.Messaging\bin\Release\netstandard2.1\OceniTest.Services.Messaging.pdb
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\Anketi\Services\OceniTest.Services.Messaging\obj\Release\netstandard2.1\OceniTest.Services.Messaging.csprojAssemblyReference.cache
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\Anketi\Services\OceniTest.Services.Messaging\obj\Release\netstandard2.1\OceniTest.Services.Messaging.AssemblyInfoInputs.cache
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\Anketi\Services\OceniTest.Services.Messaging\obj\Release\netstandard2.1\OceniTest.Services.Messaging.AssemblyInfo.cs
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\Anketi\Services\OceniTest.Services.Messaging\obj\Release\netstandard2.1\OceniTest.Services.Messaging.csproj.CoreCompileInputs.cache
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\Anketi\Services\OceniTest.Services.Messaging\obj\Release\netstandard2.1\OceniTest.Services.Messaging.dll
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\Anketi\Services\OceniTest.Services.Messaging\obj\Release\netstandard2.1\OceniTest.Services.Messaging.pdb

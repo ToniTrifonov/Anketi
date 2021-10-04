@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9lDxKzwCGL4ZADYwBGElZ4KYML+jBKdtptzgt2btTLA8xbhQRtcEC4ysraC3ZP3cJwQpoWTvtPqy5kutBcIbmA==",
+  "dgSpecHash": "RNurP9giIasyyTdfY97LmOApjbdfDJcx47H4phlp0Q9JLSOzwEUnkU9pIOyXhSRPpKCHfdQHXhB22i1JQbCeHA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Tests\\Sandbox\\Sandbox.csproj",
+  "projectFilePath": "C:\\Users\\123\\OneDrive\\Работен плот\\Anketi - ASP.NET Project\\Anketi\\Tests\\Sandbox\\Sandbox.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\123\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\123\\.nuget\\packages\\commandlineparser\\2.8.0\\commandlineparser.2.8.0.nupkg.sha512",

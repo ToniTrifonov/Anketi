@@ -6810,11 +6810,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Tests\\Sandbox\\Sandbox.csproj",
+      "projectUniqueName": "C:\\Users\\123\\OneDrive\\Работен плот\\Anketi - ASP.NET Project\\Anketi\\Tests\\Sandbox\\Sandbox.csproj",
       "projectName": "Sandbox",
-      "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Tests\\Sandbox\\Sandbox.csproj",
+      "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\Anketi - ASP.NET Project\\Anketi\\Tests\\Sandbox\\Sandbox.csproj",
       "packagesPath": "C:\\Users\\123\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Tests\\Sandbox\\obj\\",
+      "outputPath": "C:\\Users\\123\\OneDrive\\Работен плот\\Anketi - ASP.NET Project\\Anketi\\Tests\\Sandbox\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6835,29 +6835,29 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data.Common\\OceniTest.Data.Common.csproj": {
-              "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data.Common\\OceniTest.Data.Common.csproj"
+            "C:\\Users\\123\\OneDrive\\Работен плот\\Anketi - ASP.NET Project\\Anketi\\Data\\OceniTest.Data.Common\\OceniTest.Data.Common.csproj": {
+              "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\Anketi - ASP.NET Project\\Anketi\\Data\\OceniTest.Data.Common\\OceniTest.Data.Common.csproj"
             },
-            "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data.Models\\OceniTest.Data.Models.csproj": {
-              "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data.Models\\OceniTest.Data.Models.csproj"
+            "C:\\Users\\123\\OneDrive\\Работен плот\\Anketi - ASP.NET Project\\Anketi\\Data\\OceniTest.Data.Models\\OceniTest.Data.Models.csproj": {
+              "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\Anketi - ASP.NET Project\\Anketi\\Data\\OceniTest.Data.Models\\OceniTest.Data.Models.csproj"
             },
-            "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data\\OceniTest.Data.csproj": {
-              "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Data\\OceniTest.Data\\OceniTest.Data.csproj"
+            "C:\\Users\\123\\OneDrive\\Работен плот\\Anketi - ASP.NET Project\\Anketi\\Data\\OceniTest.Data\\OceniTest.Data.csproj": {
+              "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\Anketi - ASP.NET Project\\Anketi\\Data\\OceniTest.Data\\OceniTest.Data.csproj"
             },
-            "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\OceniTest.Common\\OceniTest.Common.csproj": {
-              "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\OceniTest.Common\\OceniTest.Common.csproj"
+            "C:\\Users\\123\\OneDrive\\Работен плот\\Anketi - ASP.NET Project\\Anketi\\OceniTest.Common\\OceniTest.Common.csproj": {
+              "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\Anketi - ASP.NET Project\\Anketi\\OceniTest.Common\\OceniTest.Common.csproj"
             },
-            "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Data\\OceniTest.Services.Data.csproj": {
-              "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Data\\OceniTest.Services.Data.csproj"
+            "C:\\Users\\123\\OneDrive\\Работен плот\\Anketi - ASP.NET Project\\Anketi\\Services\\OceniTest.Services.Data\\OceniTest.Services.Data.csproj": {
+              "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\Anketi - ASP.NET Project\\Anketi\\Services\\OceniTest.Services.Data\\OceniTest.Services.Data.csproj"
             },
-            "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj": {
-              "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj"
+            "C:\\Users\\123\\OneDrive\\Работен плот\\Anketi - ASP.NET Project\\Anketi\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj": {
+              "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\Anketi - ASP.NET Project\\Anketi\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj"
             },
-            "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Messaging\\OceniTest.Services.Messaging.csproj": {
-              "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Messaging\\OceniTest.Services.Messaging.csproj"
+            "C:\\Users\\123\\OneDrive\\Работен плот\\Anketi - ASP.NET Project\\Anketi\\Services\\OceniTest.Services.Messaging\\OceniTest.Services.Messaging.csproj": {
+              "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\Anketi - ASP.NET Project\\Anketi\\Services\\OceniTest.Services.Messaging\\OceniTest.Services.Messaging.csproj"
             },
-            "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services\\OceniTest.Services.csproj": {
-              "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services\\OceniTest.Services.csproj"
+            "C:\\Users\\123\\OneDrive\\Работен плот\\Anketi - ASP.NET Project\\Anketi\\Services\\OceniTest.Services\\OceniTest.Services.csproj": {
+              "projectPath": "C:\\Users\\123\\OneDrive\\Работен плот\\Anketi - ASP.NET Project\\Anketi\\Services\\OceniTest.Services\\OceniTest.Services.csproj"
             }
           }
         }

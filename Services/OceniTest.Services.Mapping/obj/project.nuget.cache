@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KUzk9hrJZL4nYMgPeJATNVes4grMM3HQA41HamNtK9xxLPW5wuwNoFyRneFbve/LlqeACkewrecA9wXKHUZgBw==",
+  "dgSpecHash": "/cUinpaM5vbdOq9vlOWOdQqUhuZqdjG/8lbCcjEjZ19uB9SWnu9oFk6673oAV+vv0W//0GNCWnbvMCLIUATbkg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\123\\OneDrive\\Работен плот\\ASP .NET Core Project\\Anketi\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj",
+  "projectFilePath": "C:\\Users\\123\\OneDrive\\Работен плот\\Anketi - ASP.NET Project\\Anketi\\Services\\OceniTest.Services.Mapping\\OceniTest.Services.Mapping.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\123\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\123\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",

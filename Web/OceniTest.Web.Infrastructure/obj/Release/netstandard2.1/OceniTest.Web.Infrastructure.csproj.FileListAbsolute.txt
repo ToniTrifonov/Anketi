@@ -1,0 +1,9 @@
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\Anketi\Web\OceniTest.Web.Infrastructure\bin\Release\netstandard2.1\OceniTest.Web.Infrastructure.deps.json
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\Anketi\Web\OceniTest.Web.Infrastructure\bin\Release\netstandard2.1\OceniTest.Web.Infrastructure.dll
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\Anketi\Web\OceniTest.Web.Infrastructure\bin\Release\netstandard2.1\OceniTest.Web.Infrastructure.pdb
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\Anketi\Web\OceniTest.Web.Infrastructure\obj\Release\netstandard2.1\OceniTest.Web.Infrastructure.csprojAssemblyReference.cache
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\Anketi\Web\OceniTest.Web.Infrastructure\obj\Release\netstandard2.1\OceniTest.Web.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\Anketi\Web\OceniTest.Web.Infrastructure\obj\Release\netstandard2.1\OceniTest.Web.Infrastructure.AssemblyInfo.cs
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\Anketi\Web\OceniTest.Web.Infrastructure\obj\Release\netstandard2.1\OceniTest.Web.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\Anketi\Web\OceniTest.Web.Infrastructure\obj\Release\netstandard2.1\OceniTest.Web.Infrastructure.dll
+C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\Anketi\Web\OceniTest.Web.Infrastructure\obj\Release\netstandard2.1\OceniTest.Web.Infrastructure.pdb

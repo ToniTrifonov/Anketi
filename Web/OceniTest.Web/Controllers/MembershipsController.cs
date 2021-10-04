@@ -72,6 +72,21 @@
 
         public IActionResult My()
         {
+            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+            var membership = this.membershipsService.GetUserMembership(userId);
+
+            this.ViewData["UserMembership"] = membership;
+
+            return this.View();
+        }
+
+        public IActionResult Cancel()
+        {
+            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+            this.membershipsService.CancelSubscription(userId);
+
             return this.View();
         }
 

@@ -1,0 +1,81 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+}
+
+<section class="login">
+    <h1 class="login-header">@ViewData["Title"]</h1>
+    <article class="login-local">
+        <section class="login-form">
+            <form id="account" method="post">
+                <h4 class="login-form-header">Use a local account to log in.</h4>
+                <div asp-validation-summary="All"></div>
+                <div class="login-form-input-section">
+                    <label class="login-form-input-field" asp-for="Input.Email"></label>
+                    <input class="login-form-input-field" asp-for="Input.Email" />
+                    <span class="login-form-input-field" asp-validation-for="Input.Email"></span>
+                </div>
+                <div class="login-form-input-section">
+                    <label class="login-form-input-field" asp-for="Input.Password"></label>
+                    <input class="login-form-input-field" asp-for="Input.Password" />
+                    <span class="login-form-input-field" asp-validation-for="Input.Password"></span>
+                </div>
+                <div>
+                    <div>
+                        <label asp-for="Input.RememberMe">
+                            <input asp-for="Input.RememberMe" />
+                            @Html.DisplayNameFor(m => m.Input.RememberMe)
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <button class="login-btn" type="submit">Log in</button>
+                </div>
+                <div class="login-form-navigation">
+                    <p>
+                        <a class="login-form-navigation-link" id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
+                    </p>
+                    <p>
+                        <a class="login-form-navigation-link" asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
+                    </p>
+                    <p>
+                        <a class="login-form-navigation-link" id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
+                    </p>
+                </div>
+            </form>
+        </section>
+    </article>
+    <article class="login-external">
+        <h4 class="login-external-header">Use another service to log in.</h4>
+        @{
+            if ((Model.ExternalLogins?.Count ?? 0) == 0)
+            {
+                <div>
+                    <p>
+                        There are no external authentication services configured. See <a href="https://go.microsoft.com/fwlink/?LinkID=532715">this article</a>
+                        for details on setting up this ASP.NET application to support logging in via external services.
+                    </p>
+                </div>
+            }
+            else
+            {
+                <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                    <div>
+                        <p>
+                            @foreach (var provider in Model.ExternalLogins)
+                            {
+                                <button class="authentication-btn" type="submit" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
+                            }
+                        </p>
+                    </div>
+                </form>
+            }
+        }
+    </article>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
