@@ -1618,3 +1618,4 @@ C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\Te
 C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\Tests\OceniTest.Web.Tests\obj\Debug\net5.0\ref\OceniTest.Web.Tests.dll
 C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\Tests\OceniTest.Web.Tests\obj\Debug\net5.0\OceniTest.Web.Tests.pdb
 C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\Tests\OceniTest.Web.Tests\obj\Debug\net5.0\OceniTest.Web.Tests.genruntimeconfig.cache
+C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\Tests\OceniTest.Web.Tests\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.Facebook.dll

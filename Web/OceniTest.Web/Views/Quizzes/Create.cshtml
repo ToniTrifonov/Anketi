@@ -102,38 +102,23 @@
         document.getElementById('addQuestionBtn').addEventListener('click', function (event) {
             event.preventDefault();
 
-            var articleElement = document.createElement('article');
+            var articleElement = Element('article', '', { class: 'question', id: `${questionsCount}` });
 
-            var labelElement = document.createElement('label');
-            var textareaElement = document.createElement('textarea');
-            var spanElement = document.createElement('span');
-            var removeButtonElement = document.createElement('button');
-            var addQuestionAnswerElement = document.createElement('button');
-            var answersElement = document.createElement('section');
+            var labelElement = Element('label', `Question ${questionsCount + 1}.`, { for: `Questions[${questionsCount}].Description` });
+            var textareaElement = Element('textarea', '', { name: `Questions[${questionsCount}].Description`, id: `Questions[${questionsCount}].Description`, placeholder: 'Enter your question here' });
+            var spanElement = Element('span', '', { 'data-valmsg-for': `Questions[${questionsCount}].Description` });
+            var removeButtonElement = Element('button', 'Discard', { class: 'removeQuestionBtn' });
+            var addQuestionAnswerElement = Element('button', 'Answer', { class: 'addAnswerBtn' });
+            var answersElement = Element('section', '', { class: 'create-form-questions-content-answers' });
 
-            labelElement.setAttribute('for', `Questions[${questionsCount}].Description`);
-            labelElement.textContent = `Question ${questionsCount + 1}.`
-            textareaElement.setAttribute('name', `Questions[${questionsCount}].Description`);
-            textareaElement.setAttribute('id', `Questions[${questionsCount}].Description`);
-            textareaElement.setAttribute('placeholder', 'Enter your question here')
-            spanElement.setAttribute('data-valmsg-for', `Questions[${questionsCount}].Description`);
-            removeButtonElement.setAttribute('class', 'removeQuestionBtn');
-            removeButtonElement.textContent = 'Discard';
-            addQuestionAnswerElement.setAttribute('class', 'addAnswerBtn');
-            addQuestionAnswerElement.textContent = 'Answer';
-            answersElement.setAttribute('class', 'create-form-questions-content-answers')
-
-            articleElement.setAttribute('class', 'question');
-            articleElement.setAttribute('id', `${questionsCount}`);
+            articleElement.appendChild(labelElement);
+            articleElement.appendChild(textareaElement);
+            articleElement.appendChild(spanElement);
+            articleElement.appendChild(removeButtonElement);
+            articleElement.appendChild(addQuestionAnswerElement);
+            articleElement.appendChild(answersElement);
 
             document.querySelector('#Questions').appendChild(articleElement);
-
-            document.getElementById(`${questionsCount}`).appendChild(labelElement);
-            document.getElementById(`${questionsCount}`).appendChild(textareaElement);
-            document.getElementById(`${questionsCount}`).appendChild(spanElement);
-            document.getElementById(`${questionsCount}`).appendChild(removeButtonElement);
-            document.getElementById(`${questionsCount}`).appendChild(addQuestionAnswerElement);
-            document.getElementById(`${questionsCount}`).appendChild(answersElement);
 
             questionsCount++;
         })
@@ -142,9 +127,10 @@
     function HandleEvents() {
         document.getElementById('Questions').addEventListener('click', function (event) {
             event.preventDefault();
+            var target = event.target;
 
-            if (event.target.textContent == 'Discard') {
-                var elementToRemove = event.target.parentNode;
+            if (target.textContent == 'Discard') {
+                var elementToRemove = target.parentNode;
                 document.querySelector('#Questions').removeChild(elementToRemove);
                 var questionNumber = elementToRemove.getAttribute('id');
 
@@ -157,35 +143,46 @@
                     });
 
                 questionsCount--;
-            } else if (event.target.textContent == 'Answer') {
-                var answersCount = [...event.target.parentNode.querySelectorAll('.questionAnswer')].length;
+            } else if (target.textContent == 'Answer') {
+                var answersCount = [...target.parentNode.querySelectorAll('.questionAnswer')].length;
 
                 var textareaElement = document.createElement('textarea');
                 var spanElement = document.createElement('span');
                 var labelElement = document.createElement('label');
                 var answerElement = document.createElement('article');
 
-                labelElement.setAttribute('for', `Questions[${event.target.parentNode.getAttribute('id')}].Answers[${answersCount}].Description`);
+                labelElement.setAttribute('for', `Questions[${target.parentNode.getAttribute('id')}].Answers[${answersCount}].Description`);
                 labelElement.textContent = `Answer ${answersCount + 1}.`
                 textareaElement.setAttribute('placeholder', 'Enter answer option here');
                 textareaElement.setAttribute('class', 'questionAnswer');
-                textareaElement.setAttribute('id', `Questions[${event.target.parentNode.getAttribute('id')}].Answers[${answersCount}].Description`);
-                textareaElement.setAttribute('name', `Questions[${event.target.parentNode.getAttribute('id')}].Answers[${answersCount}].Description`);
-                spanElement.setAttribute('data-valmsg-for', `Questions[${event.target.parentNode.getAttribute('id')}].Answers[${answersCount}].Description`);
+                textareaElement.setAttribute('id', `Questions[${target.parentNode.getAttribute('id')}].Answers[${answersCount}].Description`);
+                textareaElement.setAttribute('name', `Questions[${target.parentNode.getAttribute('id')}].Answers[${answersCount}].Description`);
+                spanElement.setAttribute('data-valmsg-for', `Questions[${target.parentNode.getAttribute('id')}].Answers[${answersCount}].Description`);
                 spanElement.setAttribute('class', 'alert-danger');
                 answerElement.setAttribute('class', 'answer');
 
-                var answerSectionsCount = [...document.querySelectorAll('.create-form-questions-content-answers')].length;
+                answerElement.appendChild(labelElement);
+                answerElement.appendChild(textareaElement);
+                answerElement.appendChild(spanElement);
 
-                document.querySelectorAll('.create-form-questions-content-answers')[answerSectionsCount - 1].appendChild(answerElement);
+                var answersSection = target.parentNode.querySelector('.create-form-questions-content-answers');
 
-                var answersCount = [...document.querySelectorAll('.answer')].length;
-
-                document.querySelectorAll('.answer')[answersCount - 1].appendChild(labelElement);
-                document.querySelectorAll('.answer')[answersCount - 1].appendChild(textareaElement);
-                document.querySelectorAll('.answer')[answersCount - 1].appendChild(spanElement);
+                answersSection.appendChild(answerElement);
             }
         })
+    }
+
+    function Element(type, textContent, attributes) {
+        var element = document.createElement(type);
+        element.textContent = textContent;
+
+        if (attributes != undefined) {
+            for (var attribute in attributes) {
+                element.setAttribute(attribute, `${attributes[attribute]}`);
+            }
+        }
+
+        return element;
     }
 
     AddQuestion();

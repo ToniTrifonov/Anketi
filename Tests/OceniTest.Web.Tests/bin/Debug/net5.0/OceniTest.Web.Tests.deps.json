@@ -351,6 +351,17 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Authentication.Facebook/5.0.10": {
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Authentication.Facebook.dll": {
+            "assemblyVersion": "5.0.10.0",
+            "fileVersion": "5.0.1021.41022"
+          }
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.AspNetCore.Authentication.Facebook.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/5.0.9": {
         "runtime": {
           "lib/net5.0/Microsoft.AspNetCore.Cryptography.Internal.dll": {
@@ -3050,6 +3061,7 @@
       "OceniTest.Web/1.0.0": {
         "dependencies": {
           "BuildBundlerMinifier": "3.2.449",
+          "Microsoft.AspNetCore.Authentication.Facebook": "5.0.10",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "5.0.6",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.9",
           "Microsoft.AspNetCore.Identity.UI": "5.0.9",
@@ -4786,6 +4798,13 @@
       "sha512": "sha512-rsYXB7+iUPP8AHgQ8JP2UZI2xK2KhjcdGr9E6zX3CsZaTLCaw8M35vaAJRo1rfxeaZEVMuXeaquLVCkZ7JcZ5Q==",
       "path": "humanizer.core/2.2.0",
       "hashPath": "humanizer.core.2.2.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.Facebook/5.0.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mOntJphmKyaey7DW1tjiAfa4p8sU8aSRBrGF+oHMk0WRpbyDplN9zfYtmSnX2YbDCcKB5/IftmhRoic+v+hhKw==",
+      "path": "microsoft.aspnetcore.authentication.facebook/5.0.10",
+      "hashPath": "microsoft.aspnetcore.authentication.facebook.5.0.10.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/5.0.9": {
       "type": "package",

@@ -63,6 +63,7 @@
         {
             this.ViewBag.NameSortParm = string.IsNullOrEmpty(sortOrder) ? "name_desc" : string.Empty;
             this.ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+            this.ViewBag.QuestionsSortParm = sortOrder == "Questions" ? "questions_desc" : "Questions";
             var surveys = this.surveysService.GetAll();
 
             if (!string.IsNullOrEmpty(searchString))
@@ -80,6 +81,12 @@
                     break;
                 case "date_desc":
                     surveys = surveys.OrderByDescending(s => s.CreatedOn);
+                    break;
+                case "Questions":
+                    surveys = surveys.OrderBy(s => s.QuestionsCount);
+                    break;
+                case "questions_desc":
+                    surveys = surveys.OrderByDescending(s => s.QuestionsCount);
                     break;
                 default:
                     surveys = surveys.OrderBy(s => s.Name);
