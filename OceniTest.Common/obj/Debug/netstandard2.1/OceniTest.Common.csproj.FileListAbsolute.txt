@@ -18,9 +18,9 @@ C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\Anketi\Oceni
 C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\OceniTest.Common\bin\Debug\netstandard2.1\OceniTest.Common.deps.json
 C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\OceniTest.Common\bin\Debug\netstandard2.1\OceniTest.Common.dll
 C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\OceniTest.Common\bin\Debug\netstandard2.1\OceniTest.Common.pdb
-C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\OceniTest.Common\obj\Debug\netstandard2.1\OceniTest.Common.csprojAssemblyReference.cache
 C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\OceniTest.Common\obj\Debug\netstandard2.1\OceniTest.Common.AssemblyInfoInputs.cache
 C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\OceniTest.Common\obj\Debug\netstandard2.1\OceniTest.Common.AssemblyInfo.cs
 C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\OceniTest.Common\obj\Debug\netstandard2.1\OceniTest.Common.csproj.CoreCompileInputs.cache
 C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\OceniTest.Common\obj\Debug\netstandard2.1\OceniTest.Common.dll
 C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\OceniTest.Common\obj\Debug\netstandard2.1\OceniTest.Common.pdb
+C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\OceniTest.Common\obj\Debug\netstandard2.1\OceniTest.Common.csprojAssemblyReference.cache

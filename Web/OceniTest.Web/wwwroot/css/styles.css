@@ -373,6 +373,7 @@ main {
 
 .answer {
     flex-basis: 30%;
+    position: relative;
 }
 
 span {
@@ -395,6 +396,18 @@ span {
 .removeQuestionBtn:hover, .addAnswerBtn:hover {
     cursor: pointer;
     font-weight: bold;
+}
+
+.fa-window-close {
+    font-size: 20px;
+    color: rgb(139, 0, 0);
+    position: absolute;
+    top: 3%;
+    left: 88%;
+}
+
+.fa-window-close:hover {
+    cursor: pointer;
 }
 
 /*My Surveys Page CSS -------------------------------------------------------------------------------------------------*/

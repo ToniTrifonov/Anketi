@@ -19,9 +19,9 @@ C:\Users\123\OneDrive\Работен плот\ASP .NET Core Project\Anketi\Servi
 C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\Services\OceniTest.Services.Mapping\bin\Debug\netstandard2.1\OceniTest.Services.Mapping.deps.json
 C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\Services\OceniTest.Services.Mapping\bin\Debug\netstandard2.1\OceniTest.Services.Mapping.dll
 C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\Services\OceniTest.Services.Mapping\bin\Debug\netstandard2.1\OceniTest.Services.Mapping.pdb
-C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\Services\OceniTest.Services.Mapping\obj\Debug\netstandard2.1\OceniTest.Services.Mapping.csprojAssemblyReference.cache
 C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\Services\OceniTest.Services.Mapping\obj\Debug\netstandard2.1\OceniTest.Services.Mapping.AssemblyInfoInputs.cache
 C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\Services\OceniTest.Services.Mapping\obj\Debug\netstandard2.1\OceniTest.Services.Mapping.AssemblyInfo.cs
 C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\Services\OceniTest.Services.Mapping\obj\Debug\netstandard2.1\OceniTest.Services.Mapping.csproj.CoreCompileInputs.cache
 C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\Services\OceniTest.Services.Mapping\obj\Debug\netstandard2.1\OceniTest.Services.Mapping.dll
 C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\Services\OceniTest.Services.Mapping\obj\Debug\netstandard2.1\OceniTest.Services.Mapping.pdb
+C:\Users\123\OneDrive\Работен плот\Anketi - ASP.NET Project\Anketi\Services\OceniTest.Services.Mapping\obj\Debug\netstandard2.1\OceniTest.Services.Mapping.csprojAssemblyReference.cache
