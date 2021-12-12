@@ -35,8 +35,6 @@
 
         public DbSet<Category> Categories { get; set; }
 
-        public DbSet<UserQuiz> UsersQuizzes { get; set; }
-
         public DbSet<Download> Downloads { get; set; }
 
         public DbSet<Membership> Memberships { get; set; }

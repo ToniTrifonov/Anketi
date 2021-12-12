@@ -15,6 +15,6 @@
 
         public string Name { get; set; }
 
-        public ICollection<Quiz> CategoryQuizzes { get; set; }
+        public virtual ICollection<Quiz> CategoryQuizzes { get; set; }
     }
 }

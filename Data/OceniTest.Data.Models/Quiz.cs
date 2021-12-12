@@ -23,18 +23,18 @@
 
         public bool IsPrivate { get; set; }
 
-        public Category Category { get; set; }
-
         public string CategoryId { get; set; }
 
-        public ApplicationUser ApplicationUser { get; set; }
+        public Category Category { get; set; }
 
         public string UserId { get; set; }
 
-        public ICollection<Question> QuizQuestions { get; set; }
+        public ApplicationUser ApplicationUser { get; set; }
 
-        public ICollection<Feedback> QuizFeedbacks { get; set; }
+        public virtual ICollection<Question> QuizQuestions { get; set; }
 
-        public ICollection<Download> QuizDownloads { get; set; }
+        public virtual ICollection<Feedback> QuizFeedbacks { get; set; }
+
+        public virtual ICollection<Download> QuizDownloads { get; set; }
     }
 }

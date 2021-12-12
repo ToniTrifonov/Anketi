@@ -39,8 +39,8 @@ namespace OceniTest.Data.Models
 
         public virtual ICollection<IdentityUserLogin<string>> Logins { get; set; }
 
-        public ICollection<Quiz> UserQuizzes { get; set; }
+        public virtual ICollection<Quiz> UserQuizzes { get; set; }
 
-        public ICollection<Feedback> UserFeedbacks { get; set; }
+        public virtual ICollection<Feedback> UserFeedbacks { get; set; }
     }
 }

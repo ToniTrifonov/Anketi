@@ -17,10 +17,11 @@
 
         public string Id { get; set; }
 
+        public bool IsOpenEnded { get; set; }
+
         [Required(ErrorMessage = "Please fill the missing question descriptions!")]
         public string Description { get; set; }
 
-        [AnswersValidation(ErrorMessage = "Please add at least 2 answer options for each question!")]
         public List<AnswerViewModel> Answers { get; set; }
     }
 }

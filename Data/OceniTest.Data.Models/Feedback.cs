@@ -13,12 +13,12 @@
 
         public string Comments { get; set; }
 
-        public ApplicationUser ApplicationUser { get; set; }
-
         public string UserId { get; set; }
 
-        public Quiz Quiz { get; set; }
+        public ApplicationUser ApplicationUser { get; set; }
 
         public string QuizId { get; set; }
+
+        public Quiz Quiz { get; set; }
     }
 }

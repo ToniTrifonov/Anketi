@@ -13,12 +13,14 @@
             this.QuestionAnswers = new HashSet<Answer>();
         }
 
-        public string Description { get; set; }
+        public bool IsOpenEnded { get; set; }
 
-        public Quiz Quiz { get; set; }
+        public string Description { get; set; }
 
         public string QuizId { get; set; }
 
-        public ICollection<Answer> QuestionAnswers { get; set; }
+        public Quiz Quiz { get; set; }
+
+        public virtual ICollection<Answer> QuestionAnswers { get; set; }
     }
 }

@@ -46,21 +46,29 @@
 
             foreach (var inputQuestion in inputQuestions)
             {
-                var question = new Question()
-                {
-                    Description = inputQuestion.Description,
-                    QuizId = quiz.Id,
-                };
+                var question = new Question();
 
-                foreach (var inputQuestionAnswer in inputQuestion.Answers)
+                if (inputQuestion.IsOpenEnded)
                 {
-                    var answer = new Answer()
+                    question.IsOpenEnded = true;
+                    question.QuizId = quiz.Id;
+                }
+                else
+                {
+                    question.Description = inputQuestion.Description;
+                    question.IsOpenEnded = false;
+                    question.QuizId = quiz.Id;
+
+                    foreach (var inputQuestionAnswer in inputQuestion.Answers)
                     {
-                        Description = inputQuestionAnswer.Description,
-                        QuestionId = question.Id,
-                    };
+                        var answer = new Answer()
+                        {
+                            Description = inputQuestionAnswer.Description,
+                            QuestionId = question.Id,
+                        };
 
-                    await this.answersRepository.AddAsync(answer);
+                        await this.answersRepository.AddAsync(answer);
+                    }
                 }
 
                 await this.questionsRepository.AddAsync(question);
