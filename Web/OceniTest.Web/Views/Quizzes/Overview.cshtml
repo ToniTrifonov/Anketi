@@ -19,12 +19,21 @@
             <article class="survey-overview-content-question">
                 <p>@($"{questionNumber}. {question.Description}")</p>
                 <section class="survey-overview-content-question-answers">
-                    @foreach (var answer in question.Answers)
+                    @if (question.IsOpenEnded)
                     {
                         <article class="survey-overview-answer">
-                            <input name="@question.Id" type="radio" value="@answer.Description" />
-                            <label>@answer.Description</label>
+                            <textarea name="@question.Id" placeholder="Write your answer"></textarea>
                         </article>
+                    }
+                    else
+                    {
+                        foreach (var answer in question.Answers)
+                        {
+                            <article class="survey-overview-answer">
+                                <input name="@question.Id" type="radio" value="@answer.Description" />
+                                <label>@answer.Description</label>
+                            </article>
+                        }
                     }
                 </section>
             </article>

@@ -538,6 +538,10 @@ li[disabled] a {
     margin-bottom: 10px;
 }
 
+.survey-overview-answer textarea {
+    width: 65%;
+}
+
 .survey-overview-content-question-answers {
     padding-left: 20px;
 }

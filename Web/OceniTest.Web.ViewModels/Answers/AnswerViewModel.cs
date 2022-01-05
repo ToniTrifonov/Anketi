@@ -11,6 +11,7 @@
 
         [Required(ErrorMessage = "Please fill the missing answer description!")]
         [MaxLength(30, ErrorMessage ="Maximum characters length is 30")]
-        public string Description { get; set; }
+#nullable enable
+        public string? Description { get; set; }
     }
 }

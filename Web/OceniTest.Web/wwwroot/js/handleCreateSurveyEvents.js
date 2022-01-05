@@ -1,4 +1,4 @@
-﻿import { AddQuestion, RemoveQuestion } from './questions/functions_v2.js'
+﻿import { AddQuestion, RemoveQuestion } from './questions/functions_v4.js'
 import { AddAnswer, RemoveAnswer } from './answers/functions_v2.js'
 
 var questionsCount = document.getElementsByClassName('question').length;
@@ -7,7 +7,7 @@ var answersCount = document.getElementsByClassName('answer').length;
 document.getElementById('addQuestionBtn').addEventListener('click', function (event) {
     event.preventDefault();
 
-    AddQuestion(questionsCount, false);
+    AddQuestion(questionsCount);
 
     questionsCount++;
 })

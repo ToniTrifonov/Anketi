@@ -1,7 +1,7 @@
 ﻿import { Element } from '../shared/utility.js'
 import { AddAnswer } from '../answers/functions_v2.js'
 
-export function AddQuestion(questionsCount, isOpenEnded) {
+export function AddQuestion(questionsCount) {
     var articleElement = Element('article', '', { class: 'question', id: `${questionsCount}` });
 
     var labelElement = Element('label', `Question ${questionsCount + 1}.`, { for: `Questions[${questionsCount}].Description` });
@@ -13,14 +13,12 @@ export function AddQuestion(questionsCount, isOpenEnded) {
     articleElement.appendChild(removeButtonElement);
     articleElement.appendChild(textareaElement);
 
-    articleElement.appendChild(answersElement);
+    var isOpenEnded = document.querySelector("input[type='checkbox']").checked;
 
-    if (isOpenEnded)
+    if (!isOpenEnded)
     {
-        AddAnswer(answersElement);
-    }
-    else
-    {
+        articleElement.appendChild(answersElement);
+
         AddAnswer(answersElement);
         AddAnswer(answersElement);
         var spanElement = Element('span', '', { 'data-valmsg-for': `Questions[${questionsCount}].Description` });

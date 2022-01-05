@@ -48,16 +48,13 @@
             {
                 var question = new Question();
 
-                if (inputQuestion.IsOpenEnded)
+                if (inputQuestion.Answers.Count == 0)
                 {
                     question.IsOpenEnded = true;
-                    question.QuizId = quiz.Id;
                 }
                 else
                 {
                     question.Description = inputQuestion.Description;
-                    question.IsOpenEnded = false;
-                    question.QuizId = quiz.Id;
 
                     foreach (var inputQuestionAnswer in inputQuestion.Answers)
                     {
@@ -70,6 +67,9 @@
                         await this.answersRepository.AddAsync(answer);
                     }
                 }
+
+                question.Description = inputQuestion.Description;
+                question.QuizId = quiz.Id;
 
                 await this.questionsRepository.AddAsync(question);
             }
@@ -221,6 +221,7 @@
                     .Select(x => new QuestionViewModel()
                     {
                         Description = x.Description,
+                        IsOpenEnded = x.IsOpenEnded,
                         Id = x.Id,
                     })
                     .ToList();
